@@ -54,19 +54,19 @@ education:
 
 experiences:
 
-    - role: [Data Management, Exploration and Mining (DMX)] Intern
+    - role: \[Data Management, Exploration and Mining (DMX)] Intern
       time: 2019
       company: <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, US
       # details: |
       #   Vectorwise team
 
-    - role: [Java] Developer
+    - role: \[Java] Developer
       time: 2014 - 2016
       company: <a href="http://greenmile.com/en/home-en/">Greenmile</a>, Brazil
       # details: |
       #   Master's project/thesis: Achieving Many-core Scalability in Vectorwise <a href="assets/thesis/msc.pdf">[PDF]</a>
    
-    - role: [C#] Intern
+    - role: \[C#] Intern
       time: 2013 - 2014
       company: <a href="http://www.cpqi.com/">CPQi</a>, Brazil
       # details: |

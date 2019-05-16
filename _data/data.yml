@@ -14,7 +14,7 @@ sidebar:
     # Sidebar links
     email: holanda@cwi.nl
     phone: +31 20 592 4134
-    website: pholanda.github.io #do not add http://
+    # website: pholanda.github.io #do not add http://
     linkedin: pedro-holanda-5447335a
     github: pholanda
     #gitlab:
@@ -99,6 +99,10 @@ publications:
     #   bibendum fringilla a eu lectus.
 
     papers:
+      - title: "Relational Queries with a Tensor Processing Unit"
+        authors:  Pedro Holanda and Hannes Mühleisen
+        conference: EDBT <a href="assets/papers/TPC___TPU__DAMON_19_.pdf">[PDF]</a> <a href="https://github.com/pholanda/tpc-tpu">[SOURCE CODE]</a>
+
       - title: "devUDF: Increasing UDF development efficiency through IDE Integration. It works like a PyCharm!"
         authors:  Mark Raasveldt, Pedro Holanda, and Stefan Manegold
         conference: EDBT <a href="assets/papers/devUDF.pdf">[PDF]</a> <a href="https://github.com/pholanda/DevUDF">[SOURCE CODE]</a>

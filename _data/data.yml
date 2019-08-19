@@ -33,6 +33,9 @@ sidebar:
 
       - idiom: Spanish
         level: Beginner
+      
+      - idiom: Dutch
+        level: Beginner (Learning)
 
 career-profile:
     title: Career Profile
@@ -148,5 +151,5 @@ publications:
         conference: JIDM <a href="assets/papers/proactiveindexmaintenance.pdf">[PDF]</a> <a href="https://github.com/pholanda/DSIM">[SOURCE CODE]</a>
 
       - title: "dBest: Um Framework para Avaliação de Desempenho de Bancos de Dados. [2011]"
-        authors:  Lucas Lemos, Pedro Holanda and José Moneiro
+        authors:  Lucas Lemos, Pedro Holanda and José Monteiro
         conference: SBBD <a href="assets/papers/dbest.pdf">[PDF]</a> <a href="https://github.com/pholanda/dbest">[SOURCE CODE]</a>

@@ -17,6 +17,9 @@
   {% endif %}
 
   {% for publication in publications.papers %}
+  {% if publications.date %}
+  <h3> {{ publication.date }}</h3>
+  {% endif %}
   <div class="item">
     <div class="publication-title">{{ publication.title }}</div>
     <div class="publication-authors">{{ publication.authors }}</div>

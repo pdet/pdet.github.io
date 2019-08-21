@@ -102,6 +102,10 @@ publications:
     #   bibendum fringilla a eu lectus.
 
     papers:
+      - title: "Progressive Indexes: Indexing for Interactive Data Analysis [2020]"
+        authors:  Pedro Holanda, Mark Raasveldt, Stefan Manegold and Hannes Mühleisen
+        conference: VLDB <a href="assets/papers/progidx.pdf">[PDF]</a> <a href="https://github.com/pholanda/ProgressiveIndexing">[SOURCE CODE]</a>
+
       - title: "Dissecting DuckDB : The internals of the “SQLite for Analytics” [2019]"
         authors:  Pedro Holanda and Mark Raasveldt
         conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a>

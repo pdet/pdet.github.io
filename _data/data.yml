@@ -102,59 +102,66 @@ publications:
     #   bibendum fringilla a eu lectus.
 
     papers:
-      - title: "Progressive Indexes: Indexing for Interactive Data Analysis [2020]"
+      - title: "Progressive Indexes: Indexing for Interactive Data Analysis"
         authors:  Pedro Holanda, Mark Raasveldt, Stefan Manegold and Hannes Mühleisen
         conference: VLDB <a href="assets/papers/progidx.pdf">[PDF]</a> <a href="https://github.com/pholanda/ProgressiveIndexing">[SOURCE CODE]</a>
         date: 2020
 
-      - title: "Dissecting DuckDB : The internals of the “SQLite for Analytics” [2019]"
+      - title: "Dissecting DuckDB : The internals of the “SQLite for Analytics”"
         authors:  Pedro Holanda and Mark Raasveldt
         conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a>
+        date: 2019
 
-      - title: "Relational Queries with a Tensor Processing Unit [2019]"
+      - title: "Relational Queries with a Tensor Processing Unit"
         authors:  Pedro Holanda and Hannes Mühleisen
         conference: SIGMOD (DaMoN) <a href="assets/papers/TPC___TPU__DAMON_19_.pdf">[PDF]</a> <a href="https://github.com/pholanda/tpc-tpu">[SOURCE CODE]</a>
 
-      - title: "devUDF: Increasing UDF development efficiency through IDE Integration. It works like a PyCharm! [2019]"
+      - title: "devUDF: Increasing UDF development efficiency through IDE Integration. It works like a PyCharm!"
         authors:  Mark Raasveldt, Pedro Holanda, and Stefan Manegold
         conference: EDBT <a href="assets/papers/devUDF.pdf">[PDF]</a> <a href="https://github.com/pholanda/DevUDF">[SOURCE CODE]</a>
 
-      - title: "Progressive Indices – Indexing Without Prejudice. [2018]"
+      - title: "Progressive Indices – Indexing Without Prejudice."
         authors:  Pedro Holanda
         conference: Ph.D. Worskhop - VLDB <a href="assets/papers/VLDB_PhD_Workshop_2018.pdf">[PDF]</a> <a href="https://github.com/pholanda/ProgressiveIndexing">[SOURCE CODE]</a>
+        date: 2018
 
-      - title: "Cracking KD-Tree: The First Multidimensional Adaptive Indexing. [2018]"
+      - title: "Cracking KD-Tree: The First Multidimensional Adaptive Indexing."
         authors:  Pedro Holanda, Matheus Nerone, Eduardo Almeida, and Stefan Manegold
         conference: EDDY - DATA <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pholanda/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
 
-      - title: "Fair Benchmarking Considered Difficult:Common Pitfalls In Database Performance Testing. [2018]"
+      - title: "Fair Benchmarking Considered Difficult:Common Pitfalls In Database Performance Testing."
         authors:  Mark Raasveldt, Pedro Holanda, Tim Gubner, and Hannes Mühleisen
         conference: DBTest - SIGMOD <a href="assets/papers/benchmarking.pdf">[PDF]</a> <a href="https://github.com/pholanda/FairBenchmarking">[SOURCE CODE]</a>
 
-      - title: "Deep Integration of Machine Learning Into Column Stores. [2018]"
+      - title: "Deep Integration of Machine Learning Into Column Stores."
         authors:  Mark Raasveldt, Pedro Holanda, Hannes Mühleisen, and Stefan Manegold 
         conference: EDBT <a href="assets/papers/deep_learning_column_store.pdf">[PDF]</a> <a href="https://github.com/pholanda/VoterClassification">[SOURCE CODE]</a>
 
-      - title: "Don't Hold My UDFs Hostage - Exporting UDFs for Debugging Purposes. [2017]"
+      - title: "Don't Hold My UDFs Hostage - Exporting UDFs for Debugging Purposes."
         authors:  Pedro Holanda, Mark Raasveldt, and Martin Kersten
         conference: SBBD <a href="assets/papers/spst.pdf">[PDF]</a> <a href="https://github.com/pholanda/SPST">[SOURCE CODE]</a>
+        date: 2017
 
-      - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking. [2017]"
+      - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking."
         authors:  Pedro Holanda and Eduardo Almeida
         conference: EDDY - DATA <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pholanda/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
 
-      - title: "Finding and Fixing Type Mismatches in the Evolution of Object-NoSQL Mappings. [2016]"
+      - title: "Finding and Fixing Type Mismatches in the Evolution of Object-NoSQL Mappings."
         authors:  Stefanie Scherzinger, Eduardo Almeida, Thomas Cerqueus, Leandro Almeida, and Pedro Holanda
         conference: DIACHRON - EDBT <a href="assets/papers/controvol.pdf">[PDF]</a></span><a href="https://github.com/pholanda/controvol">[SOURCE CODE]</a>
+        date: 2016
 
-      - title: "Improving Index Maintenance Using Decision Analysis. [2013]"
+      - title: "Improving Index Maintenance Using Decision Analysis."
         authors:  Pedro Holanda, João Pordeus, José Monteiro, Angelo Brayner, and Sérgio Lifschitz
         conference: JIDM <a href="assets/papers/index_maintenance.pdf">[PDF]</a> <a href="https://github.com/pholanda/DSIM">[SOURCE CODE]</a>
+        date: 2013
 
-      - title: "Proactive Index Maintenance : Using Prediction Models for Improving Index Maintenance in Databases. [2012]"
+      - title: "Proactive Index Maintenance : Using Prediction Models for Improving Index Maintenance in Databases."
         authors:  André Medeiros, Aristénio Saraiva, Gustavo Campos, Pedro Holanda, José Monteiro, Angelo Brayner, and Sérgio Lifschitz
         conference: JIDM <a href="assets/papers/proactiveindexmaintenance.pdf">[PDF]</a> <a href="https://github.com/pholanda/DSIM">[SOURCE CODE]</a>
+        date: 2012
 
-      - title: "dBest: Um Framework para Avaliação de Desempenho de Bancos de Dados. [2011]"
+      - title: "dBest: Um Framework para Avaliação de Desempenho de Bancos de Dados."
         authors:  Lucas Lemos, Pedro Holanda and José Monteiro
         conference: SBBD <a href="assets/papers/dbest.pdf">[PDF]</a> <a href="https://github.com/pholanda/dbest">[SOURCE CODE]</a>
+        date: 2011

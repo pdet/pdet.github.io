@@ -122,16 +122,16 @@ publications:
 
       - title: "Progressive Indices – Indexing Without Prejudice."
         authors:  Pedro Holanda
-        conference: Ph.D. Worskhop - VLDB <a href="assets/papers/VLDB_PhD_Workshop_2018.pdf">[PDF]</a> <a href="https://github.com/pholanda/ProgressiveIndexing">[SOURCE CODE]</a>
+        conference: VLDB (Ph.D. Worskhop)  <a href="assets/papers/VLDB_PhD_Workshop_2018.pdf">[PDF]</a> <a href="https://github.com/pholanda/ProgressiveIndexing">[SOURCE CODE]</a>
         date: 2018
 
       - title: "Cracking KD-Tree: The First Multidimensional Adaptive Indexing."
         authors:  Pedro Holanda, Matheus Nerone, Eduardo Almeida, and Stefan Manegold
-        conference: EDDY - DATA <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pholanda/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
+        conference: DATA (EDDY) <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pholanda/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
 
       - title: "Fair Benchmarking Considered Difficult:Common Pitfalls In Database Performance Testing."
         authors:  Mark Raasveldt, Pedro Holanda, Tim Gubner, and Hannes Mühleisen
-        conference: DBTest - SIGMOD <a href="assets/papers/benchmarking.pdf">[PDF]</a> <a href="https://github.com/pholanda/FairBenchmarking">[SOURCE CODE]</a>
+        conference: SIGMOD (DbTest) <a href="assets/papers/benchmarking.pdf">[PDF]</a> <a href="https://github.com/pholanda/FairBenchmarking">[SOURCE CODE]</a>
 
       - title: "Deep Integration of Machine Learning Into Column Stores."
         authors:  Mark Raasveldt, Pedro Holanda, Hannes Mühleisen, and Stefan Manegold 
@@ -144,11 +144,11 @@ publications:
 
       - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking."
         authors:  Pedro Holanda and Eduardo Almeida
-        conference: EDDY - DATA <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pholanda/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
+        conference: EDBT <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pholanda/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
 
       - title: "Finding and Fixing Type Mismatches in the Evolution of Object-NoSQL Mappings."
         authors:  Stefanie Scherzinger, Eduardo Almeida, Thomas Cerqueus, Leandro Almeida, and Pedro Holanda
-        conference: DIACHRON - EDBT <a href="assets/papers/controvol.pdf">[PDF]</a></span><a href="https://github.com/pholanda/controvol">[SOURCE CODE]</a>
+        conference: EDBT (DIACHRON) <a href="assets/papers/controvol.pdf">[PDF]</a></span><a href="https://github.com/pholanda/controvol">[SOURCE CODE]</a>
         date: 2016
 
       - title: "Improving Index Maintenance Using Decision Analysis."

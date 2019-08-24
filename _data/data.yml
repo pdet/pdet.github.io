@@ -130,7 +130,7 @@ publications:
         conference: DATA (EDDY) <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pholanda/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
 
       - title: "Fair Benchmarking Considered Difficult:Common Pitfalls In Database Performance Testing."
-        authors:  <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <bold>Pedro Holanda</bold>, Tim Gubner, and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
+        authors:  <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <bold>Pedro Holanda</bold>, <a href="https://t1mm3.github.io/">Tim Gubner</a> , and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
         conference: SIGMOD (DbTest) <a href="assets/papers/benchmarking.pdf">[PDF]</a> <a href="https://github.com/pholanda/FairBenchmarking">[SOURCE CODE]</a>
 
       - title: "Deep Integration of Machine Learning Into Column Stores."
@@ -165,4 +165,3 @@ publications:
         authors:  Lucas Lemos, <bold>Pedro Holanda</bold> and José Monteiro
         conference: SBBD <a href="assets/papers/dbest.pdf">[PDF]</a> <a href="https://github.com/pholanda/dbest">[SOURCE CODE]</a>
         date: 2011
-        

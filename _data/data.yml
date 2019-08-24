@@ -103,21 +103,21 @@ publications:
 
     papers:
       - title: "Progressive Indexes: Indexing for Interactive Data Analysis"
-        authors:  Pedro Holanda, Mark Raasveldt, Stefan Manegold and Hannes Mühleisen
+        authors:  Pedro Holanda, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
         conference: VLDB <a href="assets/papers/progidx.pdf">[PDF]</a> <a href="https://github.com/pholanda/ProgressiveIndexing">[SOURCE CODE]</a>
         date: 2020
 
       - title: "Dissecting DuckDB : The internals of the “SQLite for Analytics”"
-        authors:  Pedro Holanda and Mark Raasveldt
+        authors:  Pedro Holanda and <a href="https://mytherin.github.io/">Mark Raasveldt</a>
         conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a>
         date: 2019
 
       - title: "Relational Queries with a Tensor Processing Unit"
-        authors:  Pedro Holanda and Hannes Mühleisen
+        authors:  Pedro Holanda and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
         conference: SIGMOD (DaMoN) <a href="assets/papers/TPC___TPU__DAMON_19_.pdf">[PDF]</a> <a href="https://github.com/pholanda/tpc-tpu">[SOURCE CODE]</a>
 
       - title: "devUDF: Increasing UDF development efficiency through IDE Integration. It works like a PyCharm!"
-        authors:  Mark Raasveldt, Pedro Holanda, and Stefan Manegold
+        authors:  <a href="https://mytherin.github.io/">Mark Raasveldt</a>, Pedro Holanda, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
         conference: EDBT <a href="assets/papers/devUDF.pdf">[PDF]</a> <a href="https://github.com/pholanda/DevUDF">[SOURCE CODE]</a>
 
       - title: "Progressive Indices – Indexing Without Prejudice."
@@ -126,28 +126,28 @@ publications:
         date: 2018
 
       - title: "Cracking KD-Tree: The First Multidimensional Adaptive Indexing."
-        authors:  Pedro Holanda, Matheus Nerone, Eduardo Almeida, and Stefan Manegold
+        authors:  Pedro Holanda, Matheus Nerone, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
         conference: DATA (EDDY) <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pholanda/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
 
       - title: "Fair Benchmarking Considered Difficult:Common Pitfalls In Database Performance Testing."
-        authors:  Mark Raasveldt, Pedro Holanda, Tim Gubner, and Hannes Mühleisen
+        authors:  <a href="https://mytherin.github.io/">Mark Raasveldt</a>, Pedro Holanda, Tim Gubner, and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
         conference: SIGMOD (DbTest) <a href="assets/papers/benchmarking.pdf">[PDF]</a> <a href="https://github.com/pholanda/FairBenchmarking">[SOURCE CODE]</a>
 
       - title: "Deep Integration of Machine Learning Into Column Stores."
-        authors:  Mark Raasveldt, Pedro Holanda, Hannes Mühleisen, and Stefan Manegold 
+        authors:  <a href="https://mytherin.github.io/">Mark Raasveldt</a>, Pedro Holanda, <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> 
         conference: EDBT <a href="assets/papers/deep_learning_column_store.pdf">[PDF]</a> <a href="https://github.com/pholanda/VoterClassification">[SOURCE CODE]</a>
 
       - title: "Don't Hold My UDFs Hostage - Exporting UDFs for Debugging Purposes."
-        authors:  Pedro Holanda, Mark Raasveldt, and Martin Kersten
+        authors:  Pedro Holanda, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, and <a href="https://en.wikipedia.org/wiki/Martin_L._Kersten">Martin Kersten</a>
         conference: SBBD <a href="assets/papers/spst.pdf">[PDF]</a> <a href="https://github.com/pholanda/SPST">[SOURCE CODE]</a>
         date: 2017
 
       - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking."
-        authors:  Pedro Holanda and Eduardo Almeida
+        authors:  Pedro Holanda and <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>
         conference: EDBT <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pholanda/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
 
       - title: "Finding and Fixing Type Mismatches in the Evolution of Object-NoSQL Mappings."
-        authors:  Stefanie Scherzinger, Eduardo Almeida, Thomas Cerqueus, Leandro Almeida, and Pedro Holanda
+        authors:  <a href="https://sites.google.com/site/stefaniescherzinger/">Stefanie Scherzinger</a>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, <a href="http://www.thomascerqueus.fr/">Thomas Cerqueus</a>, Leandro Almeida, and Pedro Holanda
         conference: EDBT (DIACHRON) <a href="assets/papers/controvol.pdf">[PDF]</a></span><a href="https://github.com/pholanda/controvol">[SOURCE CODE]</a>
         date: 2016
 

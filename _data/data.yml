@@ -34,8 +34,8 @@ sidebar:
       - idiom: Spanish
         level: Beginner
       
-      - idiom: Dutch
-        level: Beginner (Learning)
+      # - idiom: Dutch
+      #   level: Beginner (Learning)
 
 career-profile:
     title: Career Profile
@@ -107,6 +107,11 @@ publications:
         conference: VLDB <a href="assets/papers/progidx.pdf">[PDF]</a> <a href="https://github.com/pholanda/ProgressiveIndexing">[SOURCE CODE]</a>
         date: 2020
 
+      - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking. (Best Dissertation Workshop [Candidate])”"
+        authors:  <b>Pedro Holanda</b>
+        conference: SBBD  <a href="assets/papers/duck_spst_ctd.pdf">[PDF]</a> <a href="https://github.com/pholanda/SPST">[SOURCE CODE]</a>
+        date: 2019
+
       - title: "Dissecting DuckDB : The internals of the “SQLite for Analytics”"
         authors:  <b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a>
         conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a>
@@ -126,7 +131,7 @@ publications:
         date: 2018
 
       - title: "Cracking KD-Tree: The First Multidimensional Adaptive Indexing."
-        authors:  <b>Pedro Holanda</b>, Matheus Nerone, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
+        authors:  <b>Pedro Holanda</b>, <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
         conference: DATA (EDDY) <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pholanda/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
 
       - title: "Fair Benchmarking Considered Difficult:Common Pitfalls In Database Performance Testing."
@@ -152,16 +157,16 @@ publications:
         date: 2016
 
       - title: "Improving Index Maintenance Using Decision Analysis."
-        authors:  <b>Pedro Holanda</b>, João Pordeus, José Monteiro, Angelo Brayner, and Sérgio Lifschitz
+        authors:  <b>Pedro Holanda</b>, <a href="http://www.mdcc.ufc.br/component/content/article/34-fixo/382">João Pordeus</a>, <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4760808E0">José Monteiro</a>, <a href="https://cc.ufc.br/curso/corpo-docente/brayner/">Angelo Brayner</a>, and <a href="http://www-di.inf.puc-rio.br/~sergio/">Sérgio Lifschitz</a>
         conference: JIDM <a href="assets/papers/index_maintenance.pdf">[PDF]</a> <a href="https://github.com/pholanda/DSIM">[SOURCE CODE]</a>
         date: 2013
 
       - title: "Proactive Index Maintenance : Using Prediction Models for Improving Index Maintenance in Databases."
-        authors:  André Medeiros, Aristénio Saraiva, Gustavo Campos, <b>Pedro Holanda</b>, José Monteiro, Angelo Brayner, and Sérgio Lifschitz
+        authors:  André Medeiros, Aristénio Saraiva, Gustavo Campos, <b>Pedro Holanda</b>, <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4760808E0">José Monteiro</a>, <a href="https://cc.ufc.br/curso/corpo-docente/brayner/">Angelo Brayner</a>, and <a href="http://www-di.inf.puc-rio.br/~sergio/">Sérgio Lifschitz</a>
         conference: JIDM <a href="assets/papers/proactiveindexmaintenance.pdf">[PDF]</a> <a href="https://github.com/pholanda/DSIM">[SOURCE CODE]</a>
         date: 2012
 
       - title: "dBest: Um Framework para Avaliação de Desempenho de Bancos de Dados."
-        authors:  Lucas Lemos, <b>Pedro Holanda</b> and José Monteiro
+        authors:  Lucas Lemos, <b>Pedro Holanda</b> and <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4760808E0">José Monteiro</a>
         conference: SBBD <a href="assets/papers/dbest.pdf">[PDF]</a> <a href="https://github.com/pholanda/dbest">[SOURCE CODE]</a>
         date: 2011

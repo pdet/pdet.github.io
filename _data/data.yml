@@ -115,7 +115,6 @@ publications:
       - title: "Dissecting DuckDB : The internals of the “SQLite for Analytics”"
         authors:  <b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a>
         conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a>
-        date: 2019
 
       - title: "Relational Queries with a Tensor Processing Unit"
         authors:  <b>Pedro Holanda</b> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>

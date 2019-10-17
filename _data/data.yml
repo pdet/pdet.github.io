@@ -107,14 +107,9 @@ publications:
         conference: VLDB <a href="assets/papers/progidx.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a>
         date: 2020
 
-      - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking. (Best Dissertation Workshop [Candidate])”"
-        authors:  <b>Pedro Holanda</b>
-        conference: SBBD  <a href="assets/papers/duck_spst_ctd.pdf">[PDF]</a> <a href="https://github.com/pdet/SPST">[SOURCE CODE]</a>
-        date: 2019
-
       - title: "Dissecting DuckDB : The internals of the “SQLite for Analytics”"
         authors:  <b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a>
-        conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a>
+        conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a> <a href="https://github.com/pdet/duckdb-tutorial">[HANDS-ON]</a>
 
       - title: "Relational Queries with a Tensor Processing Unit"
         authors:  <b>Pedro Holanda</b> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
@@ -148,7 +143,7 @@ publications:
 
       - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking."
         authors:  <b>Pedro Holanda</b> and <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>
-        conference: EDBT <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pdet/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
+        conference: EDBT <a href="assets/papers/SPST.pdf">[PDF]</a> [SOURCE CODE]
 
       - title: "Finding and Fixing Type Mismatches in the Evolution of Object-NoSQL Mappings."
         authors:  <a href="https://sites.google.com/site/stefaniescherzinger/">Stefanie Scherzinger</a>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, <a href="http://www.thomascerqueus.fr/">Thomas Cerqueus</a>, Leandro Almeida, and <b>Pedro Holanda</b>

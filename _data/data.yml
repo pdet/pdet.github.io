@@ -96,6 +96,7 @@ publications:
         authors:  <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
         conference: VLDB <a href="assets/papers/progidx_vldb.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a>
         date: 2020
+        
 
       - title: "Dissecting DuckDB : The internals of the “SQLite for Analytics”"
         authors:  <b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a>

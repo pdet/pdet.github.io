@@ -15,11 +15,11 @@ sidebar:
     email: holanda@cwi.nl
     phone: +31 20 592 4134
     # website: pholanda.github.io #do not add http://
-    linkedin: pedro-holanda-5447335a
+    # linkedin: pedro-holanda-5447335a
     github: pdet
     #gitlab:
     #bitbucket:
-    twitter: '@pttholanda'
+    # twitter: '@pttholanda'
     #stack-overflow: # Number/Username, e.g. 123456/alandoe
     #codewars:
     #goodreads: # Number-Username, e.g. 123456-alandoe
@@ -30,12 +30,6 @@ sidebar:
 
       - idiom: English
         level: Fluent
-
-      - idiom: Spanish
-        level: Beginner
-      
-      # - idiom: Dutch
-      #   level: Beginner (Learning)
 
 career-profile:
     title: Career Profile
@@ -80,36 +74,34 @@ projects:
 
     assignments:
       - title: DuckDB
-        link: "https://github.com/cwida/duckdb/commits?author=pholanda"
+        link: "https://github.com/cwida/duckdb/commits?author=pdet"
         tagline: "Embeddable SQL OLAP Database Management System"
 
       - title: MonetDB
-        link: "https://github.com/MonetDB/MonetDB/commits?author=pholanda"
+        link: "https://github.com/MonetDB/MonetDB/commits?author=pdet"
         tagline: "Column-store Database Management System"
 
       - title: PyMonetDB
-        link: "https://github.com/gijzelaerr/pymonetdb/commits?author=pholanda"
+        link: "https://github.com/gijzelaerr/pymonetdb/commits?author=pdet"
         tagline: "Python API for MonetDB"
 
       - title: Peloton
-        link: "https://github.com/cmu-db/peloton/commits?author=pholanda"
+        link: "https://github.com/cmu-db/peloton/commits?author=pdet"
         tagline: "Self-Driving Database Management System"
 publications:
     title: Publications
-    # intro: |
-    #   You can list your publications in this section. Lorem ipsum dolor sit
-    #   amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-    #   bibendum fringilla a eu lectus.
 
     papers:
       - title: "Progressive Indexes: Indexing for Interactive Data Analysis"
         authors:  <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
-        conference: VLDB <a href="assets/papers/progidx.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a>
+        conference: VLDB <a href="assets/papers/progidx_vldb.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a>
         date: 2020
+        
 
       - title: "Dissecting DuckDB : The internals of the “SQLite for Analytics”"
         authors:  <b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a>
         conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a> <a href="https://github.com/pdet/duckdb-tutorial">[HANDS-ON]</a>
+        date: 2019
 
       - title: "Relational Queries with a Tensor Processing Unit"
         authors:  <b>Pedro Holanda</b> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
@@ -143,7 +135,7 @@ publications:
 
       - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking."
         authors:  <b>Pedro Holanda</b> and <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>
-        conference: EDBT <a href="assets/papers/SPST.pdf">[PDF]</a> [SOURCE CODE]
+        conference: EDBT <a href="assets/papers/SPST.pdf">[PDF]</a>
 
       - title: "Finding and Fixing Type Mismatches in the Evolution of Object-NoSQL Mappings."
         authors:  <a href="https://sites.google.com/site/stefaniescherzinger/">Stefanie Scherzinger</a>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, <a href="http://www.thomascerqueus.fr/">Thomas Cerqueus</a>, Leandro Almeida, and <b>Pedro Holanda</b>

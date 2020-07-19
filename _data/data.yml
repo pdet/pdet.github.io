@@ -33,8 +33,8 @@ sidebar:
 
 career-profile:
     title: Career Profile
-    summary: Ph.D. candidate located in Amsterdam. Member of the Database Architecture group at CWI.  My research is focused on progressive indexing techniques, self-tuning tools, embedded database systems, and in-database analytics.
-
+    summary: I'm a Ph.D. candidate based in Amsterdam and a member of the Database Architecture group at CWI. My research focuses on adaptive physical design. I am currently working on a new database system with no knobs for physical layouts.
+    
 education:
     - degree: PhD Candidate in Computer Science
       university: Centrum Wiskunde en Informatica (CWI)
@@ -96,7 +96,6 @@ publications:
         authors:  <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
         conference: VLDB <a href="assets/papers/progidx_vldb.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a>
         date: 2020
-        
 
       - title: "Dissecting DuckDB : The internals of the “SQLite for Analytics”"
         authors:  <b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a>

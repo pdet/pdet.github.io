@@ -90,7 +90,6 @@ projects:
         tagline: "Self-Driving Database Management System"
 publications:
     title: Publications
-
     papers:
       - title: "Multidimensional Adaptive & Progressive Indexes"
         authors:  <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>,<b>Pedro Holanda</b>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>

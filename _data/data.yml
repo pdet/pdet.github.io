@@ -33,7 +33,7 @@ sidebar:
 
 career-profile:
     title: Career Profile
-    summary: I'm a Ph.D. candidate based in Amsterdam and a member of the Database Architecture group at CWI. My research focuses on adaptive physical design. I am currently working on a new database system with no knobs for physical layouts.
+    summary: I'm a Ph.D. candidate based in Amsterdam and a member of the Database Architecture group at CWI. My research focuses on adaptive physical design.
     
 education:
     - degree: PhD Candidate in Computer Science
@@ -92,6 +92,11 @@ publications:
     title: Publications
 
     papers:
+      - title: "Multidimensional Adaptive & Progressive Indexes"
+        authors:  <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>,<b>Pedro Holanda</b>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
+        conference: ICDE
+        date: 2021
+
       - title: "Progressive Indexes: Indexing for Interactive Data Analysis"
         authors:  <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
         conference: VLDB <a href="assets/papers/progidx_vldb.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a>

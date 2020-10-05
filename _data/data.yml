@@ -89,6 +89,7 @@ projects:
         link: "https://github.com/cmu-db/peloton/commits?author=pdet"
         tagline: "Self-Driving Database Management System"
 publications:
+  
     title: Publications
     papers:
       - title: "Multidimensional Adaptive & Progressive Indexes"

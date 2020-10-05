@@ -93,7 +93,7 @@ publications:
     papers:
       - title: "Multidimensional Adaptive & Progressive Indexes"
         authors:  <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>,<b>Pedro Holanda</b>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
-        conference: ICDE
+        conference: ICDE <a href="assets/papers/ICDE2021.pdf">[PDF]</a>
         date: 2021
 
       - title: "Progressive Indexes: Indexing for Interactive Data Analysis"

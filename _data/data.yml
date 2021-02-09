@@ -33,7 +33,7 @@ sidebar:
 
 career-profile:
     title: Career Profile
-    summary: I'm a Ph.D. candidate based in Amsterdam and a member of the Database Architecture group at CWI. My research focuses on adaptive physical design.
+    summary: I'm a Ph.D. candidate based in Amsterdam and a member of the Database Architecture group at CWI. I'm currently writing up my PhD Thesis and working on DuckDB.
     
 education:
     - degree: PhD Candidate in Computer Science
@@ -74,28 +74,22 @@ projects:
 
     assignments:
       - title: DuckDB
-        link: "https://github.com/cwida/duckdb/commits?author=pdet"
+        intro: I've worked (and I am working) in several different parts of DuckDB (e.g., Index Structures, Zone maps, Compression, ...). Check the link below to see my latest Pull-Requests.
+
+        link: "https://github.com/cwida/duckdb/pulls?q=author%3Apdet+"
         tagline: "Embeddable SQL OLAP Database Management System"
 
-      - title: MonetDB
-        link: "https://github.com/MonetDB/MonetDB/commits?author=pdet"
-        tagline: "Column-store Database Management System"
-
-      - title: PyMonetDB
-        link: "https://github.com/gijzelaerr/pymonetdb/commits?author=pdet"
-        tagline: "Python API for MonetDB"
-
-      - title: Peloton
-        link: "https://github.com/cmu-db/peloton/commits?author=pdet"
-        tagline: "Self-Driving Database Management System"
 publications:
-  
     title: Publications
     papers:
-      - title: "Multidimensional Adaptive & Progressive Indexes"
-        authors:  <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>,<b>Pedro Holanda</b>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
-        conference: ICDE <a href="assets/papers/ICDE2021.pdf">[PDF]</a>
+      - title: "Progressive Mergesort: Merging Batches of Appends into Progressive IndexesPedro"
+        authors:  <b>Pedro Holanda</b>  and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
+        conference: EDBT <a href="assets/papers/progressive_mergesort.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveMergesort">[SOURCE CODE]</a>
         date: 2021
+
+        - title: "Multidimensional Adaptive & Progressive Indexes"
+        authors:  <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>,<b>Pedro Holanda</b>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
+        conference: ICDE <a href="assets/papers/ICDE2021.pdf">[PDF]</a> <a href="https://github.com/pdet/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
 
       - title: "Progressive Indexes: Indexing for Interactive Data Analysis"
         authors:  <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
@@ -134,12 +128,12 @@ publications:
 
       - title: "Don't Hold My UDFs Hostage - Exporting UDFs for Debugging Purposes."
         authors:  <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, and <a href="https://en.wikipedia.org/wiki/Martin_L._Kersten">Martin Kersten</a>
-        conference: SBBD <a href="assets/papers/spst.pdf">[PDF]</a> <a href="https://github.com/pdet/SPST">[SOURCE CODE]</a>
+        conference: SBBD <a href="assets/papers/udf_hostage.pdf">[PDF]</a> <a href="https://github.com/gijzelaerr/pymonetdb">[SOURCE CODE]</a>
         date: 2017
 
       - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking."
         authors:  <b>Pedro Holanda</b> and <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>
-        conference: EDBT <a href="assets/papers/SPST.pdf">[PDF]</a>
+        conference: EDBT <a href="assets/papers/SPST.pdf">[PDF]</a> <a href="https://github.com/pdet/SPST">[SOURCE CODE]</a>
 
       - title: "Finding and Fixing Type Mismatches in the Evolution of Object-NoSQL Mappings."
         authors:  <a href="https://sites.google.com/site/stefaniescherzinger/">Stefanie Scherzinger</a>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, <a href="http://www.thomascerqueus.fr/">Thomas Cerqueus</a>, Leandro Almeida, and <b>Pedro Holanda</b>

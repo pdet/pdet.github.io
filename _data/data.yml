@@ -80,14 +80,16 @@ projects:
         tagline: "Embeddable SQL OLAP Database Management System"
 
 publications:
+  
     title: Publications
+
     papers:
       - title: "Progressive Mergesort: Merging Batches of Appends into Progressive IndexesPedro"
         authors:  <b>Pedro Holanda</b>  and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
         conference: EDBT <a href="assets/papers/progressive_mergesort.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveMergesort">[SOURCE CODE]</a>
         date: 2021
 
-        - title: "Multidimensional Adaptive & Progressive Indexes"
+      - title: "Multidimensional Adaptive & Progressive Indexes"
         authors:  <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>,<b>Pedro Holanda</b>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
         conference: ICDE <a href="assets/papers/ICDE2021.pdf">[PDF]</a> <a href="https://github.com/pdet/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
 

@@ -75,7 +75,6 @@ projects:
     assignments:
       - title: DuckDB
         intro: I've worked (and I am working) in several different parts of DuckDB (e.g., Index Structures, Zone maps, Compression, ...). Check the link below to see my latest Pull-Requests.
-
         link: "https://github.com/cwida/duckdb/pulls?q=author%3Apdet+"
         tagline: "Embeddable SQL OLAP Database Management System"
 

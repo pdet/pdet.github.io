@@ -15,11 +15,11 @@ sidebar:
     email: holanda@cwi.nl
     phone: +31 20 592 4134
     # website: pholanda.github.io #do not add http://
-    # linkedin: pedro-holanda-5447335a
+    linkedin: pedro-holanda-5447335a
     github: pdet
     #gitlab:
     #bitbucket:
-    # twitter: '@pttholanda'
+    twitter: '@holanda_pe'
     #stack-overflow: # Number/Username, e.g. 123456/alandoe
     #codewars:
     #goodreads: # Number-Username, e.g. 123456-alandoe
@@ -84,7 +84,7 @@ publications:
     title: Publications
 
     papers:
-      - title: "Progressive Mergesort: Merging Batches of Appends into Progressive IndexesPedro"
+      - title: "Progressive Mergesort: Merging Batches of Appends into Progressive Indexes"
         authors:  <b>Pedro Holanda</b>  and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
         conference: EDBT <a href="assets/papers/progressive_mergesort.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveMergesort">[SOURCE CODE]</a>
         date: 2021

@@ -78,7 +78,7 @@ projects:
 
     assignments:
       - title: DuckDB
-        intro: Most notably: ART-Indexes, Zonemaps, Many Aggregations, Arrow Integration.
+        intro: "Most notably: ART-Indexes, Zonemaps, Many Aggregations, Arrow Integration."
         link: "https://github.com/cwida/duckdb/pulls?q=author%3Apdet+"
         tagline: "Embeddable SQL OLAP Database Management System"
 

@@ -1,4 +1,4 @@
-date,maximum temperature,minimum temperature,average temperature,precipitation,snow fall,snow depth
+date,maximum_temperature,minimum_temperature,average_temperature,precipitation,snow_fall,snow_depth
 1-1-2016,42,34,38.0,0.00,0.0,0
 2-1-2016,40,32,36.0,0.00,0.0,0
 3-1-2016,45,35,40.0,0.00,0.0,0

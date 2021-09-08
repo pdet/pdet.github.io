@@ -9,7 +9,7 @@ sidebar:
 
     # Profile information
     name: <b>Pedro Holanda</b>
-    tagline: Post-Doc
+    tagline: Post-Doc & Software Developer
     avatar: profile.jpg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -34,12 +34,16 @@ sidebar:
 
 career-profile:
     title: Career Profile
-    summary: I'm a Post-Doc based in Amsterdam and a member of the Database Architecture group at CWI. I'm currently working on integrating Apache Arrow and DuckDB.
+    summary: I'm a Post-Doc based in Amsterdam and a member of the Database Architecture group at CWI. I'm currently working as a Software Developer for Duckdb Labs.
     
 education:
+  - degree: Post-Doc in Database Architectures
+      university: Centrum Wiskunde en Informatica (CWI)
+      time: 2021 - Now
+
     - degree: PhD Candidate in Computer Science
       university: Centrum Wiskunde en Informatica (CWI)
-      time: 2017 - Now
+      time: 2017 - 2021
 
     - degree: MSc in Computer Science
       university: Universidade Federal do Paraná
@@ -51,9 +55,10 @@ education:
 
 experiences:
 
-    - role: Post-Doc in Database Architectures
+    - role: DBMS Software Developer
       time: 2021 - Current
-      company: CWI, The Netherlands
+      company: DuckDB Labs, The Netherlands
+      details: DuckDB is an Open-Source OLAP Embedded DBMS. You can check my public PRs <a href="https://github.com/cwida/duckdb/pulls?q=author%3Apdet+">here</a>.
  
     - role: (Data Management, Exploration and Mining) Intern
       time: 2019
@@ -68,24 +73,19 @@ experiences:
       company: <a href="http://www.cpqi.com/">CPQi</a>, Brazil
 
 
-projects:
-    title: Open-Source Projects
-
-    assignments:
-      - title: DuckDB
-        intro: "Most notably: ART-Indexes, Zonemaps, Many Aggregations, Arrow Integration."
-        link: "https://github.com/cwida/duckdb/pulls?q=author%3Apdet+"
-        tagline: "Most notably, I've implemented : ART-Indexes, Zonemaps, Many Aggregations, Integration with Apache Arrow."
-
 publications:
   
     title: Publications
 
     papers:
+       - title: "Progressive Indexes"
+        authors:  <b>Pedro Holanda</b>
+        conference: PhD Thesis @ Leiden University/CWI <a href="https://ir.cwi.nl/pub/31048">[PDF]</a>
+        date: 2021
+
       - title: "Progressive Mergesort: Merging Batches of Appends into Progressive Indexes"
         authors:  <b>Pedro Holanda</b>  and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
         conference: EDBT <a href="assets/papers/progressive_mergesort.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveMergesort">[SOURCE CODE]</a>
-        date: 2021
 
       - title: "Multidimensional Adaptive & Progressive Indexes"
         authors:  <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>,<b>Pedro Holanda</b>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>

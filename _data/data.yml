@@ -78,7 +78,7 @@ publications:
     title: Publications
 
     papers:
-       - title: "Progressive Indexes"
+      - title: "Progressive Indexes"
         authors:  <b>Pedro Holanda</b>
         conference: PhD Thesis @ Leiden University/CWI <a href="https://ir.cwi.nl/pub/31048">[PDF]</a>
         date: 2021

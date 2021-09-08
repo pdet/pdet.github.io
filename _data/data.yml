@@ -37,7 +37,7 @@ career-profile:
     summary: I'm a Post-Doc based in Amsterdam and a member of the Database Architecture group at CWI. I'm currently working as a Software Developer for Duckdb Labs.
     
 education:
-  - degree: Post-Doc in Database Architectures
+    - degree: Post-Doc in Database Architectures
       university: Centrum Wiskunde en Informatica (CWI)
       time: 2021 - Now
 

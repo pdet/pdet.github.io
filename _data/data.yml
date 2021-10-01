@@ -58,7 +58,7 @@ experiences:
     - role: (C++/Python) DBMS Software Engineer
       time: 2021 - Current
       company: <a href="https://duckdblabs.com/">DuckDB Labs</a>, The Netherlands
-      details: DuckDB is an Open-Source OLAP Embedded DBMS. You can check my public PRs <a href="https://github.com/cwida/duckdb/pulls?q=author%3Apdet+">here</a>.
+      details: <a href="https://duckdblabs.oeg/">DuckDB</a> is an Open-Source OLAP Embedded DBMS. You can check my public PRs <a href="https://github.com/cwida/duckdb/pulls?q=author%3Apdet+">here</a>.
  
     - role: (C/C++) Data Management Intern
       time: 2019

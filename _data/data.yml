@@ -73,9 +73,12 @@ publications:
     title: Blog Posts
 
     papers:
-      - title: <a href="https://duckdb.org/2021/11/26/duck-enum.html">DuckDB - The Lord of Enums: The Fellowship of the Categorical and Factors.</a>
+      - title: "DuckDB - The Lord of Enums: The Fellowship of the Categorical and Factors."
+        authors:  <a href="https://duckdb.org/2021/11/26/duck-enum.html"> [Here]</a>
         date: 2021
-      - title: <a href="https://www.monetdb.org/blog/interactive-debugging-python-udf">MonetDB - Interactive Debugging for Python UDFs</a>
+        
+      - title: "MonetDB - Interactive Debugging for Python UDFs"
+        authors:  <a href="https://www.monetdb.org/blog/interactive-debugging-python-udf"> [Here]</a>
         date: 2017
    
 

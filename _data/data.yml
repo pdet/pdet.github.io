@@ -70,27 +70,16 @@ experiences:
 
 publications:
   
-    title: Blog Posts
+    title: Publications
 
     papers:
       - title: "DuckDB - The Lord of Enums: The Fellowship of the Categorical and Factors."
         authors:  <a href="https://duckdb.org/2021/11/26/duck-enum.html"> [Here]</a>
         date: 2021
-        
-      - title: "MonetDB - Interactive Debugging for Python UDFs"
-        authors:  <a href="https://www.monetdb.org/blog/interactive-debugging-python-udf"> [Here]</a>
-        date: 2017
-   
 
-publications:
-  
-    title: Publications
-
-    papers:
       - title: "Progressive Indexes"
         authors:  <b>Pedro Holanda</b>
         conference: PhD Thesis @ Leiden University/CWI <a href="https://ir.cwi.nl/pub/31048">[PDF]</a>
-        date: 2021
 
       - title: "Progressive Mergesort: Merging Batches of Appends into Progressive Indexes"
         authors:  <b>Pedro Holanda</b>  and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
@@ -139,6 +128,9 @@ publications:
         authors:  <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, and <a href="https://en.wikipedia.org/wiki/Martin_L._Kersten">Martin Kersten</a>
         conference: SBBD <a href="assets/papers/udf_hostage.pdf">[PDF]</a> <a href="https://github.com/gijzelaerr/pymonetdb">[SOURCE CODE]</a>
         date: 2017
+
+      - title: "MonetDB - Interactive Debugging for Python UDFs"
+        authors:  <a href="https://www.monetdb.org/blog/interactive-debugging-python-udf"> [Here]</a>
 
       - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking."
         authors:  <b>Pedro Holanda</b> and <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>

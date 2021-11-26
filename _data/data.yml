@@ -68,6 +68,16 @@ experiences:
       time: 2014 - 2016
       company: <a href="http://greenmile.com/en/home-en/">Greenmile</a>, Brazil
 
+publications:
+  
+    title: Blog Posts
+
+    papers:
+      - title: <a href="https://duckdb.org/2021/11/26/duck-enum.html">DuckDB - The Lord of Enums: The Fellowship of the Categorical and Factors.</a>
+        date: 2021
+      - title: <a href="https://www.monetdb.org/blog/interactive-debugging-python-udf">MonetDB - Interactive Debugging for Python UDFs</a>
+        date: 2017
+   
 
 publications:
   

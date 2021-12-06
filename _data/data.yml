@@ -73,9 +73,13 @@ publications:
     title: Publications
 
     papers:
+      - title: "DuckDB quacks Arrow: A zero-copy data integration between Apache Arrow and DuckDB."
+        authors:  <b>Pedro Holanda</b> and Jonathan Keane 
+        conference: <a href="https://duckdb.org/2021/12/03/duck-arrow.html"> [Here]</a>
+        date: 2021
+
       - title: "DuckDB - The Lord of Enums: The Fellowship of the Categorical and Factors."
         authors:  <a href="https://duckdb.org/2021/11/26/duck-enum.html"> [Here]</a>
-        date: 2021
 
       - title: "Progressive Indexes"
         authors:  <b>Pedro Holanda</b>

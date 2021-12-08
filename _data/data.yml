@@ -70,16 +70,17 @@ experiences:
 
 publications:
   
-    title: Publications
+    title: Scientific Publications & Blogposts
 
     papers:
       - title: "DuckDB quacks Arrow: A zero-copy data integration between Apache Arrow and DuckDB."
         authors:  <b>Pedro Holanda</b> and Jonathan Keane 
-        conference: <a href="https://duckdb.org/2021/12/03/duck-arrow.html"> [Here]</a>
+        conference: DuckDB Blog <a href="https://duckdb.org/2021/12/03/duck-arrow.html"> [Here]</a>
         date: 2021
 
       - title: "DuckDB - The Lord of Enums: The Fellowship of the Categorical and Factors."
-        authors:  <a href="https://duckdb.org/2021/11/26/duck-enum.html"> [Here]</a>
+        authors:  <b>Pedro Holanda</b> 
+        conference: DuckDB Blog <a href="https://duckdb.org/2021/11/26/duck-enum.html"> [Here]</a>
 
       - title: "Progressive Indexes"
         authors:  <b>Pedro Holanda</b>
@@ -134,7 +135,8 @@ publications:
         date: 2017
 
       - title: "MonetDB - Interactive Debugging for Python UDFs"
-        authors:  <a href="https://www.monetdb.org/blog/interactive-debugging-python-udf"> [Here]</a>
+        authors:  <b>Pedro Holanda</b>
+        conference: MonetDB Blog <a href="https://www.monetdb.org/blog/interactive-debugging-python-udf"> [Here]</a>
 
       - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking."
         authors:  <b>Pedro Holanda</b> and <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>

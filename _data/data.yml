@@ -73,10 +73,14 @@ publications:
     title: Scientific Publications & Blogposts
 
     papers:
+      - title: "Scrooge McDuck: A DuckDB Extension for Financial Data Analysis (Demo)"
+        authors:  <b>Pedro Holanda</b>
+        conference: Blog <a href="https://pdet-blog.github.io/2022/08/16/scrooge.html"> [Here]</a>
+        date: 2022
+
       - title: "Persistent Storage of Adaptive Radix Trees in DuckDB."
         authors:  <b>Pedro Holanda</b>
         conference: DuckDB Blog <a href="https://duckdb.org/2022/07/27/art-storage.html"> [Here]</a>
-        date: 2022
 
       - title: "DuckDB quacks Arrow: A zero-copy data integration between Apache Arrow and DuckDB."
         authors:  <b>Pedro Holanda</b> and Jonathan Keane 

@@ -55,10 +55,14 @@ education:
 
 experiences:
 
-    - role: (C++/Python) DBMS Software Engineer
-      time: 2021 - Current
+    - role: Chief of Operations
+      time: 2022 - Now
       company: <a href="https://duckdblabs.com/">DuckDB Labs</a>, The Netherlands
-      details: <a href="https://duckdblabs.oeg/">DuckDB</a> is an Open-Source OLAP Embedded DBMS. You can check my public PRs <a href="https://github.com/cwida/duckdb/pulls?q=author%3Apdet+">here</a>.
+      details: <a href="https://duckdblabs.oeg/">DuckDB</a> is an Open-Source OLAP Embedded DBMS. I'm currently overseeing day-to-day operations at DuckDB Labs. While also continuing C++ development in DuckDB. You can check my public PRs <a href="https://github.com/cwida/duckdb/pulls?q=author%3Apdet+">here</a>.
+ 
+    - role: (C++/Python) DBMS Software Engineer
+      time: 2021 - 2022
+      company: <a href="https://duckdblabs.com/">DuckDB Labs</a>, The Netherlands
  
     - role: (C/C++) Data Management Intern
       time: 2019

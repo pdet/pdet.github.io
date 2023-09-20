@@ -9,7 +9,7 @@ sidebar:
 
     # Profile information
     name: <b>Pedro Holanda</b>
-    tagline: COO @ DuckDB Labs
+    tagline: Software Engineer @ DuckDB
     avatar: profile.jpg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -34,12 +34,13 @@ sidebar:
 
 career-profile:
     title: Career Profile
-    summary: I'm a Post-Doc based in Amsterdam and a member of the Database Architecture group at CWI. I'm currently working as COO @ DuckDB Labs.
-    
+    summary: I am one of the core developers of DuckDB. My first commit was made within the first few months of the project, and I currently rank among the top three contributors to the project. I have worked on various aspects of DuckDB, including DBMS Core (e.g., zonemaps, indexes, joins, optimizer, scans, and more), integration projects (e.g., Arrow and ADBC), plan serialization (i.e., Substrait), and client APIs (i.e., Python). All of these contributions have public pull requests available.
+    On the soft skill side, I have authored numerous technical blog posts and scientific papers, some of which you can find linked on this page. Additionally, I have experience as a public speaker, with many videos published on YouTube, some of which can be accessed through this page.
+
 education:
     - degree: Post-Doc in Database Architectures
       university: Centrum Wiskunde en Informatica (CWI)
-      time: 2021 - Now
+      time: 2021 - 2023
 
     - degree: PhD Candidate in Computer Science
       university: Centrum Wiskunde en Informatica (CWI)
@@ -54,13 +55,15 @@ education:
       time: 2010 - 2014
 
 experiences:
+    - role: Software Engineer
+      time: 2023 - Now
+      company: <a href="https://duckdblabs.com/">DuckDB Labs</a>, The Netherlands
 
     - role: Chief of Operations
-      time: 2022 - Now
+      time: 2022 - 2023
       company: <a href="https://duckdblabs.com/">DuckDB Labs</a>, The Netherlands
-      details: <a href="https://duckdblabs.oeg/">DuckDB</a> is an Open-Source OLAP Embedded DBMS. I'm currently overseeing day-to-day operations at DuckDB Labs. While also continuing C++ development in DuckDB. You can check my public PRs <a href="https://github.com/cwida/duckdb/pulls?q=author%3Apdet+">here</a>.
  
-    - role: (C++/Python) DBMS Software Engineer
+    - role: Software Engineer
       time: 2021 - 2022
       company: <a href="https://duckdblabs.com/">DuckDB Labs</a>, The Netherlands
  
@@ -69,10 +72,37 @@ experiences:
       company: <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, US
 
 publications:
+
+    title: Video Presentations
+
+    papers:
+      - title: "DuckDB: Bringing analytical SQL directly to your Python shell"
+        conference: <a href="https://www.youtube.com/watch?v=2i2nyodhGkk&ab_channel=PyData"> [Here]</a>
+
+      - title: " DuckDB Extensions"
+        conference: <a href="https://www.youtube.com/watch?v=UKo_LQyLTko&ab_channel=DuckDB"> [Here]</a>
+      
+      - title: " DuckDB: O Banco de Dados Analítico de Alta Velocidade"
+        conference: <a href="https://www.youtube.com/watch?v=n0npcfsZvnk&ab_channel=RodrigoTeORiA"> [Here]</a>
+
+    title: Podcasts
+
+    papers:
+      - title: "DuckDB - All the benefits of a database, none of the hassle"
+        conference: <a href="https://www.inspiringcomputing.com/2107763/12627309"> [Here]</a>
   
     title: Scientific Publications & Blogposts
 
     papers:
+      - title: "DuckDB ADBC - Zero-Copy data transfer via Arrow Database Connectivity"
+        authors:  <b>Pedro Holanda</b>
+        conference: DuckDB Blog <a href="https://duckdb.org/2023/08/04/adbc.html"> [Here]</a>
+        date: 2023
+
+      - title: "From Waddle to Flying: Quickly expanding DuckDB's functionality with Scalar Python UDFs."
+        authors:  <b>Pedro Holanda</b>
+        conference: DuckDB Blog <a href="https://duckdb.org/2023/07/07/python-udf.html"> [Here]</a>
+
       - title: "Scrooge McDuck: A DuckDB Extension for Financial Data Analysis (Demo)"
         authors:  <b>Pedro Holanda</b>
         conference: Blog <a href="https://pdet-blog.github.io/2022/08/16/scrooge.html"> [Here]</a>

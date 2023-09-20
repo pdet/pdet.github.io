@@ -9,7 +9,7 @@ sidebar:
 
     # Profile information
     name: <b>Pedro Holanda</b>
-    tagline: Software Engineer @ DuckDB
+    tagline: COO @ DuckDB Labs
     avatar: profile.jpg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -33,15 +33,15 @@ sidebar:
         level: Fluent
 
 career-profile:
-    title: Intro
-    summary: I am one of the core developers of DuckDB. <br> My first commit was made within the first few months of the project, and I currently rank among the top three contributors to the project.
-
+    title: Career Profile
+    summary: I'm a Post-Doc based in Amsterdam and a member of the Database Architecture group at CWI. I'm currently working as COO @ DuckDB Labs.
+    
 education:
     - degree: Post-Doc in Database Architectures
       university: Centrum Wiskunde en Informatica (CWI)
-      time: 2021 - 2023
+      time: 2021 - Now
 
-    - degree: PhD Candidate in Database Architectures
+    - degree: PhD Candidate in Computer Science
       university: Centrum Wiskunde en Informatica (CWI)
       time: 2017 - 2021
 
@@ -54,36 +54,25 @@ education:
       time: 2010 - 2014
 
 experiences:
-    - role: Software Engineer
-      time: 2023 - Now
-      company: <a href="https://duckdblabs.com/">DuckDB Labs</a>, The Netherlands
 
     - role: Chief of Operations
-      time: 2022 - 2023
+      time: 2022 - Now
       company: <a href="https://duckdblabs.com/">DuckDB Labs</a>, The Netherlands
+      details: <a href="https://duckdblabs.oeg/">DuckDB</a> is an Open-Source OLAP Embedded DBMS. I'm currently overseeing day-to-day operations at DuckDB Labs. While also continuing C++ development in DuckDB. You can check my public PRs <a href="https://github.com/cwida/duckdb/pulls?q=author%3Apdet+">here</a>.
  
-    - role: Software Engineer
+    - role: (C++/Python) DBMS Software Engineer
       time: 2021 - 2022
       company: <a href="https://duckdblabs.com/">DuckDB Labs</a>, The Netherlands
  
     - role: (C/C++) Data Management Intern
       time: 2019
       company: <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, US
- 
- publications: 
-    
+
+publications:
+  
     title: Scientific Publications & Blogposts
 
     papers:
-      - title: "DuckDB ADBC - Zero-Copy data transfer via Arrow Database Connectivity"
-        authors:  <b>Pedro Holanda</b>
-        conference: DuckDB Blog <a href="https://duckdb.org/2023/08/04/adbc.html"> [Here]</a>
-        date: 2023
-
-      - title: "From Waddle to Flying: Quickly expanding DuckDB's functionality with Scalar Python UDFs."
-        authors:  <b>Pedro Holanda</b>
-        conference: DuckDB Blog <a href="https://duckdb.org/2023/07/07/python-udf.html"> [Here]</a>
-
       - title: "Scrooge McDuck: A DuckDB Extension for Financial Data Analysis (Demo)"
         authors:  <b>Pedro Holanda</b>
         conference: Blog <a href="https://pdet-blog.github.io/2022/08/16/scrooge.html"> [Here]</a>
@@ -137,10 +126,6 @@ experiences:
         conference: VLDB (Ph.D. Worskhop)  <a href="assets/papers/VLDB_PhD_Workshop_2018.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a>
         date: 2018
 
-      - title: "Cracking KD-Tree: The First Multidimensional Adaptive Indexing."
-        authors:  <b>Pedro Holanda</b>, <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
-        conference: DATA (EDDY) <a href="assets/papers/MultCracking.pdf">[PDF]</a> <a href="https://github.com/pdet/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
-
       - title: "Fair Benchmarking Considered Difficult:Common Pitfalls In Database Performance Testing."
         authors:  <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <b>Pedro Holanda</b>, <a href="https://t1mm3.github.io/">Tim Gubner</a>, and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
         conference: SIGMOD (DbTest) <a href="assets/papers/benchmarking.pdf">[PDF]</a> <a href="https://github.com/pdet/FairBenchmarking">[SOURCE CODE]</a>
@@ -148,36 +133,3 @@ experiences:
       - title: "Deep Integration of Machine Learning Into Column Stores."
         authors:  <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <b>Pedro Holanda</b>, <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> 
         conference: EDBT <a href="assets/papers/deep_learning_column_store.pdf">[PDF]</a> <a href="https://github.com/pdet/VoterClassification">[SOURCE CODE]</a>
-
-      - title: "Don't Hold My UDFs Hostage - Exporting UDFs for Debugging Purposes."
-        authors:  <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, and <a href="https://en.wikipedia.org/wiki/Martin_L._Kersten">Martin Kersten</a>
-        conference: SBBD <a href="assets/papers/udf_hostage.pdf">[PDF]</a> <a href="https://github.com/gijzelaerr/pymonetdb">[SOURCE CODE]</a>
-        date: 2017
-
-      - title: "MonetDB - Interactive Debugging for Python UDFs"
-        authors:  <b>Pedro Holanda</b>
-        conference: MonetDB Blog <a href="https://www.monetdb.org/blog/interactive-debugging-python-udf"> [Here]</a>
-
-      - title: "SPST-Index : A Self-Pruning Splay Tree Index for Caching Database Cracking."
-        authors:  <b>Pedro Holanda</b> and <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>
-        conference: EDBT <a href="assets/papers/SPST.pdf">[PDF]</a> <a href="https://github.com/pdet/SPST">[SOURCE CODE]</a>
-
-      - title: "Finding and Fixing Type Mismatches in the Evolution of Object-NoSQL Mappings."
-        authors:  <a href="https://sites.google.com/site/stefaniescherzinger/">Stefanie Scherzinger</a>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, <a href="http://www.thomascerqueus.fr/">Thomas Cerqueus</a>, Leandro Almeida, and <b>Pedro Holanda</b>
-        conference: EDBT (DIACHRON) <a href="assets/papers/controvol.pdf">[PDF]</a></span><a href="https://github.com/pdet/controvol">[SOURCE CODE]</a>
-        date: 2016
-
-      - title: "Improving Index Maintenance Using Decision Analysis."
-        authors:  <b>Pedro Holanda</b>, <a href="http://www.mdcc.ufc.br/component/content/article/34-fixo/382">João Pordeus</a>, <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4760808E0">José Monteiro</a>, <a href="https://cc.ufc.br/curso/corpo-docente/brayner/">Angelo Brayner</a>, and <a href="http://www-di.inf.puc-rio.br/~sergio/">Sérgio Lifschitz</a>
-        conference: JIDM <a href="assets/papers/index_maintenance.pdf">[PDF]</a> <a href="https://github.com/pdet/DSIM">[SOURCE CODE]</a>
-        date: 2013
-
-      - title: "Proactive Index Maintenance : Using Prediction Models for Improving Index Maintenance in Databases."
-        authors:  André Medeiros, Aristénio Saraiva, Gustavo Campos, <b>Pedro Holanda</b>, <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4760808E0">José Monteiro</a>, <a href="https://cc.ufc.br/curso/corpo-docente/brayner/">Angelo Brayner</a>, and <a href="http://www-di.inf.puc-rio.br/~sergio/">Sérgio Lifschitz</a>
-        conference: JIDM <a href="assets/papers/proactiveindexmaintenance.pdf">[PDF]</a> <a href="https://github.com/pdet/DSIM">[SOURCE CODE]</a>
-        date: 2012
-
-      - title: "dBest: Um Framework para Avaliação de Desempenho de Bancos de Dados."
-        authors:  Lucas Lemos, <b>Pedro Holanda</b> and <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4760808E0">José Monteiro</a>
-        conference: SBBD <a href="assets/papers/dbest.pdf">[PDF]</a> <a href="https://github.com/pdet/dbest">[SOURCE CODE]</a>
-        date: 2011

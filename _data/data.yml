@@ -34,7 +34,7 @@ sidebar:
 
 career-profile:
     title: Intro
-    summary: I am one of the core developers of DuckDB. <br> My first commit was made within the first few months of the project, and I currently rank among the top three contributors to the project. <br>  I have worked on various aspects of DuckDB, including <br>DBMS Core (e.g., zonemaps, indexes, joins, optimizer, scans, and more). <br> Integration projects (e.g., Arrow and ADBC). <br> Plan serialization (i.e., Substrait), <br>Client APIs (i.e., Python). <br> All of these contributions have public pull requests available. <br> On the soft skill side, I have authored numerous technical blog posts and scientific papers, some of which you can find linked on this page. <br> Additionally, I have experience as a public speaker, with many videos published on YouTube, some of which can be accessed through this page.
+    summary: I am one of the core developers of DuckDB. <br> My first commit was made within the first few months of the project, and I currently rank among the top three contributors to the project.
 
 education:
     - degree: Post-Doc in Database Architectures
@@ -71,6 +71,7 @@ experiences:
       company: <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, US
  
  publications: 
+    
     title: Scientific Publications & Blogposts
 
     papers:

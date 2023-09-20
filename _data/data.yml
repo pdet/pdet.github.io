@@ -34,8 +34,7 @@ sidebar:
 
 career-profile:
     title: Career Profile
-    summary: I am one of the core developers of DuckDB. My first commit was made within the first few months of the project, and I currently rank among the top three contributors to the project. I have worked on various aspects of DuckDB, including DBMS Core (e.g., zonemaps, indexes, joins, optimizer, scans, and more), integration projects (e.g., Arrow and ADBC), plan serialization (i.e., Substrait), and client APIs (i.e., Python). All of these contributions have public pull requests available.
-    On the soft skill side, I have authored numerous technical blog posts and scientific papers, some of which you can find linked on this page. Additionally, I have experience as a public speaker, with many videos published on YouTube, some of which can be accessed through this page.
+    summary: I am one of the core developers of DuckDB. My first commit was made within the first few months of the project, and I currently rank among the top three contributors to the project. I have worked on various aspects of DuckDB, including DBMS Core (e.g., zonemaps, indexes, joins, optimizer, scans, and more), integration projects (e.g., Arrow and ADBC), plan serialization (i.e., Substrait), and client APIs (i.e., Python). All of these contributions have public pull requests available. åOn the soft skill side, I have authored numerous technical blog posts and scientific papers, some of which you can find linked on this page. Additionally, I have experience as a public speaker, with many videos published on YouTube, some of which can be accessed through this page.
 
 education:
     - degree: Post-Doc in Database Architectures
@@ -72,6 +71,24 @@ experiences:
       company: <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a>, US
 
 publications:
+
+    title: Video Presentations
+
+    papers:
+      - title: "DuckDB: Bringing analytical SQL directly to your Python shell"
+        conference: <a href="https://www.youtube.com/watch?v=2i2nyodhGkk&ab_channel=PyData"> [Here]</a>
+
+      - title: " DuckDB Extensions"
+        conference: <a href="https://www.youtube.com/watch?v=UKo_LQyLTko&ab_channel=DuckDB"> [Here]</a>
+      
+      - title: " DuckDB: O Banco de Dados Analítico de Alta Velocidade"
+        conference: <a href="https://www.youtube.com/watch?v=n0npcfsZvnk&ab_channel=RodrigoTeORiA"> [Here]</a>
+
+    title: Podcasts
+
+    papers:
+      - title: "DuckDB - All the benefits of a database, none of the hassle"
+        conference: <a href="https://www.inspiringcomputing.com/2107763/12627309"> [Here]</a>
   
     title: Scientific Publications & Blogposts
 

@@ -41,7 +41,7 @@ education:
       university: Centrum Wiskunde en Informatica (CWI)
       time: 2021 - 2023
 
-    - degree: PhD Candidate in Computer Science
+    - degree: PhD Candidate in Database Architectures
       university: Centrum Wiskunde en Informatica (CWI)
       time: 2017 - 2021
 
@@ -84,12 +84,14 @@ publications:
       - title: " DuckDB: O Banco de Dados Analítico de Alta Velocidade"
         conference: <a href="https://www.youtube.com/watch?v=n0npcfsZvnk&ab_channel=RodrigoTeORiA"> [Here]</a>
 
+publications:
     title: Podcasts
 
     papers:
       - title: "DuckDB - All the benefits of a database, none of the hassle"
         conference: <a href="https://www.inspiringcomputing.com/2107763/12627309"> [Here]</a>
-  
+ 
+ publications: 
     title: Scientific Publications & Blogposts
 
     papers:

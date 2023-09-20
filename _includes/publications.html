@@ -2,22 +2,21 @@
 {% if publications %}
 <section class="section publications-section">
 
-  {% for pubs in publications %}
   <h2 class="section-title">
     <span class="fa-stack fa-xs">
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
     </span>
-    {{ pubs.title }}
+    {{ publications.title }}
   </h2>
 
-  {% if pubs.intro %}
+  {% if publications.intro %}
   <div class="intro">
-    {{ pubs.intro | markdownify }}
+    {{ publications.intro | markdownify }}
   </div><!--//intro-->
   {% endif %}
 
-  {% for publication in pubs.papers %}
+  {% for publication in publications.papers %}
   {% if publication.date %}
   <h3> {{publication.date}} </h3>
   {% endif %}
@@ -27,6 +26,6 @@
     <div class="publication-conference">{{ publication.conference }}</div>
   </div><!--//item-->
   {% endfor %}
-{% endfor %}
+
 </section><!--//section-->
 {% endif %}

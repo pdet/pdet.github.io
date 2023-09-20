@@ -1,5 +1,5 @@
 {% assign publications = site.data.data.publications %}
-{% if publications %}
+{% for pubs in publications %}
 <section class="section publications-section">
 
   <h2 class="section-title">
@@ -7,16 +7,16 @@
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
     </span>
-    {{ publications.title }}
+    {{ pubs.title }}
   </h2>
 
-  {% if publications.intro %}
+  {% if pubs.intro %}
   <div class="intro">
-    {{ publications.intro | markdownify }}
+    {{ pubs.intro | markdownify }}
   </div><!--//intro-->
   {% endif %}
 
-  {% for publication in publications.papers %}
+  {% for publication in pubs.papers %}
   {% if publication.date %}
   <h3> {{publication.date}} </h3>
   {% endif %}

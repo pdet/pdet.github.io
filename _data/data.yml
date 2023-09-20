@@ -33,8 +33,8 @@ sidebar:
         level: Fluent
 
 career-profile:
-    title: Career Profile
-    summary: I am one of the core developers of DuckDB. My first commit was made within the first few months of the project, and I currently rank among the top three contributors to the project. <br>  I have worked on various aspects of DuckDB, including DBMS Core (e.g., zonemaps, indexes, joins, optimizer, scans, and more), integration projects (e.g., Arrow and ADBC), plan serialization (i.e., Substrait), and client APIs (i.e., Python). <br> All of these contributions have public pull requests available. <br> On the soft skill side, I have authored numerous technical blog posts and scientific papers, some of which you can find linked on this page. <br> Additionally, I have experience as a public speaker, with many videos published on YouTube, some of which can be accessed through this page.
+    title: Intro
+    summary: I am one of the core developers of DuckDB. <br> My first commit was made within the first few months of the project, and I currently rank among the top three contributors to the project. <br>  I have worked on various aspects of DuckDB, including <br>DBMS Core (e.g., zonemaps, indexes, joins, optimizer, scans, and more). <br> Integration projects (e.g., Arrow and ADBC). <br> Plan serialization (i.e., Substrait), <br>Client APIs (i.e., Python). <br> All of these contributions have public pull requests available. <br> On the soft skill side, I have authored numerous technical blog posts and scientific papers, some of which you can find linked on this page. <br> Additionally, I have experience as a public speaker, with many videos published on YouTube, some of which can be accessed through this page.
 
 education:
     - degree: Post-Doc in Database Architectures

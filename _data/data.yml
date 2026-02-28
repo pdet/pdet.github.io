@@ -28,9 +28,9 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      I helped build <a href="https://duckdb.org">DuckDB</a> from a research prototype at CWI Amsterdam into one of the most widely adopted analytical databases in the world — 36k+ GitHub stars, 28M+ monthly downloads, and embedded across the modern data stack.
-      As one of the earliest contributors, I served as Chief Operating Officer (COO) of <a href="https://duckdblabs.com">DuckDB Labs</a> from 2021 to 2023, scaling the company from a small research spinoff into a leading open-source database company. I now lead core infrastructure as Principal Engineer, driving the CSV Reader/Sniffer, <a href="https://github.com/duckdb/ducklake">DuckLake</a>, Arrow & ADBC integration, and the Extension framework.
-      Previously a research intern at Microsoft Research — one of the most selective research programs in industry. Published at VLDB and ICDE, the top peer-reviewed venues in database research. PhD from CWI/Leiden University.
+      I helped build <a href="https://duckdb.org">DuckDB</a> from a research prototype at CWI Amsterdam into one of the most widely adopted analytical databases in the world, with 36k+ GitHub stars, 28M+ monthly downloads, and embedded across the modern data stack.
+      As one of the earliest contributors, I served as Chief Operating Officer (COO) of <a href="https://duckdblabs.com">DuckDB Labs</a> from 2021 to 2023, helping scale the company from a small research spinoff into a leading open-source database company. I now lead core infrastructure as Principal Engineer, helping drive the core of DuckDB and <a href="https://github.com/duckdb/ducklake">DuckLake</a>.
+      Previously a research intern at Microsoft Research, one of the most selective research programs in industry. Published at VLDB and ICDE, the top peer-reviewed venues in database research. PhD from CWI/Leiden University.
 
 education:
     - degree: PhD in Computer Science
@@ -50,7 +50,7 @@ experiences:
       time: 2025 - Present
       company: DuckDB Labs, Amsterdam
       details: |
-        Leading the development of core database infrastructure in [DuckDB](https://github.com/duckdb/duckdb), the open-source analytical database with 36k+ stars and 28M+ monthly downloads. Driving the CSV Reader/Sniffer, [DuckLake](https://github.com/duckdb/ducklake), and the Extension framework.
+        Leading the development of core database infrastructure in [DuckDB](https://github.com/duckdb/duckdb), the open-source analytical database with 36k+ stars and 28M+ monthly downloads. Helping drive the core of DuckDB and [DuckLake](https://github.com/duckdb/ducklake).
 
     - role: Software Engineer
       time: 2023 - 2025
@@ -62,7 +62,7 @@ experiences:
       time: 2021 - 2023
       company: DuckDB Labs, Amsterdam
       details: |
-        Co-built the operational foundation of DuckDB Labs during its critical zero-to-one phase — scaling the company from a research spinoff at CWI into a leading open-source database company. Built the organizational and commercial infrastructure while simultaneously shipping core database features including the Arrow integration, Enum/Dictionary encoding, ART Persistent Storage, BIGNUM, Python client, index joins, and zone maps.
+        Helped grow DuckDB Labs during its early phase, from a small research spinoff at CWI into a leading open-source database company. Contributed to core DuckDB development including the Arrow integration, Enum/Dictionary encoding, ART Persistent Storage, BIGNUM, Python client, index joins, and zone maps.
 
     - role: Post-Doctoral Researcher
       time: 2021 - 2022

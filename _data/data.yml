@@ -8,7 +8,8 @@ sidebar:
     education: True # set to False if you want education in main section instead of in sidebar
 
     # Profile information
-    name: <b>Dr. Pedro Holanda</b>
+    name: Dr. Pedro Holanda
+    tagline: "Principal Engineer @ DuckDB Labs"
     avatar: profile.jpg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -24,18 +25,12 @@ sidebar:
     #codewars:
     #goodreads: # Number-Username, e.g. 123456-alandoe
 
-    languages:
-      - idiom: Portuguese
-        level: Native
-
-      - idiom: English
-        level: Fluent
-
 career-profile:
     title: Career Profile
     summary: |
-      Principal Engineer @ <a href="https://duckdblabs.com">DuckDB Labs</a> and early core contributor to <a href="https://duckdb.org">DuckDB</a>, the fastest growing open-source analytical database management system.
-      I build core database infrastructure including the CSV Reader/Sniffer, ART Persistent Storage, Arrow & ADBC integration, Enum types, and the Extension framework.
+      I helped build <a href="https://duckdb.org">DuckDB</a> from a research prototype at CWI Amsterdam into one of the most widely adopted analytical databases in the world — 36k+ GitHub stars, 28M+ monthly downloads, and embedded across the modern data stack.
+      As one of the earliest contributors, I served as Chief Operating Officer (COO) of <a href="https://duckdblabs.com">DuckDB Labs</a> from 2021 to 2023, scaling the company from a small research spinoff into a leading open-source database company. I now lead core infrastructure as Principal Engineer, driving the CSV Reader/Sniffer, <a href="https://github.com/duckdb/ducklake">DuckLake</a>, Arrow & ADBC integration, and the Extension framework.
+      Previously a research intern at Microsoft Research — one of the most selective research programs in industry. Published at VLDB and ICDE, the top peer-reviewed venues in database research. PhD from CWI/Leiden University.
 
 education:
     - degree: PhD in Computer Science
@@ -55,7 +50,7 @@ experiences:
       time: 2025 - Present
       company: DuckDB Labs, Amsterdam
       details: |
-        Leading the development of core database infrastructure in [DuckDB](https://github.com/duckdb/duckdb). Driving the CSV Reader/Sniffer, [DuckLake](https://github.com/duckdb/ducklake), and the Extension framework.
+        Leading the development of core database infrastructure in [DuckDB](https://github.com/duckdb/duckdb), the open-source analytical database with 36k+ stars and 28M+ monthly downloads. Driving the CSV Reader/Sniffer, [DuckLake](https://github.com/duckdb/ducklake), and the Extension framework.
 
     - role: Software Engineer
       time: 2023 - 2025
@@ -63,42 +58,66 @@ experiences:
       details: |
         Built and maintained core DuckDB subsystems including the parallel CSV Reader & Sniffer, ART Persistent Storage, Arrow & ADBC integration (~38x faster than ODBC), Enum/Dictionary encoding, BIGNUM implementation, Python client, index joins, and zone maps.
 
-        **Selected Talks:**
-        - [Efficient CSV Parsing: On the Complexity of Simple Things](https://www.youtube.com/watch?v=YrqSp8m7fmk) — DSDSD 2024
-        - [DuckDB: Bringing Analytical SQL Directly to Your Python Shell](https://www.youtube.com/watch?v=egN4TwVyJss) — EuroPython 2023
-        - [DuckDB: Bringing Analytical SQL Directly to Your Python Shell](https://www.youtube.com/watch?v=-rCZQHXSunc) — FOSDEM 2023
-        - [DuckDB Extensions](https://www.youtube.com/watch?v=UKo_LQyLTko) — DuckCon #2, Brussels 2023
-        - [Data Analysis with DuckDB](https://www.youtube.com/watch?v=f8OsHWvCQw4) — J on the Beach 2023
-        - [DuckLake (Portuguese)](https://www.youtube.com/watch?v=QSVucNH-3Xg)
-        - [DuckDB: O Banco de Dados Analítico de Alta Velocidade (Portuguese)](https://www.youtube.com/watch?v=n0npcfsZvnk)
-
-        **Podcast:**
-        - [DuckDB — All the Benefits of a Database, None of the Hassle](https://www.inspiringcomputing.com/2107763/episodes/12627309-duckdb-all-the-benefits-of-a-database-none-of-the-hassle) — Inspiring Computing, 2023
-
     - role: Chief Operating Officer (COO)
       time: 2021 - 2023
       company: DuckDB Labs, Amsterdam
       details: |
-        Led day-to-day operations at DuckDB Labs during its early growth phase while also contributing to core DuckDB development, including the Arrow integration, Enum/Dictionary encoding, ART general implementation & Persistent Storage, BIGNUM, Python client, index joins, and zone maps.
+        Co-built the operational foundation of DuckDB Labs during its critical zero-to-one phase — scaling the company from a research spinoff at CWI into a leading open-source database company. Built the organizational and commercial infrastructure while simultaneously shipping core database features including the Arrow integration, Enum/Dictionary encoding, ART Persistent Storage, BIGNUM, Python client, index joins, and zone maps.
 
     - role: Post-Doctoral Researcher
       time: 2021 - 2022
       company: Centrum Wiskunde en Informatica (CWI), Amsterdam
       details: |
-        Database Architectures group. Research on progressive indexing and analytical database systems.
+        Database Architectures group. Research on progressive indexing and analytical database systems. Early DuckDB development alongside the core research team that created the project.
 
     - role: Research Intern
-      time: 2019 (4 months)
+      time: 2019
       company: Microsoft Research, Redmond
       details: |
-        DMX group. Worked on an experimental JIT-compiled execution engine for analytics in SQL Server.
+        DMX group (4-month internship). Designed and implemented an experimental JIT-compiled execution engine for analytical query processing in SQL Server, working directly with the SQL Server team on next-generation query execution. Microsoft Research is one of the most selective research internship programs in the world.
+
+talks:
+    title: Talks & Media
+    intro: "Speaker at FOSDEM, EuroPython, and international data conferences."
+    items:
+      - title: "Efficient CSV Parsing: On the Complexity of Simple Things"
+        link: "https://www.youtube.com/watch?v=YrqSp8m7fmk"
+        venue: DSDSD 2024
+
+      - title: "DuckDB: Bringing Analytical SQL Directly to Your Python Shell"
+        link: "https://www.youtube.com/watch?v=egN4TwVyJss"
+        venue: "EuroPython 2023 — one of the world's largest Python conferences"
+
+      - title: "DuckDB: Bringing Analytical SQL Directly to Your Python Shell"
+        link: "https://www.youtube.com/watch?v=-rCZQHXSunc"
+        venue: "FOSDEM 2023 — one of the largest open-source conferences in the world"
+
+      - title: "DuckDB Extensions"
+        link: "https://www.youtube.com/watch?v=UKo_LQyLTko"
+        venue: "DuckCon #2, Brussels 2023"
+
+      - title: "Data Analysis with DuckDB"
+        link: "https://www.youtube.com/watch?v=f8OsHWvCQw4"
+        venue: J on the Beach 2023
+
+      - title: "DuckLake (Portuguese)"
+        link: "https://www.youtube.com/watch?v=QSVucNH-3Xg"
+        venue: Talk
+
+      - title: "DuckDB: O Banco de Dados Analítico de Alta Velocidade (Portuguese)"
+        link: "https://www.youtube.com/watch?v=n0npcfsZvnk"
+        venue: Talk
+
+      - title: "DuckDB — All the Benefits of a Database, None of the Hassle"
+        link: "https://www.inspiringcomputing.com/2107763/episodes/12627309-duckdb-all-the-benefits-of-a-database-none-of-the-hassle"
+        venue: Inspiring Computing Podcast, 2023
 
 projects:
     title: Open Source Projects
     assignments:
       - title: DuckDB
         link: "https://github.com/duckdb/duckdb"
-        tagline: "An analytical in-process SQL database management system (36k+ stars). Core contributor since inception."
+        tagline: "The open-source analytical in-process database (36k+ stars, 28M+ monthly downloads). Core contributor since inception."
 
       - title: DuckLake
         link: "https://github.com/duckdb/ducklake"
@@ -110,9 +129,35 @@ projects:
 
 publications:
 
-    title: Blog Posts & Selected Publications
+    title: Selected Publications
+    intro: "Published at VLDB, ICDE, and SIGMOD — the leading peer-reviewed venues in database systems research."
 
     papers:
+      - title: "Progressive Indexes: Indexing for Interactive Data Analysis"
+        authors: <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
+        conference: VLDB <a href="assets/papers/progidx_vldb.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a>
+
+      - title: "Multidimensional Adaptive & Progressive Indexes"
+        authors: <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>, <b>Pedro Holanda</b>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
+        conference: ICDE <a href="assets/papers/ICDE2021.pdf">[PDF]</a> <a href="https://github.com/pdet/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
+
+      - title: "Dissecting DuckDB: The internals of the SQLite for Analytics"
+        authors: <b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a>
+        conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a> <a href="https://github.com/pdet/duckdb-tutorial">[HANDS-ON]</a>
+
+      - title: "Fair Benchmarking Considered Difficult: Common Pitfalls In Database Performance Testing"
+        authors: <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <b>Pedro Holanda</b>, <a href="https://t1mm3.github.io/">Tim Gubner</a>, and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
+        conference: SIGMOD (DbTest) <a href="assets/papers/benchmarking.pdf">[PDF]</a> <a href="https://github.com/pdet/FairBenchmarking">[SOURCE CODE]</a>
+
+      - title: "Progressive Indexes"
+        authors: <b>Pedro Holanda</b>
+        conference: PhD Thesis @ Leiden University/CWI <a href="https://ir.cwi.nl/pub/31048">[PDF]</a>
+
+blogposts:
+
+    title: Blog Posts
+
+    posts:
       - title: "DuckDB's CSV Reader and the Pollock Robustness Benchmark: Into the CSV Abyss"
         authors: <b>Pedro Holanda</b>, Gábor Szárnyas, and Gerardo Vitagliano
         conference: DuckDB Blog <a href="https://duckdb.org/2025/04/16/duckdb-csv-pollock-benchmark.html">[Here]</a>
@@ -162,23 +207,4 @@ publications:
         authors: <b>Pedro Holanda</b>
         conference: DuckDB Blog <a href="https://duckdb.org/2021/11/26/duck-enum.html">[Here]</a>
 
-      - title: "Progressive Indexes: Indexing for Interactive Data Analysis"
-        authors: <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
-        conference: VLDB <a href="assets/papers/progidx_vldb.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a>
-        date: Selected Academic Publications
-
-      - title: "Multidimensional Adaptive & Progressive Indexes"
-        authors: <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>, <b>Pedro Holanda</b>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
-        conference: ICDE <a href="assets/papers/ICDE2021.pdf">[PDF]</a> <a href="https://github.com/pdet/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
-
-      - title: "Dissecting DuckDB: The internals of the SQLite for Analytics"
-        authors: <b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a>
-        conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a> <a href="https://github.com/pdet/duckdb-tutorial">[HANDS-ON]</a>
-
-      - title: "Fair Benchmarking Considered Difficult: Common Pitfalls In Database Performance Testing"
-        authors: <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <b>Pedro Holanda</b>, <a href="https://t1mm3.github.io/">Tim Gubner</a>, and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
-        conference: SIGMOD (DbTest) <a href="assets/papers/benchmarking.pdf">[PDF]</a> <a href="https://github.com/pdet/FairBenchmarking">[SOURCE CODE]</a>
-
-      - title: "Progressive Indexes"
-        authors: <b>Pedro Holanda</b>
-        conference: PhD Thesis @ Leiden University/CWI <a href="https://ir.cwi.nl/pub/31048">[PDF]</a>
+footer: "Dr. Pedro Holanda — pedroholanda.org"

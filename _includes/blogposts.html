@@ -1,0 +1,25 @@
+{% assign blogposts = site.data.data.blogposts %}
+{% if blogposts %}
+<section class="section publications-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-pen fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ blogposts.title }}
+  </h2>
+
+  {% for post in blogposts.posts %}
+  {% if post.date %}
+  <h3> {{post.date}} </h3>
+  {% endif %}
+  <div class="item">
+    <div class="publication-title">{{ post.title }}</div>
+    <div class="publication-authors">{{ post.authors }}</div>
+    <div class="publication-conference">{{ post.conference }}</div>
+  </div><!--//item-->
+  {% endfor %}
+
+</section><!--//section-->
+{% endif %}

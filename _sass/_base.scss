@@ -14,10 +14,10 @@ h1, h2, h3, h4, h5, h6  {
 }
 
 a {
-    color: darken($theme-color, 15%);
+    color: $accent-color;
     &:hover {
         text-decoration: underline;
-        color: darken($theme-color, 30%);
+        color: darken($accent-color, 15%);
     }
     &:focus {
         text-decoration: none;
@@ -30,26 +30,28 @@ p {
 
 .wrapper {
     background:$theme-color;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     position: relative;
-    @include box-shadow(0px 2px 4px rgba(0,0,0,0.1));
+    @include box-shadow(0px 4px 12px rgba(0,0,0,0.15));
 }
 
 .sidebar-wrapper {
     background: $theme-color;
     position: absolute;
     right: 0;
-    width: 280px;
+    width: 300px;
     height: 100%;
     min-height: 800px;
     color: #fff;
     a {
-        color: #fff;
+        color: rgba(255, 255, 255, 0.85);
+        &:hover {
+            color: #fff;
+        }
     }
     .profile-container {
-        padding: 30px;
-        //background: darken($theme-color, 10%);
+        padding: 35px 30px;
         background: rgba(0, 0, 0, 0.2);
         text-align: center;
         color: #fff;
@@ -62,8 +64,8 @@ p {
         white-space: nowrap;
     }
     .tagline {
-        color: rgba(256, 256, 256, 0.6);
-        font-size: 16px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
         font-weight: 400;
         margin-top: 0;
         margin-bottom: 0;
@@ -73,12 +75,11 @@ p {
     }
 
     .avatar {
-        //used for profile image
-        max-width: 100px;
+        max-width: 180px;
         margin-bottom: 15px;
-        border: 0px solid #fff;
+        border: 3px solid rgba(255, 255, 255, 0.15);
         border-radius: 100%;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
     .contact-list {
         .fas, .fab {
@@ -116,20 +117,20 @@ p {
             }
         }
         .meta {
-            color: rgba(256, 256, 256, 0.6);
+            color: rgba(255, 255, 255, 0.5);
             font-weight: 500;
             margin-bottom: 0px;
             margin-top: 0;
         }
         .time {
-            color: rgba(256, 256, 256, 0.6);
+            color: rgba(255, 255, 255, 0.5);
             font-weight: 500;
             margin-bottom: 0px;
         }
     }
     .languages-container {
         .lang-desc {
-            color: rgba(256, 256, 256, 0.6);
+            color: rgba(255, 255, 255, 0.5);
         }
     }
 
@@ -157,12 +158,12 @@ p {
 .main-wrapper {
     background: #fff;
     padding: 60px;
-    padding-right: 340px;
+    padding-right: 360px;
     .section-title {
         text-transform: uppercase;
         font-size: 20px;
         font-weight: 500;
-        color: darken($theme-color, 15%);
+        color: $theme-color;
         position: relative;
         margin-top: 0;
         margin-bottom: 20px;
@@ -252,7 +253,7 @@ p {
     }
     .level-bar-inner {
         height: 12px;
-        background: lighten($theme-color, 15%);
+        background: $accent-color;
     }
 }
 

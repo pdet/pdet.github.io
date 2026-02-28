@@ -34,7 +34,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      Principal Engineer @ <a href="https://duckdblabs.com">DuckDB Labs</a> and core contributor to <a href="https://duckdb.org">DuckDB</a>, the open-source analytical in-process SQL database.
+      Principal Engineer @ <a href="https://duckdblabs.com">DuckDB Labs</a> and early core contributor to <a href="https://duckdb.org">DuckDB</a>, the fastest growing open-source analytical database management system.
       I build core database infrastructure including the CSV Reader/Sniffer, ART Persistent Storage, Arrow & ADBC integration, Enum types, and the Extension framework.
 
 education:
@@ -86,6 +86,12 @@ experiences:
       company: Centrum Wiskunde en Informatica (CWI), Amsterdam
       details: |
         Database Architectures group. Research on progressive indexing and analytical database systems.
+
+    - role: Research Intern
+      time: 2019 (4 months)
+      company: Microsoft Research, Redmond
+      details: |
+        DMX group. Worked on an experimental JIT-compiled execution engine for analytics in SQL Server.
 
 projects:
     title: Open Source Projects

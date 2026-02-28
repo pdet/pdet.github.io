@@ -17,6 +17,9 @@
   {% endif %}
 
   {% for talk in talks.items %}
+  {% if talk.date %}
+  <h3> {{talk.date}} </h3>
+  {% endif %}
   <div class="item">
     <span class="project-title">
       <a href="{{ talk.link }}">{{ talk.title }}</a>

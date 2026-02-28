@@ -80,37 +80,40 @@ talks:
     title: Talks & Media
     intro: "Speaker at FOSDEM, EuroPython, and international data conferences."
     items:
-      - title: "Efficient CSV Parsing: On the Complexity of Simple Things"
-        link: "https://www.youtube.com/watch?v=YrqSp8m7fmk"
-        venue: DSDSD 2024
-
-      - title: "DuckDB: Bringing Analytical SQL Directly to Your Python Shell"
-        link: "https://www.youtube.com/watch?v=egN4TwVyJss"
-        venue: "EuroPython 2023 — one of the world's largest Python conferences"
-
-      - title: "DuckDB: Bringing Analytical SQL Directly to Your Python Shell"
-        link: "https://www.youtube.com/watch?v=-rCZQHXSunc"
-        venue: "FOSDEM 2023 — one of the largest open-source conferences in the world"
-
-      - title: "DuckDB Extensions"
-        link: "https://www.youtube.com/watch?v=UKo_LQyLTko"
-        venue: "DuckCon #2, Brussels 2023"
-
-      - title: "Data Analysis with DuckDB"
-        link: "https://www.youtube.com/watch?v=f8OsHWvCQw4"
-        venue: J on the Beach 2023
-
       - title: "DuckLake (Portuguese)"
         link: "https://www.youtube.com/watch?v=QSVucNH-3Xg"
         venue: Data Hackers Community
+        date: 2025
+
+      - title: "Efficient CSV Parsing: On the Complexity of Simple Things"
+        link: "https://www.youtube.com/watch?v=YrqSp8m7fmk"
+        venue: DSDSD
+        date: 2024
 
       - title: "DuckDB: O Banco de Dados Analítico de Alta Velocidade (Portuguese)"
         link: "https://www.youtube.com/watch?v=n0npcfsZvnk"
         venue: Data Hackers Community
 
+      - title: "DuckDB: Bringing Analytical SQL Directly to Your Python Shell"
+        link: "https://www.youtube.com/watch?v=egN4TwVyJss"
+        venue: "EuroPython — one of the world's largest Python conferences"
+        date: 2023
+
+      - title: "DuckDB: Bringing Analytical SQL Directly to Your Python Shell"
+        link: "https://www.youtube.com/watch?v=-rCZQHXSunc"
+        venue: "FOSDEM — one of the largest open-source conferences in the world"
+
+      - title: "DuckDB Extensions"
+        link: "https://www.youtube.com/watch?v=UKo_LQyLTko"
+        venue: "DuckCon #2, Brussels"
+
+      - title: "Data Analysis with DuckDB"
+        link: "https://www.youtube.com/watch?v=f8OsHWvCQw4"
+        venue: J on the Beach
+
       - title: "DuckDB — All the Benefits of a Database, None of the Hassle"
         link: "https://www.inspiringcomputing.com/2107763/episodes/12627309-duckdb-all-the-benefits-of-a-database-none-of-the-hassle"
-        venue: Inspiring Computing Podcast, 2023
+        venue: Inspiring Computing Podcast
 
 projects:
     title: Open Source Projects
@@ -133,25 +136,29 @@ publications:
     intro: "Published at VLDB, ICDE, and SIGMOD — the leading peer-reviewed venues in database systems research."
 
     papers:
-      - title: "Progressive Indexes: Indexing for Interactive Data Analysis"
-        authors: <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
-        conference: VLDB <a href="assets/papers/progidx_vldb.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a>
-
       - title: "Multidimensional Adaptive & Progressive Indexes"
         authors: <a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>, <b>Pedro Holanda</b>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a>
         conference: ICDE <a href="assets/papers/ICDE2021.pdf">[PDF]</a> <a href="https://github.com/pdet/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a>
-
-      - title: "Dissecting DuckDB: The internals of the SQLite for Analytics"
-        authors: <b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a>
-        conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a> <a href="https://github.com/pdet/duckdb-tutorial">[HANDS-ON]</a>
-
-      - title: "Fair Benchmarking Considered Difficult: Common Pitfalls In Database Performance Testing"
-        authors: <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <b>Pedro Holanda</b>, <a href="https://t1mm3.github.io/">Tim Gubner</a>, and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
-        conference: SIGMOD (DbTest) <a href="assets/papers/benchmarking.pdf">[PDF]</a> <a href="https://github.com/pdet/FairBenchmarking">[SOURCE CODE]</a>
+        date: 2021
 
       - title: "Progressive Indexes"
         authors: <b>Pedro Holanda</b>
         conference: PhD Thesis @ Leiden University/CWI <a href="https://ir.cwi.nl/pub/31048">[PDF]</a>
+
+      - title: "Dissecting DuckDB: The internals of the SQLite for Analytics"
+        authors: <b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a>
+        conference: SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a> <a href="https://github.com/pdet/duckdb-tutorial">[HANDS-ON]</a>
+        date: 2020
+
+      - title: "Progressive Indexes: Indexing for Interactive Data Analysis"
+        authors: <b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
+        conference: VLDB <a href="assets/papers/progidx_vldb.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a>
+        date: 2019
+
+      - title: "Fair Benchmarking Considered Difficult: Common Pitfalls In Database Performance Testing"
+        authors: <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <b>Pedro Holanda</b>, <a href="https://t1mm3.github.io/">Tim Gubner</a>, and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a>
+        conference: SIGMOD (DbTest) <a href="assets/papers/benchmarking.pdf">[PDF]</a> <a href="https://github.com/pdet/FairBenchmarking">[SOURCE CODE]</a>
+        date: 2018
 
 blogposts:
 
@@ -166,7 +173,6 @@ blogposts:
       - title: "DuckDB's CSV Reader and the Pollock Robustness Benchmark: Into the CSV Abyss"
         authors: <b>Pedro Holanda</b>, <a href="https://szarnyasgabor.github.io/">Gábor Szárnyas</a>, and <a href="https://gerardovitagliano.github.io/">Gerardo Vitagliano</a>
         conference: DuckDB Blog <a href="https://duckdb.org/2025/04/16/duckdb-csv-pollock-benchmark.html">[Here]</a>
-        date: 2025
 
       - title: "CSV Files: Dethroning Parquet as the Ultimate Storage File Format — or Not?"
         authors: <b>Pedro Holanda</b>
@@ -176,7 +182,6 @@ blogposts:
       - title: "Driving CSV Performance: Benchmarking DuckDB with the NYC Taxi Dataset"
         authors: <b>Pedro Holanda</b>
         conference: DuckDB Blog <a href="https://duckdb.org/2024/10/16/driving-csv-performance-benchmarking-duckdb-with-the-nyc-taxi-dataset.html">[Here]</a>
-        date: 2024
 
       - title: "Scrooge - DuckDB: Experimental Ethereum Blockchain Scanner"
         authors: <b>Pedro Holanda</b>
@@ -190,7 +195,6 @@ blogposts:
       - title: "DuckDB ADBC — Zero-Copy Data Transfer via Arrow Database Connectivity"
         authors: <b>Pedro Holanda</b>
         conference: DuckDB Blog <a href="https://duckdb.org/2023/08/04/adbc">[Here]</a>
-        date: 2023
 
       - title: "From Waddle to Flying: Quickly Expanding DuckDB's Functionality with Scalar Python UDFs"
         authors: <b>Pedro Holanda</b>, <a href="https://github.com/Tishj">Thijs Bruineman</a>, and <a href="https://github.com/cpcloud">Phillip Cloud</a>
@@ -208,7 +212,6 @@ blogposts:
       - title: "Scrooge McDuck: A DuckDB Extension for Financial Data Analysis (Demo)"
         authors: <b>Pedro Holanda</b>
         conference: Blog <a href="https://pdet-blog.github.io/2022/08/16/scrooge.html">[Here]</a>
-        date: 2022
 
       - title: "DuckDB quacks Arrow: A zero-copy data integration between Apache Arrow and DuckDB"
         authors: <b>Pedro Holanda</b> and <a href="https://github.com/jonkeane">Jonathan Keane</a>

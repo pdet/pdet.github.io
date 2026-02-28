@@ -102,11 +102,11 @@ talks:
 
       - title: "DuckLake (Portuguese)"
         link: "https://www.youtube.com/watch?v=QSVucNH-3Xg"
-        venue: Talk
+        venue: Data Hackers Community
 
       - title: "DuckDB: O Banco de Dados Analítico de Alta Velocidade (Portuguese)"
         link: "https://www.youtube.com/watch?v=n0npcfsZvnk"
-        venue: Talk
+        venue: Data Hackers Community
 
       - title: "DuckDB — All the Benefits of a Database, None of the Hassle"
         link: "https://www.inspiringcomputing.com/2107763/episodes/12627309-duckdb-all-the-benefits-of-a-database-none-of-the-hassle"
@@ -158,8 +158,13 @@ blogposts:
     title: Blog Posts
 
     posts:
+      - title: "Arrow IPC Support in DuckDB"
+        authors: <b>Pedro Holanda</b>, <a href="https://github.com/ianmcook">Ian Cook</a>, <a href="https://github.com/paleolimbot">Dewey Dunnington</a>, and <a href="https://github.com/brycemecum">Bryce Mecum</a>
+        conference: DuckDB Blog <a href="https://duckdb.org/2025/05/23/arrow-ipc-support-in-duckdb.html">[Here]</a>
+        date: 2025
+
       - title: "DuckDB's CSV Reader and the Pollock Robustness Benchmark: Into the CSV Abyss"
-        authors: <b>Pedro Holanda</b>, Gábor Szárnyas, and Gerardo Vitagliano
+        authors: <b>Pedro Holanda</b>, <a href="https://szarnyasgabor.github.io/">Gábor Szárnyas</a>, and <a href="https://gerardovitagliano.github.io/">Gerardo Vitagliano</a>
         conference: DuckDB Blog <a href="https://duckdb.org/2025/04/16/duckdb-csv-pollock-benchmark.html">[Here]</a>
         date: 2025
 
@@ -171,6 +176,7 @@ blogposts:
       - title: "Driving CSV Performance: Benchmarking DuckDB with the NYC Taxi Dataset"
         authors: <b>Pedro Holanda</b>
         conference: DuckDB Blog <a href="https://duckdb.org/2024/10/16/driving-csv-performance-benchmarking-duckdb-with-the-nyc-taxi-dataset.html">[Here]</a>
+        date: 2024
 
       - title: "Scrooge - DuckDB: Experimental Ethereum Blockchain Scanner"
         authors: <b>Pedro Holanda</b>
@@ -184,6 +190,11 @@ blogposts:
       - title: "DuckDB ADBC — Zero-Copy Data Transfer via Arrow Database Connectivity"
         authors: <b>Pedro Holanda</b>
         conference: DuckDB Blog <a href="https://duckdb.org/2023/08/04/adbc">[Here]</a>
+        date: 2023
+
+      - title: "From Waddle to Flying: Quickly Expanding DuckDB's Functionality with Scalar Python UDFs"
+        authors: <b>Pedro Holanda</b>, <a href="https://github.com/Tishj">Thijs Bruineman</a>, and <a href="https://github.com/cpcloud">Phillip Cloud</a>
+        conference: DuckDB Blog <a href="https://duckdb.org/2023/07/07/python-udf.html">[Here]</a>
 
       - title: "Scrooge: Analyzing Yahoo Financial Data In DuckDB"
         authors: <b>Pedro Holanda</b>
@@ -197,9 +208,10 @@ blogposts:
       - title: "Scrooge McDuck: A DuckDB Extension for Financial Data Analysis (Demo)"
         authors: <b>Pedro Holanda</b>
         conference: Blog <a href="https://pdet-blog.github.io/2022/08/16/scrooge.html">[Here]</a>
+        date: 2022
 
       - title: "DuckDB quacks Arrow: A zero-copy data integration between Apache Arrow and DuckDB"
-        authors: <b>Pedro Holanda</b> and Jonathan Keane
+        authors: <b>Pedro Holanda</b> and <a href="https://github.com/jonkeane">Jonathan Keane</a>
         conference: DuckDB Blog <a href="https://duckdb.org/2021/12/03/duck-arrow.html">[Here]</a>
         date: 2021
 

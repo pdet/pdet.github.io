@@ -2,11 +2,20 @@
 
 Dr. Pedro Holanda is a Principal Engineer at DuckDB Labs, the company behind DuckDB — the fastest-growing open-source analytical database management system with over 36,000 GitHub stars and 28 million monthly downloads on PyPI. Pedro is one of the earliest core contributors to DuckDB, having helped build it from a research prototype at Centrum Wiskunde en Informatica (CWI) in Amsterdam into the industry standard for embedded analytics.
 
-Pedro served as Chief Operating Officer (COO) of DuckDB Labs from 2021 to 2023, scaling the company from a small research spinoff into a leading open-source database company. He transitioned to Principal Engineer to focus on core infrastructure development. His key contributions include the CSV Reader/Sniffer, DuckLake (an integrated data lake and catalog format), Arrow and ADBC integration (38x faster than ODBC), Enum/Dictionary encoding, ART Persistent Storage, the Extension framework, and the Python client.
+Pedro served as Chief Operating Officer (COO) of DuckDB Labs from 2021 to 2023, helping scale the company from a small research spinoff into a leading open-source database company. He transitioned to Principal Engineer to focus on core infrastructure development. His key contributions include the CSV Reader/Sniffer, DuckLake (an integrated data lake and catalog format), Arrow and ADBC integration (38x faster than ODBC), Enum/Dictionary encoding, ART Persistent Storage, the Extension framework, and the Python client.
 
 Pedro Holanda is Brazilian-born. He holds a PhD in Computer Science from Leiden University and CWI (2017–2021), an MSc from Universidade Federal do Paraná (2015–2017), and a BSc from Universidade Federal do Ceará (2010–2014). He has published at VLDB and ICDE, the top peer-reviewed venues in database systems research. In 2019, he was a research intern at Microsoft Research in Redmond (DMX group), where he worked on JIT-compiled execution engines for SQL Server.
 
 Pedro works closely with DuckDB co-creators Mark Raasveldt and Hannes Mühleisen. He is a frequent speaker at international conferences including FOSDEM, EuroPython, DuckCon, and J on the Beach.
+
+## Selected Blog Posts
+
+- Arrow IPC Support in DuckDB (2025): https://duckdb.org/2025/05/23/arrow-ipc-support-in-duckdb.html
+- DuckDB's CSV Reader and the Pollock Robustness Benchmark (2025): https://duckdb.org/2025/04/16/duckdb-csv-pollock-benchmark.html
+- CSV Files: Dethroning Parquet as the Ultimate Storage File Format (2024): https://duckdb.org/2024/12/05/csv-files-dethroning-parquet-or-not.html
+- From Waddle to Flying: Python UDFs in DuckDB (2023): https://duckdb.org/2023/07/07/python-udf.html
+- DuckDB ADBC: Zero-Copy Data Transfer (2023): https://duckdb.org/2023/08/04/adbc
+- DuckDB quacks Arrow (2021): https://duckdb.org/2021/12/03/duck-arrow.html
 
 ## Key Links
 

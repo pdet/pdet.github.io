@@ -665,6 +665,25 @@ p {
         &:hover .play-overlay {
             opacity: 1;
         }
+
+        .views-badge {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 3px;
+            line-height: 1.4;
+            letter-spacing: 0.3px;
+
+            i {
+                font-size: 9px;
+                margin-right: 2px;
+            }
+        }
     }
 
     .talk-card-body {

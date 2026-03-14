@@ -63,7 +63,7 @@ engineering-work:
       - title: CSV Reader
         description: "Parallel CSV ingestion engine used in DuckDB for high-performance analytics. Handles encoding, escaping, multi-line values, and parallel parsing at scale."
         blog_link: "https://duckdb.org/2024/12/05/csv-files-dethroning-parquet-or-not.html"
-        icon: "fas fa-file-csv"
+        icon: "fas fa-table"
 
       - title: CSV Sniffer
         description: "Automatic detection of CSV types, delimiters, and dialects. Enables DuckDB to read arbitrary CSV files without manual configuration."
@@ -183,32 +183,39 @@ talks:
         link: "https://www.youtube.com/watch?v=QSVucNH-3Xg"
         venue: Data Hackers Community
         date: 2025
+        views: "840+"
 
       - title: "Efficient CSV Parsing: On the Complexity of Simple Things"
         link: "https://www.youtube.com/watch?v=YrqSp8m7fmk"
         venue: DSDSD
         date: 2024
+        views: "2.1K"
 
       - title: "DuckDB: O Banco de Dados Analítico de Alta Velocidade (Portuguese)"
         link: "https://www.youtube.com/watch?v=n0npcfsZvnk"
         venue: Data Hackers Community
+        views: "5.2K"
 
       - title: "DuckDB: Bringing Analytical SQL Directly to Your Python Shell"
         link: "https://www.youtube.com/watch?v=egN4TwVyJss"
         venue: "EuroPython"
         date: 2023
+        views: "12K"
 
       - title: "DuckDB: Bringing Analytical SQL Directly to Your Python Shell"
         link: "https://www.youtube.com/watch?v=-rCZQHXSunc"
         venue: "FOSDEM"
+        views: "1.8K"
 
       - title: "DuckDB Extensions"
         link: "https://www.youtube.com/watch?v=UKo_LQyLTko"
         venue: "DuckCon #2, Brussels"
+        views: "660+"
 
       - title: "Data Analysis with DuckDB"
         link: "https://www.youtube.com/watch?v=f8OsHWvCQw4"
         venue: J on the Beach
+        views: "1.8K"
 
       - title: "DuckDB — All the Benefits of a Database, None of the Hassle"
         link: "https://www.inspiringcomputing.com/2107763/episodes/12627309-duckdb-all-the-benefits-of-a-database-none-of-the-hassle"

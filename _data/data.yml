@@ -85,8 +85,8 @@ engineering-work:
 
 narrative:
     text: |
-      <p>I joined <a href="https://duckdb.org">DuckDB</a> at CWI Amsterdam when the project had two researchers, zero users, and a bet that analytical databases could be radically simpler. I have been building its infrastructure from the start.</p>
-      <p>When DuckDB Labs spun out of CWI, I took on the COO role - hiring the early team, shaping the open-source strategy, and building the company while still writing code. That experience gave me a perspective on the full lifecycle of open-source infrastructure that informs every design decision I make today. When the company was ready for dedicated operations leadership, I chose to return to engineering full-time.</p>
+      <p>I joined <a href="https://duckdb.org">DuckDB</a> at CWI Amsterdam when the project had two researchers, only a handful of users, and a bet that analytical databases could be radically simpler. I have been assisting with building its infrastructure from the early days.</p>
+      <p>When DuckDB Labs spun out of CWI, I took on the COO role - helping hire the early team, organizing events, shaping the open-source strategy, and building the company while still writing code. That experience gave me a perspective on the full lifecycle of open-source infrastructure that informs every design decision I make today. When the company was ready for dedicated operations leadership, I chose to return to engineering full-time.</p>
       <p>As Principal Engineer, I lead the development of <a href="https://github.com/duckdb/ducklake">DuckLake</a> and drive query processing performance. I mentor new contributors, lead design reviews across subsystems, and help set technical direction for the engine.</p>
 
 vision:

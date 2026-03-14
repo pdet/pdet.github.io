@@ -14,9 +14,9 @@
     {% for project in projects.assignments %}
     <div class="project-card">
       <div class="project-card-header">
-        <h4 class="project-card-title">
+        <h3 class="project-card-title">
           <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
-        </h4>
+        </h3>
         {% if project.stars %}
         <span class="project-stars"><i class="fas fa-star"></i> {{ project.stars }}</span>
         {% endif %}

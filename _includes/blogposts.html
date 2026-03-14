@@ -20,13 +20,13 @@
     {% for post in blogposts.posts %}
     <div class="blog-card">
       <div class="blog-card-header">
-        <div class="blog-card-title">
+        <h3 class="blog-card-title">
           {% if post.link %}
           <a href="{{ post.link }}" target="_blank">{{ post.title }}</a>
           {% else %}
           {{ post.title }}
           {% endif %}
-        </div>
+        </h3>
         {% if post.date %}
         <span class="blog-card-year">{{ post.date }}</span>
         {% endif %}

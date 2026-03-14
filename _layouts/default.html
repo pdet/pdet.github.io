@@ -7,38 +7,6 @@ layout: compress
 
 <body>
   <div class="wrapper">
-    <aside class="sidebar-wrapper">
-      {% assign sidebar = site.data.data.sidebar %}
-
-      <div class="profile-container">
-        {% if sidebar.name %}
-        <img class="avatar" src="{{ site.baseurl }}/assets/images/{{ sidebar.avatar }}" alt="Dr. Pedro Holanda — Principal Engineer at DuckDB Labs" />
-        {% endif %}
-
-        {% if sidebar.name %}
-        <div class="name">{{ sidebar.name }}</div>
-        {% endif %}
-
-        {% if sidebar.tagline %}
-        <h2 class="tagline">{{ sidebar.tagline }}</h2>
-        {% endif %}
-      </div><!--//profile-container-->
-
-      {% include contact.html %}
-
-      {% if sidebar.education %}
-        {% include education.html %}
-      {% endif %}
-
-      {% include language.html %}
-      {% include interests.html %}
-
-      {% if sidebar.about %}
-        {% include about.html %}
-      {% endif %}
-
-    </aside><!--//sidebar-wrapper-->
-
     <main class="main-wrapper">
         {{ content }}
     </main>

@@ -5,13 +5,8 @@
         padding: 0;
     }
 
-    .sidebar-wrapper {
-        position: static;
-        width: inherit;
-    }
-
     .main-wrapper {
-        padding: 30px;
+        padding: 20px;
     }
 
     .main-wrapper .time {
@@ -26,7 +21,7 @@
 
     /* Nav */
     .site-nav {
-        margin: -30px -30px 24px -30px;
+        margin: -20px -20px 24px -20px;
         padding: 0 12px;
         overflow-x: auto;
 
@@ -44,6 +39,15 @@
 
     /* Hero */
     .hero-section {
+        .hero-header {
+            gap: 16px;
+        }
+
+        .hero-avatar {
+            width: 72px;
+            height: 72px;
+        }
+
         .hero-name {
             font-size: 24px;
         }
@@ -62,6 +66,10 @@
 
         .hero-links {
             flex-wrap: wrap;
+        }
+
+        .hero-contact {
+            gap: 12px;
         }
     }
 

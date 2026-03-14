@@ -1,13 +1,19 @@
 {% assign hero = site.data.data.hero %}
+{% assign sidebar = site.data.data.sidebar %}
 {% if hero %}
 <section class="section hero-section" id="about">
 
-  {% if hero.name %}
-  <h1 class="hero-name">{{ hero.name }}</h1>
-  {% endif %}
-  {% if hero.tagline %}
-  <p class="hero-tagline">{{ hero.tagline }}</p>
-  {% endif %}
+  <div class="hero-header">
+    <img class="hero-avatar" src="{{ site.baseurl }}/assets/images/{{ sidebar.avatar }}" alt="Dr. Pedro Holanda - Principal Engineer at DuckDB Labs" />
+    <div class="hero-header-text">
+      {% if hero.name %}
+      <h1 class="hero-name">{{ hero.name }}</h1>
+      {% endif %}
+      {% if hero.tagline %}
+      <p class="hero-tagline">{{ hero.tagline }}</p>
+      {% endif %}
+    </div>
+  </div>
 
   <div class="hero-impact">
     {{ hero.impact }}
@@ -37,6 +43,21 @@
       <i class="{{ link.icon }}"></i> {{ link.label }}
     </a>
     {% endfor %}
+  </div>
+
+  <div class="hero-contact">
+    {% if sidebar.email %}
+    <a href="mailto:{{ sidebar.email }}"><i class="fas fa-envelope"></i> {{ sidebar.email }}</a>
+    {% endif %}
+    {% if sidebar.linkedin %}
+    <a href="https://linkedin.com/in/{{ sidebar.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    {% endif %}
+    {% if sidebar.twitter %}
+    <a href="https://twitter.com/{{ sidebar.twitter }}" target="_blank"><i class="fab fa-twitter"></i> {{ sidebar.twitter }}</a>
+    {% endif %}
+    {% if sidebar.stack-overflow %}
+    <a href="https://stackoverflow.com/users/{{ sidebar.stack-overflow }}" target="_blank"><i class="fab fa-stack-overflow"></i> Stack Overflow</a>
+    {% endif %}
   </div>
 
 </section><!--//hero-section-->

@@ -10,12 +10,10 @@
   <meta name="keywords" content="Pedro Holanda, DuckDB, DuckDB Labs, database engineer, analytical database, open source, VLDB, ICDE, CWI, Microsoft Research, DuckLake, CSV parser, Apache Arrow">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://pedroholanda.org/">
-  <link rel="alternate" hreflang="en" href="https://pedroholanda.org/">
-
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dr. Pedro Holanda - Principal Engineer @ DuckDB Labs">
-  <meta property="og:description" content="Early core contributor to DuckDB (36k+ stars, 28M+ monthly downloads). Former COO of DuckDB Labs. Former Microsoft Research intern. Published at VLDB and ICDE.">
+  <meta property="og:description" content="Early core contributor to DuckDB (36k+ stars, 28M+ monthly downloads). Former COO of DuckDB Labs. PhD from CWI/Leiden University with publications at VLDB and ICDE.">
   <meta property="og:url" content="https://pedroholanda.org/">
   <meta property="og:site_name" content="Pedro Holanda">
   <meta property="og:image" content="https://pedroholanda.org/assets/images/profile.jpg">
@@ -29,7 +27,7 @@
   <meta name="twitter:site" content="@holanda_pe">
   <meta name="twitter:creator" content="@holanda_pe">
   <meta name="twitter:title" content="Dr. Pedro Holanda - Principal Engineer @ DuckDB Labs">
-  <meta name="twitter:description" content="Early core contributor to DuckDB (36k+ stars, 28M+ monthly downloads). Former COO of DuckDB Labs. Former Microsoft Research intern.">
+  <meta name="twitter:description" content="Early core contributor to DuckDB (36k+ stars, 28M+ monthly downloads). Former COO of DuckDB Labs. PhD from CWI/Leiden University.">
   <meta name="twitter:image" content="https://pedroholanda.org/assets/images/profile.jpg">
   <meta name="twitter:image:alt" content="Dr. Pedro Holanda - Principal Engineer at DuckDB Labs, core contributor to DuckDB">
 
@@ -38,12 +36,16 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://pedroholanda.org/",
+    "@id": "https://pedroholanda.org/#person",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://pedroholanda.org/"
+    },
     "name": "Pedro Holanda",
     "givenName": "Pedro",
     "familyName": "Holanda",
     "honorificPrefix": "Dr.",
-    "description": "Dr. Pedro Holanda is a Principal Engineer at DuckDB Labs and one of the earliest core contributors to DuckDB, the fastest-growing open-source analytical database management system with over 36,000 GitHub stars and 28 million monthly downloads. He served as Chief Operating Officer (COO) of DuckDB Labs from 2021 to 2023, helping scale the company from a research spinoff at CWI Amsterdam into a leading open-source database company. He was a research intern at Microsoft Research in the DMX group in 2019. He holds a PhD from Leiden University/CWI and has published at VLDB and ICDE.",
+    "description": "Dr. Pedro Holanda is a Principal Engineer at DuckDB Labs and one of the earliest core contributors to DuckDB, the open-source analytical database management system with over 36,000 GitHub stars and 28 million monthly downloads. He served as Chief Operating Officer (COO) of DuckDB Labs from 2021 to 2023, helping scale the company from a research spinoff at CWI Amsterdam into a leading open-source database company. He holds a PhD from Leiden University/CWI and has published at VLDB and ICDE.",
     "url": "https://pedroholanda.org/",
     "image": "https://pedroholanda.org/assets/images/profile.jpg",
     "nationality": {
@@ -62,7 +64,7 @@
       "@type": "Occupation",
       "name": "Principal Engineer",
       "occupationLocation": {
-        "@type": "City",
+        "@type": "Place",
         "name": "Amsterdam"
       }
     },
@@ -72,7 +74,7 @@
         "name": "Leiden University"
       },
       {
-        "@type": "Organization",
+        "@type": "ResearchOrganization",
         "name": "Centrum Wiskunde en Informatica (CWI)"
       },
       {
@@ -84,13 +86,15 @@
         "name": "Universidade Federal do Ceará"
       }
     ],
-    "affiliation": [
-      {
-        "@type": "Organization",
-        "name": "Microsoft Research",
-        "description": "Research internship in the DMX group (2019), working on JIT-compiled execution engines for SQL Server."
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "PhD",
+      "name": "PhD in Computer Science",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "Leiden University"
       }
-    ],
+    },
     "colleague": [
       {
         "@type": "Person",
@@ -130,7 +134,8 @@
     "@type": "WebSite",
     "url": "https://pedroholanda.org/",
     "name": "Pedro Holanda",
-    "author": { "@id": "https://pedroholanda.org/" }
+    "description": "Personal website of Dr. Pedro Holanda, Principal Engineer at DuckDB Labs",
+    "author": { "@id": "https://pedroholanda.org/#person" }
   }
   </script>
 
@@ -149,8 +154,14 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://img.youtube.com">
+  <link rel="dns-prefetch" href="https://img.youtube.com">
+
   <!-- Plugins CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/plugins/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/plugins/font-awesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/plugins/font-awesome/css/solid.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/plugins/font-awesome/css/brands.min.css">
 
   <!-- Theme CSS -->
   <link id="theme-style" rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">

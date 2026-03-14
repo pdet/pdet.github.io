@@ -100,49 +100,6 @@ p {
         }
     }
 
-    .experiences-section, .educations-section {
-        .item {
-            margin-bottom: 30px;
-        }
-    }
-    .upper-row {
-        position: relative;
-        overflow: hidden;
-        margin-bottom: 2px;
-    }
-    .job-title, .degree {
-        color: $text-color;
-        font-size: 16px;
-        margin-top: 0;
-        margin-bottom: 0;
-        font-weight: 500;
-    }
-    .time {
-        position: absolute;
-        right: 0;
-        top: 0;
-        color: $text-grey;
-    }
-    .company, .university {
-        margin-bottom: 10px;
-        color: $text-grey;
-    }
-
-    .project-title {
-        font-size: 16px;
-        font-weight: 400;
-        margin-top: 0;
-        margin-bottom: 5px;
-    }
-    .projects-section {
-        .intro {
-            margin-bottom: 30px;
-        }
-        .item {
-            margin-bottom: 15px;
-        }
-    }
-
     .publication-title {
         font-size: 16px;
         font-weight: 400;
@@ -416,6 +373,15 @@ p {
         margin-top: 0;
         margin-bottom: 8px;
         color: $text-color;
+
+        a {
+            color: $text-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
     }
 
     .engineering-card-desc {
@@ -456,7 +422,8 @@ p {
         padding-left: 20px;
 
         p {
-            margin: 0;
+            margin: 0 0 16px 0;
+            &:last-child { margin-bottom: 0; }
         }
     }
 }
@@ -626,7 +593,7 @@ p {
             background: rgba(0, 0, 0, 0.3);
             color: #fff;
             font-size: 22px;
-            opacity: 0.5;
+            opacity: 0.7;
             transition: opacity 0.2s ease;
         }
 
@@ -767,7 +734,7 @@ p {
     }
 
     .project-card-desc {
-        font-size: 13px;
+        font-size: 14px;
         color: $text-color-secondary;
         line-height: 1.5;
         margin: 0 0 12px 0;
@@ -957,18 +924,6 @@ p {
             border-bottom-color: #334155;
         }
 
-        .job-title, .degree {
-            color: #E2E8F0;
-        }
-
-        .time {
-            color: #64748B;
-        }
-
-        .company, .university {
-            color: #64748B;
-        }
-
         .publication-title {
             color: #E2E8F0;
         }
@@ -978,15 +933,15 @@ p {
         }
 
         .publication-authors {
-            color: #64748B;
+            color: #94A3B8;
         }
 
         .publication-conference {
-            color: #64748B;
+            color: #94A3B8;
         }
 
         .publication-year {
-            color: #94A3B8;
+            color: #93C5FD;
         }
 
         .details, .details p,
@@ -1040,7 +995,7 @@ p {
         }
 
         .metric-label {
-            color: #64748B;
+            color: #94A3B8;
         }
 
         .hero-link {
@@ -1081,6 +1036,14 @@ p {
 
     .engineering-card-title {
         color: #E2E8F0;
+
+        a {
+            color: #E2E8F0;
+
+            &:hover {
+                color: #60A5FA;
+            }
+        }
     }
 
     .engineering-card-desc {
@@ -1126,7 +1089,7 @@ p {
         }
 
         .timeline-time {
-            color: #64748B;
+            color: #94A3B8;
         }
 
         .timeline-role {
@@ -1138,7 +1101,7 @@ p {
         }
 
         .timeline-detail {
-            color: #64748B;
+            color: #94A3B8;
         }
     }
 
@@ -1171,7 +1134,7 @@ p {
         }
 
         .talk-card-date {
-            color: #64748B;
+            color: #94A3B8;
         }
 
         .talk-watch-link {
@@ -1231,7 +1194,7 @@ p {
         }
 
         .blog-card-year {
-            color: #64748B;
+            color: #94A3B8;
         }
 
         .blog-card-summary {
@@ -1253,7 +1216,7 @@ p {
         }
 
         .blog-card-venue {
-            color: #64748B;
+            color: #94A3B8;
         }
     }
 
@@ -1279,7 +1242,7 @@ p {
     }
 
     .footer .copyright {
-        color: #64748B;
+        color: #94A3B8;
     }
 
     a {

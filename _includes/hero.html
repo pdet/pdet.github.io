@@ -40,23 +40,23 @@
   <div class="hero-links">
     {% for link in hero.links %}
     <a href="{{ link.url }}" class="hero-link" {% unless link.url contains '#' %}target="_blank" rel="noopener noreferrer"{% endunless %}>
-      <i class="{{ link.icon }}"></i> {{ link.label }}
+      <i class="{{ link.icon }}" aria-hidden="true"></i> {{ link.label }}
     </a>
     {% endfor %}
   </div>
 
   <div class="hero-contact">
     {% if sidebar.email %}
-    <a href="mailto:{{ sidebar.email }}"><i class="fas fa-envelope"></i> {{ sidebar.email }}</a>
+    <a href="mailto:{{ sidebar.email }}"><i class="fas fa-envelope" aria-hidden="true"></i> {{ sidebar.email }}</a>
     {% endif %}
     {% if sidebar.linkedin %}
-    <a href="https://linkedin.com/in/{{ sidebar.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://linkedin.com/in/{{ sidebar.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
     {% endif %}
     {% if sidebar.twitter %}
-    <a href="https://x.com/{{ sidebar.twitter }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> {{ sidebar.twitter }}</a>
+    <a href="https://x.com/{{ sidebar.twitter }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" aria-hidden="true"></i> @{{ sidebar.twitter }}</a>
     {% endif %}
     {% if sidebar.stack-overflow %}
-    <a href="https://stackoverflow.com/users/{{ sidebar.stack-overflow }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-stack-overflow"></i> Stack Overflow</a>
+    <a href="https://stackoverflow.com/users/{{ sidebar.stack-overflow }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a>
     {% endif %}
   </div>
 

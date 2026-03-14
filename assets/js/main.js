@@ -3,22 +3,23 @@ document.addEventListener('DOMContentLoaded', function() {
     /* Dark mode toggle (theme detection is in head.html to prevent FOUC) */
     var darkModeToggle = document.getElementById('dark-mode-toggle');
     if (darkModeToggle) {
-        function updateIcon() {
+        function updateToggle() {
             var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             var icon = darkModeToggle.querySelector('i');
             if (icon) {
                 icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
             }
+            darkModeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
         }
 
-        updateIcon();
+        updateToggle();
 
         darkModeToggle.addEventListener('click', function() {
             var currentTheme = document.documentElement.getAttribute('data-theme');
             var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            updateIcon();
+            updateToggle();
         });
     }
 

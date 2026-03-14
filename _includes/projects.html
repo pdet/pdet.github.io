@@ -18,14 +18,14 @@
           <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer">{{ project.title }}</a>
         </h3>
         {% if project.stars %}
-        <span class="project-stars"><i class="fas fa-star"></i> {{ project.stars }}</span>
+        <span class="project-stars"><i class="fas fa-star" aria-hidden="true"></i> {{ project.stars }}</span>
         {% endif %}
       </div>
       {% if project.tagline %}
       <p class="project-card-desc">{{ project.tagline }}</p>
       {% endif %}
       <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" class="project-card-link">
-        <i class="fab fa-github"></i> View on GitHub
+        <i class="fab fa-github" aria-hidden="true"></i> View on GitHub
       </a>
     </div>
     {% endfor %}

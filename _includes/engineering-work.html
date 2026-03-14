@@ -14,17 +14,17 @@
     {% for item in ework.items %}
     <div class="engineering-card">
       <div class="engineering-card-icon">
-        <i class="{{ item.icon }}"></i>
+        <i class="{{ item.icon }}" aria-hidden="true"></i>
       </div>
-      <h3 class="engineering-card-title">{{ item.title }}</h3>
+      <h3 class="engineering-card-title">{% if item.blog_link %}<a href="{{ item.blog_link }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
       <p class="engineering-card-desc">{{ item.description }}</p>
       {% if item.blog_link or item.source_link %}
       <div class="engineering-card-links">
         {% if item.blog_link %}
-        <a href="{{ item.blog_link }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-pen"></i> Blog</a>
+        <a href="{{ item.blog_link }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-pen" aria-hidden="true"></i> Blog</a>
         {% endif %}
         {% if item.source_link %}
-        <a href="{{ item.source_link }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source</a>
+        <a href="{{ item.source_link }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
         {% endif %}
       </div>
       {% endif %}

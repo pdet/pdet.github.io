@@ -1,0 +1,15 @@
+{% assign cta = site.data.data.cta %}
+{% if cta %}
+<section class="section cta-section">
+
+  <div class="cta-box">
+    <p class="cta-text">{{ cta.text }}</p>
+    {% if cta.email %}
+    <a href="mailto:{{ cta.email }}" class="cta-button">
+      <i class="fas fa-envelope"></i> Get in Touch
+    </a>
+    {% endif %}
+  </div>
+
+</section><!--//cta-section-->
+{% endif %}

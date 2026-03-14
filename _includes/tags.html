@@ -1,0 +1,10 @@
+{% assign tags = site.data.data.tags %}
+{% if tags %}
+<section class="section tags-section">
+  <div class="tags-container">
+    {% for tag in tags %}
+    <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+</section><!--//tags-section-->
+{% endif %}

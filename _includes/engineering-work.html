@@ -1,0 +1,32 @@
+{% assign ework = site.data.data.engineering-work %}
+{% if ework %}
+<section class="section engineering-section" id="engineering">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-cogs fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ ework.title }}
+  </h2>
+
+  <div class="engineering-grid">
+    {% for item in ework.items %}
+    <div class="engineering-card">
+      <div class="engineering-card-icon">
+        <i class="{{ item.icon }}"></i>
+      </div>
+      <h3 class="engineering-card-title">
+        {% if item.link %}
+        <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>
+        {% else %}
+        {{ item.title }}
+        {% endif %}
+      </h3>
+      <p class="engineering-card-desc">{{ item.description }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+</section><!--//engineering-section-->
+{% endif %}

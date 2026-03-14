@@ -1,0 +1,27 @@
+{% assign timeline = site.data.data.timeline %}
+{% if timeline %}
+<section class="section timeline-section" id="career">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-stream fa-stack-1x fa-inverse"></i>
+    </span>
+    Career Timeline
+  </h2>
+
+  <div class="timeline">
+    {% for item in timeline.items %}
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <span class="timeline-time">{{ item.time }}</span>
+        <h4 class="timeline-role">{{ item.role }}</h4>
+        <span class="timeline-company">{{ item.company }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</section><!--//timeline-section-->
+{% endif %}

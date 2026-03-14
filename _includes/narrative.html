@@ -1,0 +1,10 @@
+{% assign narrative = site.data.data.narrative %}
+{% if narrative %}
+<section class="section narrative-section">
+
+  <div class="narrative-text">
+    {{ narrative.text | markdownify }}
+  </div>
+
+</section><!--//narrative-section-->
+{% endif %}

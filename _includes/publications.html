@@ -1,6 +1,6 @@
 {% assign publications = site.data.data.publications %}
 {% if publications %}
-<section class="section publications-section">
+<section class="section publications-section" id="research">
 
   <h2 class="section-title">
     <span class="fa-stack fa-xs">
@@ -22,6 +22,9 @@
   {% endif %}
   <div class="item">
     <div class="publication-title">{{ publication.title }}</div>
+    {% if publication.summary %}
+    <div class="publication-summary">{{ publication.summary }}</div>
+    {% endif %}
     <div class="publication-authors">{{ publication.authors }}</div>
     <div class="publication-conference">{{ publication.conference }}</div>
   </div><!--//item-->

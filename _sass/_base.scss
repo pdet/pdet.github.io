@@ -7,6 +7,7 @@ body {
     padding: 30px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6  {
@@ -159,6 +160,8 @@ p {
     background: #fff;
     padding: 60px;
     padding-right: 360px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
     .section-title {
         text-transform: uppercase;
         font-size: 20px;
@@ -226,6 +229,13 @@ p {
         color: $text-grey;
         margin-bottom: 1px;
     }
+    .publication-summary {
+        color: $text-color-secondary;
+        font-size: 13px;
+        margin-bottom: 4px;
+        padding-left: 0;
+        line-height: 1.4;
+    }
     .publications-section {
         .intro {
             margin-bottom: 30px;
@@ -236,7 +246,508 @@ p {
     }
 }
 
+/* ======= Navigation ======= */
+.site-nav {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 100;
+    margin: -60px -60px 40px -60px;
+    padding: 0 60px;
+    border-bottom: 1px solid $divider;
+    transition: background-color 0.3s ease;
 
+    .nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+
+        li {
+            margin: 0;
+            a {
+                display: block;
+                padding: 14px 16px;
+                color: $text-color-secondary;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                transition: color 0.2s ease;
+
+                &:hover {
+                    color: $accent-color;
+                    text-decoration: none;
+                }
+            }
+            &:last-child {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: 1px solid $divider;
+    color: $text-color-secondary;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: $smoky-white;
+        color: $accent-color;
+    }
+}
+
+/* ======= Hero Section ======= */
+.hero-section {
+    margin-bottom: 50px;
+
+    .hero-impact {
+        font-size: 18px;
+        line-height: 1.6;
+        color: $text-color;
+        margin-bottom: 24px;
+        font-weight: 400;
+    }
+
+    .hero-metrics {
+        display: flex;
+        gap: 32px;
+        margin-bottom: 24px;
+    }
+
+    .metric {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .metric-value {
+        font-size: 28px;
+        font-weight: 700;
+        color: $accent-color;
+        line-height: 1.2;
+    }
+
+    .metric-label {
+        font-size: 12px;
+        color: $text-grey;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-top: 4px;
+    }
+
+    .hero-links {
+        display: flex;
+        gap: 12px;
+    }
+
+    .hero-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        background: $theme-color;
+        color: #fff;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+
+        &:hover {
+            opacity: 0.9;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+/* ======= Now Section ======= */
+.now-section {
+    .now-grid {
+        display: flex;
+        gap: 40px;
+    }
+
+    .now-column {
+        flex: 1;
+
+        h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: $text-color;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                padding: 6px 0;
+                color: $text-color-secondary;
+                font-size: 14px;
+                border-bottom: 1px solid $divider;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+/* ======= Engineering Work Section ======= */
+.engineering-section {
+    .engineering-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .engineering-card {
+        border: 1px solid $divider;
+        border-radius: 8px;
+        padding: 20px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            border-color: $accent-color;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+    }
+
+    .engineering-card-icon {
+        color: $accent-color;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .engineering-card-title {
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 8px;
+
+        a {
+            color: $text-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .engineering-card-desc {
+        font-size: 13px;
+        color: $text-color-secondary;
+        line-height: 1.5;
+        margin: 0;
+    }
+}
+
+/* ======= Narrative Section ======= */
+.narrative-section {
+    margin-bottom: 20px;
+
+    .narrative-text {
+        font-size: 15px;
+        line-height: 1.7;
+        color: $text-color-secondary;
+        border-left: 3px solid $accent-color;
+        padding-left: 20px;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+/* ======= Timeline Section ======= */
+.timeline-section {
+    .timeline {
+        position: relative;
+        padding-left: 30px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 6px;
+            bottom: 6px;
+            width: 2px;
+            background: $divider;
+        }
+    }
+
+    .timeline-item {
+        position: relative;
+        padding-bottom: 24px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    .timeline-marker {
+        position: absolute;
+        left: -26px;
+        top: 6px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: $accent-color;
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 2px $accent-color;
+    }
+
+    .timeline-content {
+        padding-left: 4px;
+    }
+
+    .timeline-time {
+        font-size: 12px;
+        color: $text-grey;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .timeline-role {
+        font-size: 15px;
+        font-weight: 600;
+        color: $text-color;
+        margin: 2px 0 0 0;
+    }
+
+    .timeline-company {
+        font-size: 13px;
+        color: $text-color-secondary;
+    }
+}
+
+/* ======= Talks Section ======= */
+.talks-section {
+    .conference-badges {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+    }
+
+    .conference-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        background: $theme-color;
+        color: #fff;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+    }
+
+    .talks-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .talk-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid $divider;
+        border-radius: 8px;
+        padding: 16px 20px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            border-color: $accent-color;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+    }
+
+    .talk-card-body {
+        flex: 1;
+    }
+
+    .talk-card-title {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0 0 4px 0;
+
+        a {
+            color: $text-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .talk-card-venue {
+        font-size: 13px;
+        color: $text-grey;
+    }
+
+    .talk-card-date {
+        font-size: 12px;
+        color: $lighter-grey;
+        margin-top: 2px;
+    }
+
+    .talk-card-action {
+        margin-left: 16px;
+        flex-shrink: 0;
+    }
+
+    .talk-watch-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 6px 14px;
+        border: 1px solid $accent-color;
+        color: $accent-color;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: $accent-color;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+/* ======= Project Cards ======= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+}
+
+.project-card {
+    border: 1px solid $divider;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: $accent-color;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .project-card-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0 0 8px 0;
+
+        a {
+            color: $text-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .project-card-desc {
+        font-size: 13px;
+        color: $text-color-secondary;
+        line-height: 1.5;
+        margin: 0 0 12px 0;
+    }
+
+    .project-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 12px;
+        color: $accent-color;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* ======= Tags Section ======= */
+.tags-section {
+    .tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 5px 14px;
+        background: $smoky-white;
+        color: $text-color-secondary;
+        border: 1px solid $divider;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+
+/* ======= Call to Action ======= */
+.cta-section {
+    .cta-box {
+        text-align: center;
+        padding: 40px 30px;
+        background: $smoky-white;
+        border-radius: 8px;
+        border: 1px solid $divider;
+    }
+
+    .cta-text {
+        font-size: 16px;
+        color: $text-color;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 24px;
+        background: $accent-color;
+        color: #fff;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+
+        &:hover {
+            opacity: 0.9;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+/* ======= Skill Bars ======= */
 .skillset {
     .item {
         margin-bottom: 15px;
@@ -257,9 +768,7 @@ p {
     }
 }
 
-
-
-
+/* ======= Footer ======= */
 .footer {
     padding-top: 30px;
     .copyright {
@@ -272,4 +781,287 @@ p {
         color: $heart;
     }
 
+}
+
+/* ======= Dark Mode ======= */
+[data-theme="dark"] {
+    body {
+        background: #0F172A;
+        color: #CBD5E1;
+    }
+
+    .wrapper {
+        background: #1E293B;
+    }
+
+    .sidebar-wrapper {
+        background: #1E293B;
+
+        .profile-container {
+            background: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .main-wrapper {
+        background: #0F172A;
+        color: #CBD5E1;
+
+        .section-title {
+            color: #93C5FD;
+        }
+
+        .job-title, .degree {
+            color: #E2E8F0;
+        }
+
+        .time {
+            color: #64748B;
+        }
+
+        .company, .university {
+            color: #64748B;
+        }
+
+        .publication-title {
+            color: #E2E8F0;
+        }
+
+        .publication-summary {
+            color: #94A3B8;
+        }
+
+        .publication-authors {
+            color: #64748B;
+        }
+    }
+
+    .site-nav {
+        background: #0F172A;
+        border-bottom-color: #334155;
+
+        .nav-list li a {
+            color: #94A3B8;
+
+            &:hover {
+                color: #60A5FA;
+            }
+        }
+    }
+
+    .dark-mode-toggle {
+        border-color: #334155;
+        color: #94A3B8;
+
+        &:hover {
+            background: #1E293B;
+            color: #60A5FA;
+        }
+    }
+
+    .hero-section {
+        .hero-impact {
+            color: #E2E8F0;
+        }
+
+        .metric-value {
+            color: #60A5FA;
+        }
+
+        .metric-label {
+            color: #64748B;
+        }
+
+        .hero-link {
+            background: #334155;
+            color: #E2E8F0;
+        }
+    }
+
+    .now-section {
+        .now-column {
+            h4 {
+                color: #E2E8F0;
+            }
+
+            ul li {
+                color: #94A3B8;
+                border-bottom-color: #334155;
+            }
+        }
+    }
+
+    .engineering-card {
+        border-color: #334155;
+        background: #1E293B;
+
+        &:hover {
+            border-color: #60A5FA;
+        }
+    }
+
+    .engineering-card-icon {
+        color: #60A5FA;
+    }
+
+    .engineering-card-title a {
+        color: #E2E8F0;
+
+        &:hover {
+            color: #60A5FA;
+        }
+    }
+
+    .engineering-card-desc {
+        color: #94A3B8;
+    }
+
+    .narrative-section .narrative-text {
+        color: #94A3B8;
+        border-left-color: #60A5FA;
+    }
+
+    .timeline-section {
+        .timeline::before {
+            background: #334155;
+        }
+
+        .timeline-marker {
+            background: #60A5FA;
+            border-color: #0F172A;
+            box-shadow: 0 0 0 2px #60A5FA;
+        }
+
+        .timeline-time {
+            color: #64748B;
+        }
+
+        .timeline-role {
+            color: #E2E8F0;
+        }
+
+        .timeline-company {
+            color: #94A3B8;
+        }
+    }
+
+    .talks-section {
+        .conference-badge {
+            background: #334155;
+            color: #E2E8F0;
+        }
+
+        .talk-card {
+            border-color: #334155;
+            background: #1E293B;
+
+            &:hover {
+                border-color: #60A5FA;
+            }
+        }
+
+        .talk-card-title a {
+            color: #E2E8F0;
+
+            &:hover {
+                color: #60A5FA;
+            }
+        }
+
+        .talk-card-venue {
+            color: #64748B;
+        }
+
+        .talk-card-date {
+            color: #475569;
+        }
+
+        .talk-watch-link {
+            border-color: #60A5FA;
+            color: #60A5FA;
+
+            &:hover {
+                background: #60A5FA;
+                color: #0F172A;
+            }
+        }
+    }
+
+    .project-card {
+        border-color: #334155;
+        background: #1E293B;
+
+        &:hover {
+            border-color: #60A5FA;
+        }
+
+        .project-card-title a {
+            color: #E2E8F0;
+
+            &:hover {
+                color: #60A5FA;
+            }
+        }
+
+        .project-card-desc {
+            color: #94A3B8;
+        }
+
+        .project-card-link {
+            color: #60A5FA;
+        }
+    }
+
+    .tags-section {
+        .tag {
+            background: #1E293B;
+            color: #94A3B8;
+            border-color: #334155;
+        }
+    }
+
+    .cta-section {
+        .cta-box {
+            background: #1E293B;
+            border-color: #334155;
+        }
+
+        .cta-text {
+            color: #E2E8F0;
+        }
+
+        .cta-button {
+            background: #60A5FA;
+            color: #0F172A;
+        }
+    }
+
+    .footer .copyright {
+        color: #64748B;
+    }
+
+    .main-wrapper h3 {
+        color: #94A3B8;
+    }
+
+    .main-wrapper .details,
+    .main-wrapper .details p {
+        color: #94A3B8;
+    }
+
+    .main-wrapper .intro,
+    .main-wrapper .intro p {
+        color: #94A3B8;
+    }
+
+    .main-wrapper .summary,
+    .main-wrapper .summary p {
+        color: #94A3B8;
+    }
+
+    a {
+        color: #60A5FA;
+        &:hover {
+            color: #93C5FD;
+        }
+    }
 }

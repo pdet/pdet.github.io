@@ -1,0 +1,33 @@
+{% assign now = site.data.data.now %}
+{% if now %}
+<section class="section now-section" id="now">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-bolt fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ now.title }}
+  </h2>
+
+  <div class="now-grid">
+    <div class="now-column">
+      <h4>Working on</h4>
+      <ul>
+        {% for item in now.working_on %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="now-column">
+      <h4>Interested in</h4>
+      <ul>
+        {% for item in now.interested_in %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+</section><!--//now-section-->
+{% endif %}

@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dr. Pedro Holanda — Principal Engineer @ DuckDB Labs</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dr. Pedro Holanda — Principal Engineer at DuckDB Labs and early core contributor to DuckDB, the fastest-growing open-source analytical database (36k+ stars, 28M+ monthly downloads). Former COO of DuckDB Labs. Former Microsoft Research intern. Published at VLDB and ICDE. PhD from CWI/Leiden University.">
+  <meta name="author" content="Pedro Holanda">
+  <meta name="keywords" content="Pedro Holanda, DuckDB, DuckDB Labs, database engineer, analytical database, open source, VLDB, ICDE, CWI, Microsoft Research, DuckLake, CSV parser, Apache Arrow">
+  <link rel="canonical" href="https://pedroholanda.org/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dr. Pedro Holanda — Principal Engineer @ DuckDB Labs">
+  <meta property="og:description" content="Early core contributor to DuckDB (36k+ stars, 28M+ monthly downloads). Former COO of DuckDB Labs. Former Microsoft Research intern. Published at VLDB and ICDE.">
+  <meta property="og:url" content="https://pedroholanda.org/">
+  <meta property="og:site_name" content="Pedro Holanda">
+  <meta property="og:image" content="https://pedroholanda.org/assets/images/profile.jpg">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@holanda_pe">
+  <meta name="twitter:creator" content="@holanda_pe">
+  <meta name="twitter:title" content="Dr. Pedro Holanda — Principal Engineer @ DuckDB Labs">
+  <meta name="twitter:description" content="Early core contributor to DuckDB (36k+ stars, 28M+ monthly downloads). Former COO of DuckDB Labs. Former Microsoft Research intern.">
+  <meta name="twitter:image" content="https://pedroholanda.org/assets/images/profile.jpg">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://pedroholanda.org",
+    "name": "Pedro Holanda",
+    "givenName": "Pedro",
+    "familyName": "Holanda",
+    "honorificPrefix": "Dr.",
+    "description": "Dr. Pedro Holanda is a Principal Engineer at DuckDB Labs and one of the earliest core contributors to DuckDB, the fastest-growing open-source analytical database management system with over 36,000 GitHub stars and 28 million monthly downloads. He served as Chief Operating Officer (COO) of DuckDB Labs from 2021 to 2023, helping scale the company from a research spinoff at CWI Amsterdam into a leading open-source database company. He was a research intern at Microsoft Research in the DMX group in 2019. He holds a PhD from Leiden University/CWI and has published at VLDB and ICDE.",
+    "url": "https://pedroholanda.org",
+    "image": "https://pedroholanda.org/assets/images/profile.jpg",
+    "nationality": {
+      "@type": "Country",
+      "name": "Brazil"
+    },
+    "jobTitle": "Principal Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "DuckDB Labs",
+      "url": "https://duckdblabs.com",
+      "description": "DuckDB Labs is the company that develops and maintains DuckDB, the open-source analytical in-process database management system."
+    },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Principal Engineer",
+      "occupationLocation": {
+        "@type": "City",
+        "name": "Amsterdam"
+      }
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Leiden University"
+      },
+      {
+        "@type": "Organization",
+        "name": "Centrum Wiskunde en Informatica (CWI)"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidade Federal do Paraná"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidade Federal do Ceará"
+      }
+    ],
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "name": "Microsoft Research",
+        "description": "Research internship in the DMX group (2019), working on JIT-compiled execution engines for SQL Server."
+      }
+    ],
+    "colleague": [
+      {
+        "@type": "Person",
+        "name": "Mark Raasveldt",
+        "url": "https://mytherin.github.io/"
+      },
+      {
+        "@type": "Person",
+        "name": "Hannes Mühleisen",
+        "url": "https://hannes.muehleisen.org"
+      }
+    ],
+    "knowsAbout": [
+      {"@type": "Thing", "name": "DuckDB", "url": "https://duckdb.org"},
+      {"@type": "Thing", "name": "Apache Arrow", "url": "https://arrow.apache.org"},
+      "database systems",
+      "analytical databases",
+      "CSV parsing",
+      "query execution",
+      "data engineering",
+      "open source"
+    ],
+    "sameAs": [
+      "https://github.com/pdet",
+      "https://linkedin.com/in/pdet",
+      "https://twitter.com/holanda_pe",
+      "https://stackoverflow.com/users/13681149/pedro-holanda"
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="//assets/plugins/bootstrap/css/bootstrap.min.css">
+
+  <!-- Plugins CSS -->
+  <link rel="stylesheet" href="//assets/plugins/font-awesome/css/all.css">
+
+  <!-- Theme CSS -->
+  <link id="theme-style" rel="stylesheet" href="//assets/css/main.css">
+</head>
+
+
+<body>
+  <div class="wrapper">
+    <aside class="sidebar-wrapper">
+      
+
+      <div class="profile-container">
+        
+        <img class="avatar" src="//assets/images/profile.jpg" alt="Dr. Pedro Holanda — Principal Engineer at DuckDB Labs" />
+        
+
+        
+        <h1 class="name">Dr. Pedro Holanda</h1>
+        
+
+        
+        <h2 class="tagline">Principal Engineer @ DuckDB Labs</h2>
+        
+      </div><!--//profile-container-->
+
+      <div class="contact-container container-block">
+  <ul class="list-unstyled contact-list">
+
+    
+    <li class="email"><i class="fas fa-envelope"></i>
+      <a href="mailto:pedro@duckdblabs.com">pedro@duckdblabs.com</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="linkedin"><i class="fab fa-linkedin"></i>
+      <a href="https://linkedin.com/in/pdet" target="_blank">pdet</a>
+    </li>
+    
+
+    
+    <li class="github"><i class="fab fa-github"></i>
+      <a href="https://github.com/pdet" target="_blank">pdet</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="twitter"><i class="fab fa-twitter"></i>
+      <a href="https://twitter.com/@holanda_pe" target="_blank">@holanda_pe</a>
+    </li>
+    
+
+    
+    <li class="stack-overflow"><i class="fab fa-stack-overflow"></i>
+      <a href="https://stackoverflow.com/users/13681149/pedro-holanda" target="_blank">13681149/pedro-holanda</a>
+    </li>
+    
+
+    
+
+    
+
+  </ul>
+</div><!--//contact-container-->
+
+
+      
+        
+
+  
+  <div class="education-container container-block">
+
+    <h2 class="container-block-title">
+      Education
+    </h2>
+
+    
+    <div class="item">
+      <h4 class="degree">PhD in Computer Science</h4>
+      <h5 class="meta">Centrum Wiskunde en Informatica (CWI) / Leiden University</h5>
+      <div class="time">2017 - 2021</div>
+    </div><!--//item-->
+    
+    <div class="item">
+      <h4 class="degree">MSc in Computer Science</h4>
+      <h5 class="meta">Universidade Federal do Paraná</h5>
+      <div class="time">2015 - 2017</div>
+    </div><!--//item-->
+    
+    <div class="item">
+      <h4 class="degree">BSc in Computer Science</h4>
+      <h5 class="meta">Universidade Federal do Ceará</h5>
+      <div class="time">2010 - 2014</div>
+    </div><!--//item-->
+    
+
+  </div><!--//education-container-->
+  
+
+
+      
+
+      
+
+
+      
+
+
+
+      
+
+    </aside><!--//sidebar-wrapper-->
+
+    <main class="main-wrapper">
+        
+
+<section class="section summary-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+    </span>
+    Career Profile
+  </h2>
+
+  <div class="summary">
+    <p>I helped build <a href="https://duckdb.org">DuckDB</a> from a research prototype at CWI Amsterdam into one of the most widely adopted analytical databases in the world, with 36k+ GitHub stars, 28M+ monthly downloads, and embedded across the modern data stack.
+As one of the earliest contributors, I served as Chief Operating Officer (COO) of <a href="https://duckdblabs.com">DuckDB Labs</a> from 2021 to 2023, helping scale the company from a small research spinoff into a leading open-source database company. I now lead core infrastructure as Principal Engineer, helping drive the core of DuckDB and <a href="https://github.com/duckdb/ducklake">DuckLake</a>.
+Previously a research intern at Microsoft Research, one of the most selective research programs in industry. Published at VLDB and ICDE, the top peer-reviewed venues in database research. PhD from CWI/Leiden University.</p>
+
+  </div><!--//summary-->
+    
+</section><!--//section-->
+
+
+
+
+
+
+<section class="section experiences-section">
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
+    </span>
+    Experiences
+  </h2>
+
+  
+  <div class="item">
+
+    <div class="meta">
+
+      <div class="upper-row">
+        <h3 class="job-title">Principal Engineer</h3>
+        <div class="time">2025 - Present</div>
+      </div><!--//upper-row-->
+
+      <div class="company">DuckDB Labs, Amsterdam</div>
+
+    </div><!--//meta-->
+
+    
+    <div class="details">
+      <p>Leading the development of core database infrastructure in <a href="https://github.com/duckdb/duckdb">DuckDB</a>, the open-source analytical database with 36k+ stars and 28M+ monthly downloads. Helping drive the core of DuckDB and <a href="https://github.com/duckdb/ducklake">DuckLake</a>.</p>
+
+    </div><!--//details-->
+    
+
+  </div><!--//item-->
+  
+  <div class="item">
+
+    <div class="meta">
+
+      <div class="upper-row">
+        <h3 class="job-title">Software Engineer</h3>
+        <div class="time">2023 - 2025</div>
+      </div><!--//upper-row-->
+
+      <div class="company">DuckDB Labs, Amsterdam</div>
+
+    </div><!--//meta-->
+
+    
+    <div class="details">
+      <p>Built and maintained core DuckDB subsystems including the parallel CSV Reader &amp; Sniffer, ART Persistent Storage, Arrow &amp; ADBC integration (~38x faster than ODBC), Enum/Dictionary encoding, BIGNUM implementation, Python client, index joins, and zone maps.</p>
+
+    </div><!--//details-->
+    
+
+  </div><!--//item-->
+  
+  <div class="item">
+
+    <div class="meta">
+
+      <div class="upper-row">
+        <h3 class="job-title">Chief Operating Officer (COO)</h3>
+        <div class="time">2021 - 2023</div>
+      </div><!--//upper-row-->
+
+      <div class="company">DuckDB Labs, Amsterdam</div>
+
+    </div><!--//meta-->
+
+    
+    <div class="details">
+      <p>Helped grow DuckDB Labs during its early phase, from a small research spinoff at CWI into a leading open-source database company. Contributed to core DuckDB development including the Arrow integration, Enum/Dictionary encoding, ART Persistent Storage, BIGNUM, Python client, index joins, and zone maps.</p>
+
+    </div><!--//details-->
+    
+
+  </div><!--//item-->
+  
+  <div class="item">
+
+    <div class="meta">
+
+      <div class="upper-row">
+        <h3 class="job-title">Post-Doctoral Researcher</h3>
+        <div class="time">2021 - 2022</div>
+      </div><!--//upper-row-->
+
+      <div class="company">Centrum Wiskunde en Informatica (CWI), Amsterdam</div>
+
+    </div><!--//meta-->
+
+    
+    <div class="details">
+      <p>Database Architectures group. Research on progressive indexing and analytical database systems. Early DuckDB development alongside the core research team that created the project.</p>
+
+    </div><!--//details-->
+    
+
+  </div><!--//item-->
+  
+  <div class="item">
+
+    <div class="meta">
+
+      <div class="upper-row">
+        <h3 class="job-title">Research Intern</h3>
+        <div class="time">2019</div>
+      </div><!--//upper-row-->
+
+      <div class="company">Microsoft Research, Redmond</div>
+
+    </div><!--//meta-->
+
+    
+    <div class="details">
+      <p>DMX group (4-month internship). Designed and implemented an experimental JIT-compiled execution engine for analytical query processing in SQL Server, working directly with the SQL Server team on next-generation query execution. Microsoft Research is one of the most selective research internship programs in the world.</p>
+
+    </div><!--//details-->
+    
+
+  </div><!--//item-->
+  
+
+</section><!--//section-->
+
+
+
+
+
+<section class="section talks-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-microphone fa-stack-1x fa-inverse"></i>
+    </span>
+    Talks & Media
+  </h2>
+
+  
+  <div class="intro">
+    <p>Speaker at FOSDEM, EuroPython, and international data conferences.</p>
+  </div>
+  
+
+  
+  
+  <h3> 2025 </h3>
+  
+  <div class="item">
+    <span class="project-title">
+      <a href="https://www.youtube.com/watch?v=QSVucNH-3Xg">DuckLake (Portuguese)</a>
+    </span>
+    - <span class="project-tagline">Data Hackers Community</span>
+  </div><!--//item-->
+  
+  
+  <h3> 2024 </h3>
+  
+  <div class="item">
+    <span class="project-title">
+      <a href="https://www.youtube.com/watch?v=YrqSp8m7fmk">Efficient CSV Parsing: On the Complexity of Simple Things</a>
+    </span>
+    - <span class="project-tagline">DSDSD</span>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <span class="project-title">
+      <a href="https://www.youtube.com/watch?v=n0npcfsZvnk">DuckDB: O Banco de Dados Analítico de Alta Velocidade (Portuguese)</a>
+    </span>
+    - <span class="project-tagline">Data Hackers Community</span>
+  </div><!--//item-->
+  
+  
+  <h3> 2023 </h3>
+  
+  <div class="item">
+    <span class="project-title">
+      <a href="https://www.youtube.com/watch?v=egN4TwVyJss">DuckDB: Bringing Analytical SQL Directly to Your Python Shell</a>
+    </span>
+    - <span class="project-tagline">EuroPython — one of the world's largest Python conferences</span>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <span class="project-title">
+      <a href="https://www.youtube.com/watch?v=-rCZQHXSunc">DuckDB: Bringing Analytical SQL Directly to Your Python Shell</a>
+    </span>
+    - <span class="project-tagline">FOSDEM — one of the largest open-source conferences in the world</span>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <span class="project-title">
+      <a href="https://www.youtube.com/watch?v=UKo_LQyLTko">DuckDB Extensions</a>
+    </span>
+    - <span class="project-tagline">DuckCon #2, Brussels</span>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <span class="project-title">
+      <a href="https://www.youtube.com/watch?v=f8OsHWvCQw4">Data Analysis with DuckDB</a>
+    </span>
+    - <span class="project-tagline">J on the Beach</span>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <span class="project-title">
+      <a href="https://www.inspiringcomputing.com/2107763/episodes/12627309-duckdb-all-the-benefits-of-a-database-none-of-the-hassle">DuckDB — All the Benefits of a Database, None of the Hassle</a>
+    </span>
+    - <span class="project-tagline">Inspiring Computing Podcast</span>
+  </div><!--//item-->
+  
+
+</section><!--//section-->
+
+
+
+
+<section class="section projects-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
+    </span>
+    Open Source Projects
+  </h2>
+
+  
+    <div class="item">
+
+      <span class="project-title">
+        <a href="https://github.com/duckdb/duckdb">DuckDB</a>
+      </span>
+
+        
+
+      
+      - <span class="project-tagline">The open-source analytical in-process database (36k+ stars, 28M+ monthly downloads). Core contributor since inception.</span>
+      
+
+    </div><!--//item-->
+  
+    <div class="item">
+
+      <span class="project-title">
+        <a href="https://github.com/duckdb/ducklake">DuckLake</a>
+      </span>
+
+        
+
+      
+      - <span class="project-tagline">An integrated data lake and catalog format (2.5k+ stars).</span>
+      
+
+    </div><!--//item-->
+  
+    <div class="item">
+
+      <span class="project-title">
+        <a href="https://github.com/pdet/Scrooge-McDuck">Scrooge McDuck</a>
+      </span>
+
+        
+
+      
+      - <span class="project-tagline">A DuckDB extension for financial data analysis — Yahoo Finance and Ethereum blockchain scanning.</span>
+      
+
+    </div><!--//item-->
+  
+
+</section><!--//section-->
+
+
+
+
+<section class="section publications-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
+    </span>
+    Selected Publications
+  </h2>
+
+  
+  <div class="intro">
+    <p>Published at VLDB, ICDE, and SIGMOD — the leading peer-reviewed venues in database systems research.</p>
+
+  </div><!--//intro-->
+  
+
+  
+  
+  <h3> 2021 </h3>
+  
+  <div class="item">
+    <div class="publication-title">Multidimensional Adaptive & Progressive Indexes</div>
+    <div class="publication-authors"><a href="https://www.cwi.nl/people/matheus-nerone">Matheus Nerone</a>, <b>Pedro Holanda</b>, <a href="http://www.inf.ufpr.br/eduardo/">Eduardo Almeida</a>, and <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a></div>
+    <div class="publication-conference">ICDE <a href="assets/papers/ICDE2021.pdf">[PDF]</a> <a href="https://github.com/pdet/MultidimensionalAdaptiveIndexing">[SOURCE CODE]</a></div>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <div class="publication-title">Progressive Indexes</div>
+    <div class="publication-authors"><b>Pedro Holanda</b></div>
+    <div class="publication-conference">PhD Thesis @ Leiden University/CWI <a href="https://ir.cwi.nl/pub/31048">[PDF]</a></div>
+  </div><!--//item-->
+  
+  
+  <h3> 2020 </h3>
+  
+  <div class="item">
+    <div class="publication-title">Dissecting DuckDB: The internals of the SQLite for Analytics</div>
+    <div class="publication-authors"><b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a></div>
+    <div class="publication-conference">SBBD (Tutorial) <a href="assets/papers/duck_sbbd.pdf">[PDF]</a> <a href="https://github.com/pdet/duckdb-tutorial">[HANDS-ON]</a></div>
+  </div><!--//item-->
+  
+  
+  <h3> 2019 </h3>
+  
+  <div class="item">
+    <div class="publication-title">Progressive Indexes: Indexing for Interactive Data Analysis</div>
+    <div class="publication-authors"><b>Pedro Holanda</b>, <a href="https://mytherin.github.io/">Mark Raasveldt</a>, <a href="https://homepages.cwi.nl/~manegold/">Stefan Manegold</a> and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a></div>
+    <div class="publication-conference">VLDB <a href="assets/papers/progidx_vldb.pdf">[PDF]</a> <a href="https://github.com/pdet/ProgressiveIndexing">[SOURCE CODE]</a></div>
+  </div><!--//item-->
+  
+  
+  <h3> 2018 </h3>
+  
+  <div class="item">
+    <div class="publication-title">Fair Benchmarking Considered Difficult: Common Pitfalls In Database Performance Testing</div>
+    <div class="publication-authors"><a href="https://mytherin.github.io/">Mark Raasveldt</a>, <b>Pedro Holanda</b>, <a href="https://t1mm3.github.io/">Tim Gubner</a>, and <a href="https://hannes.muehleisen.org">Hannes Mühleisen</a></div>
+    <div class="publication-conference">SIGMOD (DbTest) <a href="assets/papers/benchmarking.pdf">[PDF]</a> <a href="https://github.com/pdet/FairBenchmarking">[SOURCE CODE]</a></div>
+  </div><!--//item-->
+  
+
+</section><!--//section-->
+
+
+
+
+<section class="section publications-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-pen fa-stack-1x fa-inverse"></i>
+    </span>
+    Blog Posts
+  </h2>
+
+  
+  
+  <h3> 2025 </h3>
+  
+  <div class="item">
+    <div class="publication-title">Arrow IPC Support in DuckDB</div>
+    <div class="publication-authors"><b>Pedro Holanda</b>, <a href="https://github.com/ianmcook">Ian Cook</a>, <a href="https://github.com/paleolimbot">Dewey Dunnington</a>, and <a href="https://github.com/brycemecum">Bryce Mecum</a></div>
+    <div class="publication-conference">DuckDB Blog <a href="https://duckdb.org/2025/05/23/arrow-ipc-support-in-duckdb.html">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <div class="publication-title">DuckDB's CSV Reader and the Pollock Robustness Benchmark: Into the CSV Abyss</div>
+    <div class="publication-authors"><b>Pedro Holanda</b>, <a href="https://szarnyasgabor.github.io/">Gábor Szárnyas</a>, and <a href="https://gerardovitagliano.github.io/">Gerardo Vitagliano</a></div>
+    <div class="publication-conference">DuckDB Blog <a href="https://duckdb.org/2025/04/16/duckdb-csv-pollock-benchmark.html">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <h3> 2024 </h3>
+  
+  <div class="item">
+    <div class="publication-title">CSV Files: Dethroning Parquet as the Ultimate Storage File Format — or Not?</div>
+    <div class="publication-authors"><b>Pedro Holanda</b></div>
+    <div class="publication-conference">DuckDB Blog <a href="https://duckdb.org/2024/12/05/csv-files-dethroning-parquet-or-not.html">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <div class="publication-title">Driving CSV Performance: Benchmarking DuckDB with the NYC Taxi Dataset</div>
+    <div class="publication-authors"><b>Pedro Holanda</b></div>
+    <div class="publication-conference">DuckDB Blog <a href="https://duckdb.org/2024/10/16/driving-csv-performance-benchmarking-duckdb-with-the-nyc-taxi-dataset.html">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <div class="publication-title">Scrooge - DuckDB: Experimental Ethereum Blockchain Scanner</div>
+    <div class="publication-authors"><b>Pedro Holanda</b></div>
+    <div class="publication-conference">Blog <a href="https://pdet-blog.github.io/2024/06/30/ethereum.html">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <h3> 2023 </h3>
+  
+  <div class="item">
+    <div class="publication-title">DuckDB's CSV Sniffer: Automatic Detection of Types and Dialects</div>
+    <div class="publication-authors"><b>Pedro Holanda</b></div>
+    <div class="publication-conference">DuckDB Blog <a href="https://duckdb.org/2023/10/27/csv-sniffer.html">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <div class="publication-title">DuckDB ADBC — Zero-Copy Data Transfer via Arrow Database Connectivity</div>
+    <div class="publication-authors"><b>Pedro Holanda</b></div>
+    <div class="publication-conference">DuckDB Blog <a href="https://duckdb.org/2023/08/04/adbc">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <div class="publication-title">From Waddle to Flying: Quickly Expanding DuckDB's Functionality with Scalar Python UDFs</div>
+    <div class="publication-authors"><b>Pedro Holanda</b>, <a href="https://github.com/Tishj">Thijs Bruineman</a>, and <a href="https://github.com/cpcloud">Phillip Cloud</a></div>
+    <div class="publication-conference">DuckDB Blog <a href="https://duckdb.org/2023/07/07/python-udf.html">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <div class="publication-title">Scrooge: Analyzing Yahoo Financial Data In DuckDB</div>
+    <div class="publication-authors"><b>Pedro Holanda</b></div>
+    <div class="publication-conference">Blog <a href="https://pdet-blog.github.io/2023/02/25/scrooge-yahoo.html">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <h3> 2022 </h3>
+  
+  <div class="item">
+    <div class="publication-title">Persistent Storage of Adaptive Radix Trees in DuckDB</div>
+    <div class="publication-authors"><b>Pedro Holanda</b></div>
+    <div class="publication-conference">DuckDB Blog <a href="https://duckdb.org/2022/07/27/art-storage.html">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <div class="publication-title">Scrooge McDuck: A DuckDB Extension for Financial Data Analysis (Demo)</div>
+    <div class="publication-authors"><b>Pedro Holanda</b></div>
+    <div class="publication-conference">Blog <a href="https://pdet-blog.github.io/2022/08/16/scrooge.html">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <h3> 2021 </h3>
+  
+  <div class="item">
+    <div class="publication-title">DuckDB quacks Arrow: A zero-copy data integration between Apache Arrow and DuckDB</div>
+    <div class="publication-authors"><b>Pedro Holanda</b> and <a href="https://github.com/jonkeane">Jonathan Keane</a></div>
+    <div class="publication-conference">DuckDB Blog <a href="https://duckdb.org/2021/12/03/duck-arrow.html">[Here]</a></div>
+  </div><!--//item-->
+  
+  
+  <div class="item">
+    <div class="publication-title">DuckDB — The Lord of Enums: The Fellowship of the Categorical and Factors</div>
+    <div class="publication-authors"><b>Pedro Holanda</b></div>
+    <div class="publication-conference">DuckDB Blog <a href="https://duckdb.org/2021/11/26/duck-enum.html">[Here]</a></div>
+  </div><!--//item-->
+  
+
+</section><!--//section-->
+
+
+
+
+
+
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="text-center">
+        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+        <small class="copyright">Dr. Pedro Holanda — pedroholanda.org</small>
+    </div><!--//container-->
+</footer><!--//footer-->
+
+
+<!-- Javascript -->
+<script type="text/javascript" src="//assets/plugins/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="//assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- custom js -->
+<script type="text/javascript" src="//assets/js/main.js"></script>
+
+
+  <!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140345721-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-140345721-1');
+</script>
+
+
+</body>
+
+</html>
+

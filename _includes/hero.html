@@ -1,0 +1,27 @@
+{% assign hero = site.data.data.hero %}
+{% if hero %}
+<section class="section hero-section" id="about">
+
+  <div class="hero-impact">
+    {{ hero.impact }}
+  </div>
+
+  <div class="hero-metrics">
+    {% for metric in hero.metrics %}
+    <div class="metric">
+      <span class="metric-value">{{ metric.value }}</span>
+      <span class="metric-label">{{ metric.label }}</span>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="hero-links">
+    {% for link in hero.links %}
+    <a href="{{ link.url }}" class="hero-link" {% unless link.url contains '#' %}target="_blank"{% endunless %}>
+      <i class="{{ link.icon }}"></i> {{ link.label }}
+    </a>
+    {% endfor %}
+  </div>
+
+</section><!--//hero-section-->
+{% endif %}

@@ -1,6 +1,6 @@
 {% assign talks = site.data.data.talks %}
 {% if talks %}
-<section class="section talks-section">
+<section class="section talks-section" id="talks">
 
   <h2 class="section-title">
     <span class="fa-stack fa-xs">
@@ -16,17 +16,40 @@
   </div>
   {% endif %}
 
-  {% for talk in talks.items %}
-  {% if talk.date %}
-  <h3> {{talk.date}} </h3>
+  {% if talks.conferences %}
+  <div class="conference-badges">
+    {% for conf in talks.conferences %}
+    <span class="conference-badge">{{ conf }}</span>
+    {% endfor %}
+  </div>
   {% endif %}
-  <div class="item">
-    <span class="project-title">
-      <a href="{{ talk.link }}">{{ talk.title }}</a>
-    </span>
-    - <span class="project-tagline">{{ talk.venue }}</span>
-  </div><!--//item-->
-  {% endfor %}
+
+  <div class="talks-grid">
+    {% for talk in talks.items %}
+    <div class="talk-card">
+      <div class="talk-card-body">
+        <h4 class="talk-card-title">
+          <a href="{{ talk.link }}" target="_blank">{{ talk.title }}</a>
+        </h4>
+        <div class="talk-card-venue">{{ talk.venue }}</div>
+        {% if talk.date %}
+        <div class="talk-card-date">{{ talk.date }}</div>
+        {% endif %}
+      </div>
+      <div class="talk-card-action">
+        <a href="{{ talk.link }}" target="_blank" class="talk-watch-link">
+          {% if talk.link contains 'youtube' %}
+          <i class="fas fa-play-circle"></i> Watch
+          {% elsif talk.link contains 'inspiring' %}
+          <i class="fas fa-headphones"></i> Listen
+          {% else %}
+          <i class="fas fa-external-link-alt"></i> View
+          {% endif %}
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 
 </section><!--//section-->
 {% endif %}

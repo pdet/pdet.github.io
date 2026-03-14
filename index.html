@@ -2,8 +2,12 @@
 layout: default
 ---
 
-
-{% include career-profile.html %}
+{% include nav.html %}
+{% include hero.html %}
+{% include now.html %}
+{% include engineering-work.html %}
+{% include narrative.html %}
+{% include timeline.html %}
 
 {% unless site.data.data.sidebar.education %}
   {% include education.html %}
@@ -13,5 +17,5 @@ layout: default
 {% include projects.html %}
 {% include publications.html %}
 {% include blogposts.html %}
-{% include skills.html %}
-
+{% include tags.html %}
+{% include call-to-action.html %}

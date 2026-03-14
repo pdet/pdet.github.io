@@ -13,6 +13,10 @@
     {{ hero.impact }}
   </div>
 
+  {% if hero.credentials %}
+  <p class="hero-credentials">{{ hero.credentials }}</p>
+  {% endif %}
+
   <div class="hero-metrics-wrapper">
     {% if hero.metrics_intro %}
     <p class="hero-metrics-intro">{{ hero.metrics_intro }}</p>

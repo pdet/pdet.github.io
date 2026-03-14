@@ -8,10 +8,12 @@
   {% endif%}
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dr. Pedro Holanda — Principal Engineer at DuckDB Labs and early core contributor to DuckDB, the fastest-growing open-source analytical database (36k+ stars, 28M+ monthly downloads). Former COO of DuckDB Labs. Former Microsoft Research intern. Published at VLDB and ICDE. PhD from CWI/Leiden University.">
+  <meta name="description" content="Dr. Pedro Holanda is a Principal Engineer at DuckDB Labs, early core contributor to DuckDB (36k+ GitHub stars, 28M+ monthly downloads). Former COO. PhD from CWI/Leiden University. Published at VLDB and ICDE. Former Microsoft Research intern.">
   <meta name="author" content="Pedro Holanda">
   <meta name="keywords" content="Pedro Holanda, DuckDB, DuckDB Labs, database engineer, analytical database, open source, VLDB, ICDE, CWI, Microsoft Research, DuckLake, CSV parser, Apache Arrow">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://pedroholanda.org/">
+  <link rel="alternate" hreflang="en" href="https://pedroholanda.org/">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
@@ -20,6 +22,9 @@
   <meta property="og:url" content="https://pedroholanda.org/">
   <meta property="og:site_name" content="Pedro Holanda">
   <meta property="og:image" content="https://pedroholanda.org/assets/images/profile.jpg">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta property="og:image:alt" content="Dr. Pedro Holanda — Principal Engineer at DuckDB Labs, core contributor to DuckDB">
   <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
@@ -29,6 +34,7 @@
   <meta name="twitter:title" content="Dr. Pedro Holanda — Principal Engineer @ DuckDB Labs">
   <meta name="twitter:description" content="Early core contributor to DuckDB (36k+ stars, 28M+ monthly downloads). Former COO of DuckDB Labs. Former Microsoft Research intern.">
   <meta name="twitter:image" content="https://pedroholanda.org/assets/images/profile.jpg">
+  <meta name="twitter:image:alt" content="Dr. Pedro Holanda — Principal Engineer at DuckDB Labs, core contributor to DuckDB">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -50,6 +56,7 @@
     "jobTitle": "Principal Engineer",
     "worksFor": {
       "@type": "Organization",
+      "@id": "https://duckdblabs.com",
       "name": "DuckDB Labs",
       "url": "https://duckdblabs.com",
       "description": "DuckDB Labs is the company that develops and maintains DuckDB, the open-source analytical in-process database management system."
@@ -113,8 +120,20 @@
       "https://github.com/pdet",
       "https://linkedin.com/in/pdet",
       "https://twitter.com/holanda_pe",
-      "https://stackoverflow.com/users/13681149/pedro-holanda"
+      "https://stackoverflow.com/users/13681149/pedro-holanda",
+      "https://scholar.google.com/citations?user=yVMGJ7IAAAAJ",
+      "https://dblp.org/pid/232/5765.html"
     ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://pedroholanda.org",
+    "name": "Pedro Holanda",
+    "author": { "@id": "https://pedroholanda.org" }
   }
   </script>
 
@@ -131,7 +150,8 @@
   </script>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/plugins/bootstrap/css/bootstrap.min.css">

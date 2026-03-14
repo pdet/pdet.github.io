@@ -65,12 +65,6 @@
         }
     }
 
-    /* Now */
-    .now-section .now-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-
     /* Engineering */
     .engineering-section .engineering-grid {
         grid-template-columns: 1fr;
@@ -107,11 +101,6 @@
             flex-direction: column;
             gap: 4px;
         }
-    }
-
-    /* Notes */
-    .notes-section .notes-grid {
-        grid-template-columns: 1fr;
     }
 
     /* Section spacing on mobile */

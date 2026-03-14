@@ -61,6 +61,12 @@
     </li>
     {% endif %}
 
+    {% if sidebar.google-scholar %}
+    <li class="google-scholar"><i class="fas fa-graduation-cap"></i>
+      <a href="https://scholar.google.com/citations?user={{ sidebar.google-scholar }}" target="_blank">Google Scholar</a>
+    </li>
+    {% endif %}
+
     {% if sidebar.codewars %}
     <li class="codewars"><i class="fas fa-code"></i>
       <a href="https://www.codewars.com/users/{{ sidebar.codewars }}/completed_solutions" target="_blank">{{ sidebar.codewars }}</a>

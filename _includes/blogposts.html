@@ -10,6 +10,12 @@
     {{ blogposts.title }}
   </h2>
 
+  {% if blogposts.all_posts_note %}
+  <div class="intro">
+    <p>{{ blogposts.all_posts_note }}</p>
+  </div>
+  {% endif %}
+
   <div class="blog-cards">
     {% for post in blogposts.posts %}
     <div class="blog-card">

@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: $text-color-secondary;
     background: $smoky-white;
-    font-size: 14px;
+    font-size: 16px;
     padding: 30px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -242,7 +242,7 @@ p {
     }
     .publication-summary {
         color: $text-color-secondary;
-        font-size: 13px;
+        font-size: 14px;
         margin-bottom: 4px;
         padding-left: 0;
         line-height: 1.4;
@@ -338,7 +338,7 @@ p {
     }
 
     .hero-impact {
-        font-size: 18px;
+        font-size: 20px;
         line-height: 1.6;
         color: $text-color;
         margin-bottom: 24px;
@@ -350,9 +350,19 @@ p {
     }
 
     .hero-metrics-intro {
-        font-size: 14px;
-        color: $text-grey;
+        font-size: 13px;
+        color: $text-color-secondary;
         margin: 0 0 8px 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+    }
+
+    .hero-credentials {
+        font-size: 14px;
+        color: $text-color-secondary;
+        margin: 0 0 20px 0;
+        line-height: 1.5;
     }
 
     .hero-metrics {
@@ -406,45 +416,6 @@ p {
     }
 }
 
-/* ======= Now Section (Plan #10) ======= */
-.now-section {
-    .now-grid {
-        display: flex;
-        gap: 40px;
-    }
-
-    .now-column {
-        flex: 1;
-
-        h4 {
-            font-size: 14px;
-            font-weight: 600;
-            color: $text-color;
-            margin-top: 0;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-
-            li {
-                padding: 6px 0;
-                color: $text-color-secondary;
-                font-size: 14px;
-                border-bottom: 1px solid $divider;
-
-                &:last-child {
-                    border-bottom: none;
-                }
-            }
-        }
-    }
-}
-
 /* ======= Engineering Contributions (Plan #2) ======= */
 .engineering-section {
     .engineering-grid {
@@ -480,7 +451,7 @@ p {
     }
 
     .engineering-card-desc {
-        font-size: 13px;
+        font-size: 14px;
         color: $text-color-secondary;
         line-height: 1.5;
         margin: 0 0 10px 0;
@@ -519,6 +490,26 @@ p {
         p {
             margin: 0;
         }
+    }
+}
+
+/* ======= Vision Section ======= */
+.vision-section {
+    .vision-items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .vision-item {
+        font-size: 15px;
+        line-height: 1.7;
+        color: $text-color-secondary;
+        border-left: 3px solid $accent-color;
+        padding: 12px 20px;
+        margin: 0;
+        background: $smoky-white;
+        border-radius: 0 6px 6px 0;
     }
 }
 
@@ -875,7 +866,7 @@ p {
     }
 
     .blog-card-summary {
-        font-size: 13px;
+        font-size: 14px;
         color: $text-color-secondary;
         line-height: 1.5;
         margin: 0 0 10px 0;
@@ -909,70 +900,6 @@ p {
         font-size: 12px;
         color: $text-grey;
         flex-shrink: 0;
-    }
-}
-
-/* ======= Engineering Notes (Plan Phase 5) ======= */
-.notes-section {
-    .notes-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
-
-    .note-card {
-        border: 1px solid $divider;
-        border-radius: 8px;
-        padding: 18px;
-        transition: all 0.2s ease;
-
-        &:hover {
-            border-color: $accent-color;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        }
-    }
-
-    .note-card-title {
-        font-size: 14px;
-        font-weight: 600;
-        margin: 0 0 8px 0;
-        color: $text-color;
-
-        a {
-            color: $text-color;
-            text-decoration: none;
-
-            &:hover {
-                color: $accent-color;
-            }
-        }
-    }
-
-    .note-card-summary {
-        font-size: 13px;
-        color: $text-color-secondary;
-        line-height: 1.5;
-        margin: 0;
-    }
-}
-
-/* ======= Tags Section (Plan #14) ======= */
-.tags-section {
-    .tags-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .tag {
-        display: inline-block;
-        padding: 5px 14px;
-        background: $smoky-white;
-        color: $text-color-secondary;
-        border: 1px solid $divider;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 500;
     }
 }
 
@@ -1163,27 +1090,9 @@ p {
             color: #64748B;
         }
 
-        .hero-metrics-intro {
-            color: #94A3B8;
-        }
-
         .hero-link {
             background: #334155;
             color: #E2E8F0;
-        }
-    }
-
-    /* Now dark */
-    .now-section {
-        .now-column {
-            h4 {
-                color: #E2E8F0;
-            }
-
-            ul li {
-                color: #94A3B8;
-                border-bottom-color: #334155;
-            }
         }
     }
 
@@ -1213,10 +1122,26 @@ p {
         color: #60A5FA;
     }
 
+    /* Hero credentials dark */
+    .hero-section .hero-credentials {
+        color: #94A3B8;
+    }
+
+    .hero-section .hero-metrics-intro {
+        color: #94A3B8;
+    }
+
     /* Narrative dark */
     .narrative-section .narrative-text {
         color: #94A3B8;
         border-left-color: #60A5FA;
+    }
+
+    /* Vision dark */
+    .vision-section .vision-item {
+        color: #94A3B8;
+        border-left-color: #60A5FA;
+        background: #1E293B;
     }
 
     /* Timeline dark */
@@ -1356,43 +1281,6 @@ p {
 
         .blog-card-venue {
             color: #64748B;
-        }
-    }
-
-    /* Notes dark */
-    .notes-section {
-        .note-card {
-            border-color: #334155;
-            background: #1E293B;
-
-            &:hover {
-                border-color: #60A5FA;
-            }
-        }
-
-        .note-card-title {
-            color: #E2E8F0;
-
-            a {
-                color: #E2E8F0;
-
-                &:hover {
-                    color: #60A5FA;
-                }
-            }
-        }
-
-        .note-card-summary {
-            color: #94A3B8;
-        }
-    }
-
-    /* Tags dark */
-    .tags-section {
-        .tag {
-            background: #1E293B;
-            color: #94A3B8;
-            border-color: #334155;
         }
     }
 

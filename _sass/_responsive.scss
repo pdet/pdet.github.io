@@ -1,3 +1,19 @@
+/* Tablet devices (768px - 960px) */
+@media (min-width: 768px) and (max-width: 960px) {
+    body {
+        padding: 15px;
+    }
+
+    .main-wrapper {
+        padding: 40px;
+    }
+
+    .site-nav {
+        margin: -40px -40px 30px -40px;
+        padding: 0 40px;
+    }
+}
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
 
@@ -24,14 +40,15 @@
         margin: -20px -20px 24px -20px;
         padding: 0 12px;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
 
         .nav-list {
             flex-wrap: nowrap;
             min-width: max-content;
 
             li a {
-                padding: 10px 10px;
-                font-size: 11px;
+                padding: 12px 14px;
+                font-size: 12px;
                 white-space: nowrap;
             }
         }
@@ -56,8 +73,13 @@
             font-size: 14px;
         }
 
+        .hero-impact {
+            font-size: 17px;
+        }
+
         .hero-metrics {
             gap: 24px;
+            flex-wrap: wrap;
         }
 
         .metric-value {
@@ -78,6 +100,11 @@
         grid-template-columns: 1fr;
     }
 
+    /* Timeline */
+    .timeline-section .timeline {
+        padding-left: 24px;
+    }
+
     /* Talks */
     .talks-section {
         .talk-card {
@@ -88,6 +115,7 @@
         .talk-card-thumb {
             width: 100%;
             height: auto;
+            aspect-ratio: 16/9;
             margin-right: 0;
             margin-bottom: 12px;
 
@@ -113,42 +141,7 @@
 
     /* Section spacing on mobile */
     .main-wrapper .section {
-        margin-bottom: 40px;
-        padding-bottom: 40px;
+        margin-bottom: 32px;
+        padding-bottom: 32px;
     }
-}
-
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-    .skillset .level-title {
-        display: inline-block;
-        float: left;
-        width: 30%;
-        margin-bottom: 0;
-    }
-
-    .skillset .level-bar {
-        display: inline-block;
-        width: 70%;
-        float: left;
-        position: relative;
-        top: 1px;
-    }
-
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-}
-
-/* Ex-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1400px) {
-
 }

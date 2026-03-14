@@ -1,13 +1,20 @@
+/* Bootstrap replacements */
+.text-center { text-align: center; }
+.list-unstyled { list-style: none; padding-left: 0; margin: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
 /* ======= Base ======= */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: $text-color-secondary;
     background: $smoky-white;
     font-size: 16px;
+    line-height: 1.5;
     padding: 30px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6  {
@@ -20,8 +27,31 @@ a {
         text-decoration: underline;
         color: darken($accent-color, 15%);
     }
+    &:focus-visible {
+        outline: 2px solid $accent-color;
+        outline-offset: 2px;
+    }
+}
+
+button:focus-visible {
+    outline: 2px solid $accent-color;
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 8px 16px;
+    background: $accent-color;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+
     &:focus {
-        text-decoration: none;
+        position: fixed;
+        top: 8px;
+        left: 8px;
     }
 }
 
@@ -117,7 +147,12 @@ p {
         font-size: 16px;
         font-weight: 400;
         color: $text-color;
+        margin-top: 0;
         margin-bottom: 1px;
+    }
+    .publication-conference {
+        font-size: 13px;
+        color: $text-grey;
     }
     .publication-authors {
         font-style: italic;
@@ -179,7 +214,7 @@ p {
                 letter-spacing: 0.5px;
                 transition: color 0.2s ease;
 
-                &:hover {
+                &:hover, &.active {
                     color: $accent-color;
                     text-decoration: none;
                 }
@@ -209,10 +244,6 @@ p {
 
 /* ======= Hero Section (Plan #1) ======= */
 .hero-section {
-    margin-bottom: 50px;
-    padding-bottom: 50px;
-    border-bottom: 1px solid $divider;
-
     .hero-header {
         display: flex;
         align-items: center;
@@ -252,8 +283,8 @@ p {
         font-size: 20px;
         line-height: 1.6;
         color: $text-color;
-        margin-bottom: 24px;
-        font-weight: 400;
+        margin-bottom: 28px;
+        font-weight: 500;
     }
 
     .hero-metrics-wrapper {
@@ -294,8 +325,8 @@ p {
     }
 
     .metric-label {
-        font-size: 11px;
-        color: $text-grey;
+        font-size: 12px;
+        color: $darker-grey;
         text-transform: uppercase;
         letter-spacing: 0.8px;
         margin-top: 4px;
@@ -320,7 +351,7 @@ p {
         transition: all 0.2s ease;
 
         &:hover {
-            opacity: 0.9;
+            background: lighten($theme-color, 8%);
             text-decoration: none;
             color: #fff;
         }
@@ -365,9 +396,9 @@ p {
         border: 1px solid $divider;
         border-radius: 8px;
         padding: 20px;
-        transition: all 0.2s ease;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
-        &:hover {
+        &:hover, &:focus-within {
             border-color: $accent-color;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
@@ -510,6 +541,14 @@ p {
         font-size: 13px;
         color: $text-color-secondary;
     }
+
+    .timeline-detail {
+        display: block;
+        font-size: 12px;
+        color: $text-grey;
+        margin-top: 2px;
+        font-style: italic;
+    }
 }
 
 /* ======= Talks Section (Plan #3) ======= */
@@ -550,9 +589,9 @@ p {
         border: 1px solid $divider;
         border-radius: 8px;
         padding: 14px 18px;
-        transition: all 0.2s ease;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
-        &:hover {
+        &:hover, &:focus-within {
             border-color: $accent-color;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
@@ -566,6 +605,7 @@ p {
         border-radius: 4px;
         overflow: hidden;
         position: relative;
+        background: #e2e8f0;
 
         img {
             width: 100%;
@@ -586,7 +626,7 @@ p {
             background: rgba(0, 0, 0, 0.3);
             color: #fff;
             font-size: 22px;
-            opacity: 0;
+            opacity: 0.5;
             transition: opacity 0.2s ease;
         }
 
@@ -641,7 +681,7 @@ p {
 
     .talk-card-date {
         font-size: 12px;
-        color: $lighter-grey;
+        color: $text-grey;
         margin-top: 2px;
     }
 
@@ -674,7 +714,7 @@ p {
 /* ======= Project Cards (Plan #7) ======= */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     gap: 16px;
 }
 
@@ -682,9 +722,9 @@ p {
     border: 1px solid $divider;
     border-radius: 8px;
     padding: 20px;
-    transition: all 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
-    &:hover {
+    &:hover, &:focus-within {
         border-color: $accent-color;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     }
@@ -760,9 +800,9 @@ p {
         border: 1px solid $divider;
         border-radius: 8px;
         padding: 18px 20px;
-        transition: all 0.2s ease;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
-        &:hover {
+        &:hover, &:focus-within {
             border-color: $accent-color;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
@@ -871,31 +911,10 @@ p {
         transition: all 0.2s ease;
 
         &:hover {
-            opacity: 0.9;
+            background: lighten($accent-color, 8%);
             text-decoration: none;
             color: #fff;
         }
-    }
-}
-
-/* ======= Skill Bars ======= */
-.skillset {
-    .item {
-        margin-bottom: 15px;
-        overflow: hidden;
-    }
-    .level-title {
-        font-size: 14px;
-        margin-top: 0;
-        margin-bottom: 12px;
-    }
-    .level-bar {
-        height: 12px;
-        background: $smoky-white;
-    }
-    .level-bar-inner {
-        height: 12px;
-        background: $accent-color;
     }
 }
 
@@ -922,6 +941,7 @@ p {
 
     .wrapper {
         background: #0F172A;
+        box-shadow: none;
     }
 
     .main-wrapper {
@@ -961,6 +981,10 @@ p {
             color: #64748B;
         }
 
+        .publication-conference {
+            color: #64748B;
+        }
+
         .publication-year {
             color: #94A3B8;
         }
@@ -979,7 +1003,7 @@ p {
         .nav-list li a {
             color: #94A3B8;
 
-            &:hover {
+            &:hover, &.active {
                 color: #60A5FA;
             }
         }
@@ -1022,6 +1046,10 @@ p {
         .hero-link {
             background: #334155;
             color: #E2E8F0;
+
+            &:hover {
+                background: #475569;
+            }
         }
 
         .hero-contact a {
@@ -1108,6 +1136,10 @@ p {
         .timeline-company {
             color: #94A3B8;
         }
+
+        .timeline-detail {
+            color: #64748B;
+        }
     }
 
     /* Talks dark */
@@ -1135,11 +1167,11 @@ p {
         }
 
         .talk-card-venue {
-            color: #64748B;
+            color: #94A3B8;
         }
 
         .talk-card-date {
-            color: #475569;
+            color: #64748B;
         }
 
         .talk-watch-link {
@@ -1207,9 +1239,9 @@ p {
         }
 
         .blog-tag {
-            background: #0F172A;
+            background: #334155;
             color: #94A3B8;
-            border-color: #334155;
+            border-color: #475569;
         }
 
         .blog-card-title a {
@@ -1239,6 +1271,10 @@ p {
         .cta-button {
             background: #60A5FA;
             color: #0F172A;
+
+            &:hover {
+                background: #93C5FD;
+            }
         }
     }
 
@@ -1251,5 +1287,13 @@ p {
         &:hover {
             color: #93C5FD;
         }
+    }
+}
+
+/* ======= Reduced Motion ======= */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
     }
 }

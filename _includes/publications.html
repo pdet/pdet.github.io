@@ -3,7 +3,7 @@
 <section class="section publications-section" id="research">
 
   <h2 class="section-title">
-    <span class="fa-stack fa-xs">
+    <span class="fa-stack fa-xs" aria-hidden="true">
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
     </span>
@@ -21,7 +21,7 @@
   <div class="publication-year">{{publication.date}}</div>
   {% endif %}
   <div class="item">
-    <div class="publication-title">{{ publication.title }}</div>
+    <h3 class="publication-title">{{ publication.title }}</h3>
     {% if publication.summary %}
     <div class="publication-summary">{{ publication.summary }}</div>
     {% endif %}

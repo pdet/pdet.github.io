@@ -3,7 +3,7 @@
 <section class="section engineering-section" id="engineering">
 
   <h2 class="section-title">
-    <span class="fa-stack fa-xs">
+    <span class="fa-stack fa-xs" aria-hidden="true">
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-cogs fa-stack-1x fa-inverse"></i>
     </span>
@@ -21,10 +21,10 @@
       {% if item.blog_link or item.source_link %}
       <div class="engineering-card-links">
         {% if item.blog_link %}
-        <a href="{{ item.blog_link }}" target="_blank"><i class="fas fa-pen"></i> Blog</a>
+        <a href="{{ item.blog_link }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-pen"></i> Blog</a>
         {% endif %}
         {% if item.source_link %}
-        <a href="{{ item.source_link }}" target="_blank"><i class="fab fa-github"></i> Source</a>
+        <a href="{{ item.source_link }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source</a>
         {% endif %}
       </div>
       {% endif %}

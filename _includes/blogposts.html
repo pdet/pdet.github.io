@@ -3,7 +3,7 @@
 <section class="section blogposts-section" id="blog">
 
   <h2 class="section-title">
-    <span class="fa-stack fa-xs">
+    <span class="fa-stack fa-xs" aria-hidden="true">
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-pen fa-stack-1x fa-inverse"></i>
     </span>
@@ -22,7 +22,7 @@
       <div class="blog-card-header">
         <h3 class="blog-card-title">
           {% if post.link %}
-          <a href="{{ post.link }}" target="_blank">{{ post.title }}</a>
+          <a href="{{ post.link }}" target="_blank" rel="noopener noreferrer">{{ post.title }}</a>
           {% else %}
           {{ post.title }}
           {% endif %}

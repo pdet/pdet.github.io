@@ -2,6 +2,16 @@
 {% if cta %}
 <section class="section cta-section">
 
+  {% if cta.title %}
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs" aria-hidden="true">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ cta.title }}
+  </h2>
+  {% endif %}
+
   <div class="cta-box">
     <p class="cta-text">{{ cta.text }}</p>
     {% if cta.email %}

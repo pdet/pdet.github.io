@@ -1,6 +1,6 @@
 {% assign blogposts = site.data.data.blogposts %}
 {% if blogposts %}
-<section class="section publications-section" id="blog">
+<section class="section blogposts-section" id="blog">
 
   <h2 class="section-title">
     <span class="fa-stack fa-xs">
@@ -10,19 +10,39 @@
     {{ blogposts.title }}
   </h2>
 
-  {% for post in blogposts.posts %}
-  {% if post.date %}
-  <h3> {{post.date}} </h3>
-  {% endif %}
-  <div class="item blog-item">
-    <div class="publication-title">{{ post.title }}</div>
-    {% if post.summary %}
-    <div class="publication-summary">{{ post.summary }}</div>
-    {% endif %}
-    <div class="publication-authors">{{ post.authors }}</div>
-    <div class="publication-conference">{{ post.conference }}</div>
-  </div><!--//item-->
-  {% endfor %}
+  <div class="blog-cards">
+    {% for post in blogposts.posts %}
+    <div class="blog-card">
+      <div class="blog-card-header">
+        <div class="blog-card-title">
+          {% if post.link %}
+          <a href="{{ post.link }}" target="_blank">{{ post.title }}</a>
+          {% else %}
+          {{ post.title }}
+          {% endif %}
+        </div>
+        {% if post.date %}
+        <span class="blog-card-year">{{ post.date }}</span>
+        {% endif %}
+      </div>
+      {% if post.summary %}
+      <p class="blog-card-summary">{{ post.summary }}</p>
+      {% endif %}
+      <div class="blog-card-footer">
+        {% if post.tags %}
+        <div class="blog-card-tags">
+          {% for tag in post.tags %}
+          <span class="blog-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if post.venue %}
+        <span class="blog-card-venue">{{ post.venue }}</span>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 
 </section><!--//section-->
 {% endif %}

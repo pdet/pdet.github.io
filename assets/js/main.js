@@ -12,17 +12,9 @@ jQuery(document).ready(function($) {
         });
     });
 
-    /* Dark mode toggle */
+    /* Dark mode toggle (theme detection is in head.html to prevent FOUC) */
     var darkModeToggle = document.getElementById('dark-mode-toggle');
     if (darkModeToggle) {
-        // Check saved preference
-        var savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-
         function updateIcon() {
             var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             var icon = darkModeToggle.querySelector('i');

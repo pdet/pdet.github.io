@@ -19,7 +19,9 @@
   {% if talks.conferences %}
   <div class="conference-badges">
     {% for conf in talks.conferences %}
-    <span class="conference-badge">{{ conf }}</span>
+    <span class="conference-badge">
+      <i class="{{ conf.icon }}"></i> {{ conf.name }}
+    </span>
     {% endfor %}
   </div>
   {% endif %}
@@ -27,6 +29,15 @@
   <div class="talks-grid">
     {% for talk in talks.items %}
     <div class="talk-card">
+      {% if talk.link contains 'youtube.com' %}
+      {% assign video_id = talk.link | split: "v=" | last %}
+      <div class="talk-card-thumb">
+        <a href="{{ talk.link }}" target="_blank">
+          <img src="https://img.youtube.com/vi/{{ video_id }}/mqdefault.jpg" alt="{{ talk.title }}" loading="lazy">
+          <span class="play-overlay"><i class="fas fa-play"></i></span>
+        </a>
+      </div>
+      {% endif %}
       <div class="talk-card-body">
         <h4 class="talk-card-title">
           <a href="{{ talk.link }}" target="_blank">{{ talk.title }}</a>

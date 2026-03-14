@@ -16,14 +16,18 @@
       <div class="engineering-card-icon">
         <i class="{{ item.icon }}"></i>
       </div>
-      <h3 class="engineering-card-title">
-        {% if item.link %}
-        <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>
-        {% else %}
-        {{ item.title }}
-        {% endif %}
-      </h3>
+      <h3 class="engineering-card-title">{{ item.title }}</h3>
       <p class="engineering-card-desc">{{ item.description }}</p>
+      {% if item.blog_link or item.source_link %}
+      <div class="engineering-card-links">
+        {% if item.blog_link %}
+        <a href="{{ item.blog_link }}" target="_blank"><i class="fas fa-pen"></i> Blog</a>
+        {% endif %}
+        {% if item.source_link %}
+        <a href="{{ item.source_link }}" target="_blank"><i class="fab fa-github"></i> Source</a>
+        {% endif %}
+      </div>
+      {% endif %}
     </div>
     {% endfor %}
   </div>

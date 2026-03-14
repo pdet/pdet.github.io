@@ -13,9 +13,14 @@
   <div class="projects-grid">
     {% for project in projects.assignments %}
     <div class="project-card">
-      <h4 class="project-card-title">
-        <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
-      </h4>
+      <div class="project-card-header">
+        <h4 class="project-card-title">
+          <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+        </h4>
+        {% if project.stars %}
+        <span class="project-stars"><i class="fas fa-star"></i> {{ project.stars }}</span>
+        {% endif %}
+      </div>
       {% if project.tagline %}
       <p class="project-card-desc">{{ project.tagline }}</p>
       {% endif %}

@@ -26,7 +26,10 @@ sidebar:
     #goodreads: # Number-Username, e.g. 123456-alandoe
 
 hero:
-    impact: "Early contributor who helped build <a href=\"https://duckdb.org\">DuckDB</a> from a research prototype into one of the most widely used analytical databases."
+    name: "Pedro Holanda"
+    tagline: "Principal Engineer @ DuckDB Labs"
+    impact: "Early engineer behind <a href=\"https://duckdb.org\">DuckDB</a>, one of the most widely used analytical databases."
+    metrics_intro: "Core contributor to open-source projects with more than"
     metrics:
       - label: "GitHub Stars"
         value: "36k+"
@@ -37,7 +40,7 @@ hero:
         url: "https://github.com/pdet"
         icon: "fab fa-github"
       - label: "Blog"
-        url: "https://duckdb.org/docs/blog"
+        url: "#blog"
         icon: "fas fa-pen"
       - label: "Talks"
         url: "#talks"
@@ -50,26 +53,31 @@ now:
       - "DuckLake"
       - "Query processing performance"
     interested_in:
-      - "Database internals"
+      - "Query execution engines"
+      - "Analytical databases"
       - "Performance engineering"
-      - "Data infrastructure"
 
 engineering-work:
-    title: Selected Engineering Work
+    title: Engineering Contributions
     items:
-      - title: DuckDB CSV Reader
-        description: "High-performance parallel CSV ingestion pipeline used by millions. Built the parser and automatic type/dialect sniffer."
-        link: "https://duckdb.org/2024/12/05/csv-files-dethroning-parquet-or-not.html"
+      - title: CSV Reader
+        description: "Parallel CSV ingestion engine used in DuckDB for high-performance analytics. Handles encoding, escaping, multi-line values, and parallel parsing at scale."
+        blog_link: "https://duckdb.org/2024/12/05/csv-files-dethroning-parquet-or-not.html"
         icon: "fas fa-file-csv"
 
+      - title: CSV Sniffer
+        description: "Automatic detection of CSV types, delimiters, and dialects. Enables DuckDB to read arbitrary CSV files without manual configuration."
+        blog_link: "https://duckdb.org/2023/10/27/csv-sniffer.html"
+        icon: "fas fa-search"
+
       - title: Apache Arrow Integration
-        description: "Zero-copy interoperability between DuckDB and Arrow, enabling ~38x faster data transfer than ODBC."
-        link: "https://duckdb.org/2021/12/03/duck-arrow.html"
+        description: "Zero-copy data transfer between DuckDB and Arrow, enabling ~38x faster interoperability than ODBC."
+        blog_link: "https://duckdb.org/2021/12/03/duck-arrow.html"
         icon: "fas fa-exchange-alt"
 
       - title: ART Persistent Storage
-        description: "Persistent Adaptive Radix Tree indexing implementation for DuckDB."
-        link: "https://duckdb.org/2022/07/27/art-storage.html"
+        description: "Persistent Adaptive Radix Tree indexing for DuckDB. Enables durable indexes that survive process restarts."
+        blog_link: "https://duckdb.org/2022/07/27/art-storage.html"
         icon: "fas fa-database"
 
       - title: BIGNUM Implementation
@@ -77,18 +85,21 @@ engineering-work:
         icon: "fas fa-calculator"
 
       - title: ADBC Integration
-        description: "Arrow Database Connectivity support — zero-copy data transfer ~38x faster than ODBC."
-        link: "https://duckdb.org/2023/08/04/adbc"
+        description: "Arrow Database Connectivity — a zero-copy data transfer protocol ~38x faster than ODBC."
+        blog_link: "https://duckdb.org/2023/08/04/adbc"
         icon: "fas fa-plug"
 
-      - title: DuckLake
-        description: "Integrated data lake and catalog format. Leading development as Principal Engineer."
-        link: "https://github.com/duckdb/ducklake"
-        icon: "fas fa-water"
+      - title: Python Client
+        description: "Core contributor to DuckDB's Python bindings and the scalar Python UDF framework."
+        blog_link: "https://duckdb.org/2023/07/07/python-udf.html"
+        icon: "fab fa-python"
 
 narrative:
     text: |
-      I helped build <a href="https://duckdb.org">DuckDB</a> from an academic research prototype at CWI into one of the most widely adopted analytical databases. Along the way I worked on core systems including CSV ingestion, Arrow integration, indexing structures, and BIGNUM support.
+      I helped build <a href="https://duckdb.org">DuckDB</a> from an academic research prototype at CWI Amsterdam into one of the most widely adopted analytical databases.
+      Along the way I designed and implemented core systems including the parallel CSV ingestion pipeline, Apache Arrow integration, persistent ART indexing, and arbitrary-precision integer support.
+      I served as COO of DuckDB Labs from 2021 to 2023, helping scale the company from its earliest days, and now lead core infrastructure development as Principal Engineer.
+      My current focus includes <a href="https://github.com/duckdb/ducklake">DuckLake</a> and continued work on query processing performance.
 
 timeline:
     items:
@@ -110,13 +121,6 @@ timeline:
       - time: "2017 - 2021"
         role: "PhD in Computer Science"
         company: "CWI / Leiden University"
-
-career-profile:
-    title: Career Profile
-    summary: |
-      I helped build <a href="https://duckdb.org">DuckDB</a> from a research prototype at CWI Amsterdam into one of the most widely adopted analytical databases in the world, with 36k+ GitHub stars, 28M+ monthly downloads, and embedded across the modern data stack.
-      As one of the earliest contributors, I served as Chief Operating Officer (COO) of <a href="https://duckdblabs.com">DuckDB Labs</a> from 2021 to 2023, helping scale the company from a small research spinoff into a leading open-source database company. I now lead core infrastructure as Principal Engineer, helping drive the core of DuckDB and <a href="https://github.com/duckdb/ducklake">DuckLake</a>.
-      Previously a research intern at Microsoft Research, one of the most selective research programs in industry. Published at VLDB and ICDE, the top peer-reviewed venues in database research. PhD from CWI/Leiden University.
 
 education:
     - degree: PhD in Computer Science
@@ -166,10 +170,14 @@ talks:
     title: Talks & Media
     intro: "Speaker at FOSDEM, EuroPython, and international data conferences."
     conferences:
-      - "FOSDEM"
-      - "EuroPython"
-      - "DuckCon"
-      - "J on the Beach"
+      - name: "FOSDEM"
+        icon: "fas fa-code"
+      - name: "EuroPython"
+        icon: "fab fa-python"
+      - name: "DuckCon"
+        icon: "fas fa-dove"
+      - name: "J on the Beach"
+        icon: "fas fa-water"
     items:
       - title: "DuckLake (Portuguese)"
         link: "https://www.youtube.com/watch?v=QSVucNH-3Xg"
@@ -211,11 +219,13 @@ projects:
     assignments:
       - title: DuckDB
         link: "https://github.com/duckdb/duckdb"
-        tagline: "The open-source analytical in-process database (36k+ stars, 28M+ monthly downloads). Core contributor since inception."
+        tagline: "The open-source analytical in-process database. Core contributor since inception."
+        stars: "36k+"
 
       - title: DuckLake
         link: "https://github.com/duckdb/ducklake"
-        tagline: "An integrated data lake and catalog format (2.5k+ stars)."
+        tagline: "Integrated data lake and catalog format designed to work with DuckDB."
+        stars: "2.5k+"
 
       - title: Scrooge McDuck
         link: "https://github.com/pdet/Scrooge-McDuck"
@@ -236,7 +246,7 @@ publications:
       - title: "Progressive Indexes"
         authors: <b>Pedro Holanda</b>
         conference: PhD Thesis @ Leiden University/CWI <a href="https://ir.cwi.nl/pub/31048">[PDF]</a>
-        summary: "Indexing structures that improve incrementally during query execution."
+        summary: "Introduces indexing structures that adapt dynamically during query execution to improve interactive analytics."
 
       - title: "Dissecting DuckDB: The internals of the SQLite for Analytics"
         authors: <b>Pedro Holanda</b> and <a href="https://mytherin.github.io/">Mark Raasveldt</a>
@@ -262,74 +272,123 @@ blogposts:
 
     posts:
       - title: "Arrow IPC Support in DuckDB"
+        link: "https://duckdb.org/2025/05/23/arrow-ipc-support-in-duckdb.html"
         authors: <b>Pedro Holanda</b>, <a href="https://github.com/ianmcook">Ian Cook</a>, <a href="https://github.com/paleolimbot">Dewey Dunnington</a>, and <a href="https://github.com/brycemecum">Bryce Mecum</a>
-        conference: DuckDB Blog <a href="https://duckdb.org/2025/05/23/arrow-ipc-support-in-duckdb.html">[Here]</a>
+        venue: DuckDB Blog
         date: 2025
         summary: "How DuckDB leverages the Arrow IPC format for efficient data exchange."
+        tags: ["Arrow", "DuckDB"]
 
       - title: "DuckDB's CSV Reader and the Pollock Robustness Benchmark: Into the CSV Abyss"
+        link: "https://duckdb.org/2025/04/16/duckdb-csv-pollock-benchmark.html"
         authors: <b>Pedro Holanda</b>, <a href="https://szarnyasgabor.github.io/">Gábor Szárnyas</a>, and <a href="https://gerardovitagliano.github.io/">Gerardo Vitagliano</a>
-        conference: DuckDB Blog <a href="https://duckdb.org/2025/04/16/duckdb-csv-pollock-benchmark.html">[Here]</a>
+        venue: DuckDB Blog
+        date: 2025
         summary: "Testing DuckDB's CSV parser against the toughest robustness edge cases."
+        tags: ["CSV", "Benchmarking"]
 
-      - title: "CSV Files: Dethroning Parquet as the Ultimate Storage File Format — or Not?"
+      - title: "CSV Files: Dethroning Parquet as the Ultimate Storage Format — or Not?"
+        link: "https://duckdb.org/2024/12/05/csv-files-dethroning-parquet-or-not.html"
         authors: <b>Pedro Holanda</b>
-        conference: DuckDB Blog <a href="https://duckdb.org/2024/12/05/csv-files-dethroning-parquet-or-not.html">[Here]</a>
+        venue: DuckDB Blog
         date: 2024
-        summary: "Benchmarking when CSV can outperform Parquet in analytical workloads."
+        summary: "A benchmark exploring when CSV can outperform Parquet in analytical workloads."
+        tags: ["CSV", "Performance", "Benchmarking"]
 
       - title: "Driving CSV Performance: Benchmarking DuckDB with the NYC Taxi Dataset"
+        link: "https://duckdb.org/2024/10/16/driving-csv-performance-benchmarking-duckdb-with-the-nyc-taxi-dataset.html"
         authors: <b>Pedro Holanda</b>
-        conference: DuckDB Blog <a href="https://duckdb.org/2024/10/16/driving-csv-performance-benchmarking-duckdb-with-the-nyc-taxi-dataset.html">[Here]</a>
+        venue: DuckDB Blog
+        date: 2024
         summary: "Benchmarking DuckDB's CSV parsing performance on the NYC Taxi dataset."
+        tags: ["CSV", "Performance", "Benchmarking"]
 
       - title: "Scrooge - DuckDB: Experimental Ethereum Blockchain Scanner"
+        link: "https://pdet-blog.github.io/2024/06/30/ethereum.html"
         authors: <b>Pedro Holanda</b>
-        conference: Blog <a href="https://pdet-blog.github.io/2024/06/30/ethereum.html">[Here]</a>
+        venue: Blog
+        date: 2024
         summary: "Using DuckDB to scan and analyze the Ethereum blockchain."
+        tags: ["DuckDB", "Blockchain"]
 
       - title: "DuckDB's CSV Sniffer: Automatic Detection of Types and Dialects"
+        link: "https://duckdb.org/2023/10/27/csv-sniffer.html"
         authors: <b>Pedro Holanda</b>
-        conference: DuckDB Blog <a href="https://duckdb.org/2023/10/27/csv-sniffer.html">[Here]</a>
+        venue: DuckDB Blog
         date: 2023
         summary: "How DuckDB automatically detects CSV types, delimiters, and dialects."
+        tags: ["CSV", "DuckDB"]
 
       - title: "DuckDB ADBC — Zero-Copy Data Transfer via Arrow Database Connectivity"
+        link: "https://duckdb.org/2023/08/04/adbc"
         authors: <b>Pedro Holanda</b>
-        conference: DuckDB Blog <a href="https://duckdb.org/2023/08/04/adbc">[Here]</a>
+        venue: DuckDB Blog
+        date: 2023
         summary: "Zero-copy data transfer via Arrow Database Connectivity — ~38x faster than ODBC."
+        tags: ["Arrow", "Performance"]
 
       - title: "From Waddle to Flying: Quickly Expanding DuckDB's Functionality with Scalar Python UDFs"
+        link: "https://duckdb.org/2023/07/07/python-udf.html"
         authors: <b>Pedro Holanda</b>, <a href="https://github.com/Tishj">Thijs Bruineman</a>, and <a href="https://github.com/cpcloud">Phillip Cloud</a>
-        conference: DuckDB Blog <a href="https://duckdb.org/2023/07/07/python-udf.html">[Here]</a>
+        venue: DuckDB Blog
+        date: 2023
         summary: "Extending DuckDB with scalar Python user-defined functions."
+        tags: ["Python", "DuckDB"]
 
       - title: "Scrooge: Analyzing Yahoo Financial Data In DuckDB"
+        link: "https://pdet-blog.github.io/2023/02/25/scrooge-yahoo.html"
         authors: <b>Pedro Holanda</b>
-        conference: Blog <a href="https://pdet-blog.github.io/2023/02/25/scrooge-yahoo.html">[Here]</a>
+        venue: Blog
+        date: 2023
         summary: "Analyzing Yahoo Financial data using a DuckDB extension."
+        tags: ["DuckDB", "Finance"]
 
       - title: "Persistent Storage of Adaptive Radix Trees in DuckDB"
+        link: "https://duckdb.org/2022/07/27/art-storage.html"
         authors: <b>Pedro Holanda</b>
-        conference: DuckDB Blog <a href="https://duckdb.org/2022/07/27/art-storage.html">[Here]</a>
+        venue: DuckDB Blog
         date: 2022
         summary: "How DuckDB persists Adaptive Radix Tree indexes to disk."
+        tags: ["DuckDB", "Indexing"]
 
       - title: "Scrooge McDuck: A DuckDB Extension for Financial Data Analysis (Demo)"
+        link: "https://pdet-blog.github.io/2022/08/16/scrooge.html"
         authors: <b>Pedro Holanda</b>
-        conference: Blog <a href="https://pdet-blog.github.io/2022/08/16/scrooge.html">[Here]</a>
+        venue: Blog
+        date: 2022
         summary: "A DuckDB extension for financial data analysis."
+        tags: ["DuckDB", "Finance"]
 
       - title: "DuckDB quacks Arrow: A zero-copy data integration between Apache Arrow and DuckDB"
+        link: "https://duckdb.org/2021/12/03/duck-arrow.html"
         authors: <b>Pedro Holanda</b> and <a href="https://github.com/jonkeane">Jonathan Keane</a>
-        conference: DuckDB Blog <a href="https://duckdb.org/2021/12/03/duck-arrow.html">[Here]</a>
+        venue: DuckDB Blog
         date: 2021
         summary: "Zero-copy data integration between Apache Arrow and DuckDB."
+        tags: ["Arrow", "DuckDB"]
 
       - title: "DuckDB — The Lord of Enums: The Fellowship of the Categorical and Factors"
+        link: "https://duckdb.org/2021/11/26/duck-enum.html"
         authors: <b>Pedro Holanda</b>
-        conference: DuckDB Blog <a href="https://duckdb.org/2021/11/26/duck-enum.html">[Here]</a>
+        venue: DuckDB Blog
+        date: 2021
         summary: "Categorical and Factor type support via dictionary encoding in DuckDB."
+        tags: ["DuckDB"]
+
+engineering-notes:
+    title: Engineering Notes
+    intro: "Short explorations of database engineering topics."
+    notes:
+      - title: "Why CSV Parsing Is Hard"
+        summary: "Parsing CSV sounds simple, but handling encoding, escaping, multi-line values, and type detection at scale is surprisingly complex."
+        link: "https://duckdb.org/2023/10/27/csv-sniffer.html"
+      - title: "Lessons from Building DuckDB"
+        summary: "What building an analytical database from a research prototype to millions of users teaches about systems engineering."
+      - title: "Common Benchmarking Mistakes in Databases"
+        summary: "Why most database benchmarks are misleading and how to design fair comparisons."
+        link: "assets/papers/benchmarking.pdf"
+      - title: "Query Execution: Vectorized vs. Compiled"
+        summary: "Exploring the trade-offs between vectorized and JIT-compiled query execution for analytical workloads."
 
 cta:
     text: "If you are working on databases, analytical systems, or performance engineering, feel free to reach out."
@@ -338,9 +397,7 @@ cta:
 tags:
   - "Databases"
   - "DuckDB"
+  - "Query Engines"
   - "Performance Engineering"
-  - "Query Processing"
-  - "Data Infrastructure"
-  - "Open Source"
 
 footer: "Dr. Pedro Holanda — pedroholanda.org"

@@ -14,13 +14,13 @@
    .main-wrapper .time {
        float: right;
         color: black !important;
-        -webkit-print-color-adjust: exact; 
+        -webkit-print-color-adjust: exact;
    }
     .sidebar-wrapper {
         position: static;
         float: right;
         width: 40%;
-        -webkit-print-color-adjust: exact; 
+        -webkit-print-color-adjust: exact;
     }
 
     .remove-container.container-block {
@@ -31,9 +31,33 @@
        display: none;
     }
 
+    .site-nav {
+       display: none;
+    }
+
+    .dark-mode-toggle {
+       display: none;
+    }
+
+    .hero-section .hero-links {
+       display: none;
+    }
+
+    .talk-card-thumb {
+       display: none;
+    }
+
+    .talk-card-action {
+       display: none;
+    }
+
+    .cta-section .cta-button {
+       display: none;
+    }
+
     .skillset .level-bar-inner {
        background-color: black !important;
-       -webkit-print-color-adjust: exact; 
+       -webkit-print-color-adjust: exact;
     }
 
 }

@@ -27,26 +27,37 @@
     /* Nav */
     .site-nav {
         margin: -30px -30px 24px -30px;
-        padding: 0 16px;
+        padding: 0 12px;
+        overflow-x: auto;
 
         .nav-list {
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            min-width: max-content;
 
             li a {
                 padding: 10px 10px;
                 font-size: 11px;
+                white-space: nowrap;
             }
         }
     }
 
     /* Hero */
     .hero-section {
+        .hero-name {
+            font-size: 24px;
+        }
+
+        .hero-tagline {
+            font-size: 14px;
+        }
+
         .hero-metrics {
-            gap: 20px;
+            gap: 24px;
         }
 
         .metric-value {
-            font-size: 22px;
+            font-size: 24px;
         }
 
         .hero-links {
@@ -72,10 +83,41 @@
             align-items: flex-start;
         }
 
+        .talk-card-thumb {
+            width: 100%;
+            height: auto;
+            margin-right: 0;
+            margin-bottom: 12px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
         .talk-card-action {
             margin-left: 0;
             margin-top: 10px;
         }
+    }
+
+    /* Blog */
+    .blogposts-section {
+        .blog-card-header {
+            flex-direction: column;
+            gap: 4px;
+        }
+    }
+
+    /* Notes */
+    .notes-section .notes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Section spacing on mobile */
+    .main-wrapper .section {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
     }
 }
 

@@ -1,9 +1,17 @@
 {% assign narrative = site.data.data.narrative %}
 {% if narrative %}
-<section class="section narrative-section">
+<section class="section narrative-section" id="narrative">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-user fa-stack-1x fa-inverse"></i>
+    </span>
+    About
+  </h2>
 
   <div class="narrative-text">
-    {{ narrative.text | markdownify }}
+    {{ narrative.text }}
   </div>
 
 </section><!--//narrative-section-->

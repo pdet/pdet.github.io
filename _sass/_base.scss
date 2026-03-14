@@ -170,9 +170,20 @@ p {
         position: relative;
         margin-top: 0;
         margin-bottom: 20px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid $divider;
     }
+
+    /* Section separators for visual hierarchy (Plan #11) */
     .section {
         margin-bottom: 60px;
+        padding-bottom: 60px;
+        border-bottom: 1px solid $divider;
+
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
     }
 
     .experiences-section, .educations-section {
@@ -246,7 +257,7 @@ p {
     }
 }
 
-/* ======= Navigation ======= */
+/* ======= Navigation (Plan #9) ======= */
 .site-nav {
     position: sticky;
     top: 0;
@@ -305,9 +316,26 @@ p {
     }
 }
 
-/* ======= Hero Section ======= */
+/* ======= Hero Section (Plan #1) ======= */
 .hero-section {
     margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid $divider;
+
+    .hero-name {
+        font-size: 32px;
+        font-weight: 900;
+        color: $text-color;
+        margin: 0 0 4px 0;
+        line-height: 1.2;
+    }
+
+    .hero-tagline {
+        font-size: 16px;
+        color: $accent-color;
+        font-weight: 500;
+        margin: 0 0 20px 0;
+    }
 
     .hero-impact {
         font-size: 18px;
@@ -317,10 +345,19 @@ p {
         font-weight: 400;
     }
 
+    .hero-metrics-wrapper {
+        margin-bottom: 24px;
+    }
+
+    .hero-metrics-intro {
+        font-size: 14px;
+        color: $text-grey;
+        margin: 0 0 8px 0;
+    }
+
     .hero-metrics {
         display: flex;
-        gap: 32px;
-        margin-bottom: 24px;
+        gap: 40px;
     }
 
     .metric {
@@ -329,17 +366,17 @@ p {
     }
 
     .metric-value {
-        font-size: 28px;
+        font-size: 32px;
         font-weight: 700;
         color: $accent-color;
         line-height: 1.2;
     }
 
     .metric-label {
-        font-size: 12px;
+        font-size: 11px;
         color: $text-grey;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.8px;
         margin-top: 4px;
     }
 
@@ -352,7 +389,7 @@ p {
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        padding: 8px 16px;
+        padding: 8px 18px;
         background: $theme-color;
         color: #fff;
         border-radius: 6px;
@@ -369,7 +406,7 @@ p {
     }
 }
 
-/* ======= Now Section ======= */
+/* ======= Now Section (Plan #10) ======= */
 .now-section {
     .now-grid {
         display: flex;
@@ -408,7 +445,7 @@ p {
     }
 }
 
-/* ======= Engineering Work Section ======= */
+/* ======= Engineering Contributions (Plan #2) ======= */
 .engineering-section {
     .engineering-grid {
         display: grid;
@@ -439,32 +476,42 @@ p {
         font-weight: 600;
         margin-top: 0;
         margin-bottom: 8px;
-
-        a {
-            color: $text-color;
-            text-decoration: none;
-
-            &:hover {
-                color: $accent-color;
-            }
-        }
+        color: $text-color;
     }
 
     .engineering-card-desc {
         font-size: 13px;
         color: $text-color-secondary;
         line-height: 1.5;
-        margin: 0;
+        margin: 0 0 10px 0;
+    }
+
+    .engineering-card-links {
+        display: flex;
+        gap: 14px;
+
+        a {
+            font-size: 12px;
+            font-weight: 500;
+            color: $accent-color;
+            text-decoration: none;
+
+            i {
+                margin-right: 3px;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
-/* ======= Narrative Section ======= */
+/* ======= Narrative Section (Plan #5) ======= */
 .narrative-section {
-    margin-bottom: 20px;
-
     .narrative-text {
         font-size: 15px;
-        line-height: 1.7;
+        line-height: 1.8;
         color: $text-color-secondary;
         border-left: 3px solid $accent-color;
         padding-left: 20px;
@@ -475,7 +522,7 @@ p {
     }
 }
 
-/* ======= Timeline Section ======= */
+/* ======= Timeline Section (Plan #8) ======= */
 .timeline-section {
     .timeline {
         position: relative;
@@ -537,24 +584,30 @@ p {
     }
 }
 
-/* ======= Talks Section ======= */
+/* ======= Talks Section (Plan #3) ======= */
 .talks-section {
     .conference-badges {
         display: flex;
-        gap: 8px;
+        gap: 10px;
         margin-bottom: 24px;
         flex-wrap: wrap;
     }
 
     .conference-badge {
-        display: inline-block;
-        padding: 4px 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
         background: $theme-color;
         color: #fff;
         border-radius: 20px;
         font-size: 12px;
         font-weight: 500;
         letter-spacing: 0.3px;
+
+        i {
+            font-size: 13px;
+        }
     }
 
     .talks-grid {
@@ -566,10 +619,9 @@ p {
     .talk-card {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         border: 1px solid $divider;
         border-radius: 8px;
-        padding: 16px 20px;
+        padding: 14px 18px;
         transition: all 0.2s ease;
 
         &:hover {
@@ -578,8 +630,46 @@ p {
         }
     }
 
+    .talk-card-thumb {
+        flex-shrink: 0;
+        width: 120px;
+        height: 68px;
+        margin-right: 16px;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            font-size: 22px;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        &:hover .play-overlay {
+            opacity: 1;
+        }
+    }
+
     .talk-card-body {
         flex: 1;
+        min-width: 0;
     }
 
     .talk-card-title {
@@ -634,7 +724,7 @@ p {
     }
 }
 
-/* ======= Project Cards ======= */
+/* ======= Project Cards (Plan #7) ======= */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -652,10 +742,17 @@ p {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     }
 
+    .project-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
     .project-card-title {
         font-size: 16px;
         font-weight: 600;
-        margin: 0 0 8px 0;
+        margin: 0;
 
         a {
             color: $text-color;
@@ -664,6 +761,21 @@ p {
             &:hover {
                 color: $accent-color;
             }
+        }
+    }
+
+    .project-stars {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 13px;
+        font-weight: 600;
+        color: $darker-grey;
+        white-space: nowrap;
+
+        i {
+            color: #F59E0B;
+            font-size: 12px;
         }
     }
 
@@ -689,7 +801,143 @@ p {
     }
 }
 
-/* ======= Tags Section ======= */
+/* ======= Blog Cards (Plan #4) ======= */
+.blogposts-section {
+    .blog-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .blog-card {
+        border: 1px solid $divider;
+        border-radius: 8px;
+        padding: 18px 20px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            border-color: $accent-color;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+    }
+
+    .blog-card-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 6px;
+    }
+
+    .blog-card-title {
+        font-size: 15px;
+        font-weight: 500;
+        color: $text-color;
+        margin: 0;
+        line-height: 1.4;
+
+        a {
+            color: $text-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .blog-card-year {
+        font-size: 12px;
+        color: $text-grey;
+        font-weight: 500;
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding-top: 2px;
+    }
+
+    .blog-card-summary {
+        font-size: 13px;
+        color: $text-color-secondary;
+        line-height: 1.5;
+        margin: 0 0 10px 0;
+    }
+
+    .blog-card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .blog-card-tags {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .blog-tag {
+        display: inline-block;
+        padding: 2px 10px;
+        background: $smoky-white;
+        color: $text-grey;
+        border: 1px solid $divider;
+        border-radius: 12px;
+        font-size: 11px;
+        font-weight: 500;
+    }
+
+    .blog-card-venue {
+        font-size: 12px;
+        color: $text-grey;
+        flex-shrink: 0;
+    }
+}
+
+/* ======= Engineering Notes (Plan Phase 5) ======= */
+.notes-section {
+    .notes-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .note-card {
+        border: 1px solid $divider;
+        border-radius: 8px;
+        padding: 18px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            border-color: $accent-color;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+    }
+
+    .note-card-title {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0 0 8px 0;
+        color: $text-color;
+
+        a {
+            color: $text-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+    .note-card-summary {
+        font-size: 13px;
+        color: $text-color-secondary;
+        line-height: 1.5;
+        margin: 0;
+    }
+}
+
+/* ======= Tags Section (Plan #14) ======= */
 .tags-section {
     .tags-container {
         display: flex;
@@ -780,10 +1028,9 @@ p {
     .fa-heart {
         color: $heart;
     }
-
 }
 
-/* ======= Dark Mode ======= */
+/* ======= Dark Mode (Plan #13) ======= */
 [data-theme="dark"] {
     body {
         background: #0F172A;
@@ -808,6 +1055,11 @@ p {
 
         .section-title {
             color: #93C5FD;
+            border-bottom-color: #334155;
+        }
+
+        .section {
+            border-bottom-color: #334155;
         }
 
         .job-title, .degree {
@@ -832,6 +1084,16 @@ p {
 
         .publication-authors {
             color: #64748B;
+        }
+
+        h3 {
+            color: #94A3B8;
+        }
+
+        .details, .details p,
+        .intro, .intro p,
+        .summary, .summary p {
+            color: #94A3B8;
         }
     }
 
@@ -858,7 +1120,18 @@ p {
         }
     }
 
+    /* Hero dark */
     .hero-section {
+        border-bottom-color: #334155;
+
+        .hero-name {
+            color: #F1F5F9;
+        }
+
+        .hero-tagline {
+            color: #60A5FA;
+        }
+
         .hero-impact {
             color: #E2E8F0;
         }
@@ -871,12 +1144,17 @@ p {
             color: #64748B;
         }
 
+        .hero-metrics-intro {
+            color: #94A3B8;
+        }
+
         .hero-link {
             background: #334155;
             color: #E2E8F0;
         }
     }
 
+    /* Now dark */
     .now-section {
         .now-column {
             h4 {
@@ -890,6 +1168,7 @@ p {
         }
     }
 
+    /* Engineering dark */
     .engineering-card {
         border-color: #334155;
         background: #1E293B;
@@ -903,23 +1182,25 @@ p {
         color: #60A5FA;
     }
 
-    .engineering-card-title a {
+    .engineering-card-title {
         color: #E2E8F0;
-
-        &:hover {
-            color: #60A5FA;
-        }
     }
 
     .engineering-card-desc {
         color: #94A3B8;
     }
 
+    .engineering-card-links a {
+        color: #60A5FA;
+    }
+
+    /* Narrative dark */
     .narrative-section .narrative-text {
         color: #94A3B8;
         border-left-color: #60A5FA;
     }
 
+    /* Timeline dark */
     .timeline-section {
         .timeline::before {
             background: #334155;
@@ -944,6 +1225,7 @@ p {
         }
     }
 
+    /* Talks dark */
     .talks-section {
         .conference-badge {
             background: #334155;
@@ -986,6 +1268,7 @@ p {
         }
     }
 
+    /* Projects dark */
     .project-card {
         border-color: #334155;
         background: #1E293B;
@@ -1002,6 +1285,10 @@ p {
             }
         }
 
+        .project-stars {
+            color: #94A3B8;
+        }
+
         .project-card-desc {
             color: #94A3B8;
         }
@@ -1011,6 +1298,77 @@ p {
         }
     }
 
+    /* Blog cards dark */
+    .blogposts-section {
+        .blog-card {
+            border-color: #334155;
+            background: #1E293B;
+
+            &:hover {
+                border-color: #60A5FA;
+            }
+        }
+
+        .blog-card-title {
+            color: #E2E8F0;
+        }
+
+        .blog-card-year {
+            color: #64748B;
+        }
+
+        .blog-card-summary {
+            color: #94A3B8;
+        }
+
+        .blog-tag {
+            background: #0F172A;
+            color: #94A3B8;
+            border-color: #334155;
+        }
+
+        .blog-card-title a {
+            color: #E2E8F0;
+
+            &:hover {
+                color: #60A5FA;
+            }
+        }
+
+        .blog-card-venue {
+            color: #64748B;
+        }
+    }
+
+    /* Notes dark */
+    .notes-section {
+        .note-card {
+            border-color: #334155;
+            background: #1E293B;
+
+            &:hover {
+                border-color: #60A5FA;
+            }
+        }
+
+        .note-card-title {
+            color: #E2E8F0;
+
+            a {
+                color: #E2E8F0;
+
+                &:hover {
+                    color: #60A5FA;
+                }
+            }
+        }
+
+        .note-card-summary {
+            color: #94A3B8;
+        }
+    }
+
+    /* Tags dark */
     .tags-section {
         .tag {
             background: #1E293B;
@@ -1019,6 +1377,7 @@ p {
         }
     }
 
+    /* CTA dark */
     .cta-section {
         .cta-box {
             background: #1E293B;
@@ -1037,25 +1396,6 @@ p {
 
     .footer .copyright {
         color: #64748B;
-    }
-
-    .main-wrapper h3 {
-        color: #94A3B8;
-    }
-
-    .main-wrapper .details,
-    .main-wrapper .details p {
-        color: #94A3B8;
-    }
-
-    .main-wrapper .intro,
-    .main-wrapper .intro p {
-        color: #94A3B8;
-    }
-
-    .main-wrapper .summary,
-    .main-wrapper .summary p {
-        color: #94A3B8;
     }
 
     a {

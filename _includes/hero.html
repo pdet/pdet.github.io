@@ -2,17 +2,29 @@
 {% if hero %}
 <section class="section hero-section" id="about">
 
+  {% if hero.name %}
+  <h1 class="hero-name">{{ hero.name }}</h1>
+  {% endif %}
+  {% if hero.tagline %}
+  <p class="hero-tagline">{{ hero.tagline }}</p>
+  {% endif %}
+
   <div class="hero-impact">
     {{ hero.impact }}
   </div>
 
-  <div class="hero-metrics">
-    {% for metric in hero.metrics %}
-    <div class="metric">
-      <span class="metric-value">{{ metric.value }}</span>
-      <span class="metric-label">{{ metric.label }}</span>
+  <div class="hero-metrics-wrapper">
+    {% if hero.metrics_intro %}
+    <p class="hero-metrics-intro">{{ hero.metrics_intro }}</p>
+    {% endif %}
+    <div class="hero-metrics">
+      {% for metric in hero.metrics %}
+      <div class="metric">
+        <span class="metric-value">{{ metric.value }}</span>
+        <span class="metric-label">{{ metric.label }}</span>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 
   <div class="hero-links">

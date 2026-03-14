@@ -1,0 +1,37 @@
+{% assign notes = site.data.data.engineering-notes %}
+{% if notes %}
+<section class="section notes-section" id="notes">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-lightbulb fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ notes.title }}
+  </h2>
+
+  {% if notes.intro %}
+  <div class="intro">
+    <p>{{ notes.intro }}</p>
+  </div>
+  {% endif %}
+
+  <div class="notes-grid">
+    {% for note in notes.notes %}
+    <div class="note-card">
+      <h4 class="note-card-title">
+        {% if note.link %}
+        <a href="{{ note.link }}" target="_blank">{{ note.title }}</a>
+        {% else %}
+        {{ note.title }}
+        {% endif %}
+      </h4>
+      {% if note.summary %}
+      <p class="note-card-summary">{{ note.summary }}</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+</section><!--//section-->
+{% endif %}

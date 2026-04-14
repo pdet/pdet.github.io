@@ -29,7 +29,7 @@ sidebar:
 hero:
     name: "Dr. Pedro Holanda"
     tagline: "Principal Engineer @ DuckDB Labs"
-    impact: "I've been building <a href=\"https://duckdb.org\">DuckDB</a>'s infrastructure since it was a research prototype at CWI. From the CSV engine to Arrow integration to <a href=\"https://github.com/duckdb/ducklake\">DuckLake</a>, I work on the systems that make analytical databases radically simpler."
+    impact: "I've been building <a href=\"https://duckdb.org\">DuckDB</a>'s infrastructure since it was a research prototype at CWI. From the CSV engine to Arrow integration to <a href=\"https://ducklake.select\">DuckLake</a>, I work on the systems that make analytical databases radically simpler."
     credentials: "PhD from CWI/Leiden University with publications at VLDB and ICDE. Former Microsoft Research intern."
     metrics_intro: "DuckDB by the numbers"
     metrics:
@@ -55,8 +55,8 @@ engineering-work:
     title: Engineering Contributions
     items:
       - title: DuckLake
-        description: "Leading development of DuckDB's integrated data lake format. A SQL-native catalog that stores table metadata in any database while data lives in open formats like Parquet on object storage."
-        blog_link: "https://github.com/duckdb/ducklake"
+        description: "Led the development of DuckDB's integrated data lake format from its 0.1 pre-production version to its 1.0 release. A SQL-native catalog that stores table metadata in any database while data lives in open formats like Parquet on object storage."
+        blog_link: "https://ducklake.select"
         icon: "fas fa-warehouse"
 
       - title: CSV Engine
@@ -87,7 +87,7 @@ narrative:
     text: |
       <p>I joined <a href="https://duckdb.org">DuckDB</a> at CWI Amsterdam when the project had two researchers, only a handful of users, and a bet that analytical databases could be radically simpler. I have been assisting with building its infrastructure from the early days.</p>
       <p>When DuckDB Labs spun out of CWI, I took on the COO role - helping hire the early team, organizing events, shaping the open-source strategy, and building the company while still writing code. That experience gave me a perspective on the full lifecycle of open-source infrastructure that informs every design decision I make today. When the company was ready for dedicated operations leadership, I chose to return to engineering full-time.</p>
-      <p>As Principal Engineer, I lead the development of <a href="https://github.com/duckdb/ducklake">DuckLake</a> and drive query processing performance. I mentor new contributors, lead design reviews across subsystems, and help set technical direction for the engine.</p>
+      <p>As Principal Engineer, I led <a href="https://ducklake.select">DuckLake</a> from its 0.1 pre-production version to its 1.0 release and drive query processing performance. I mentor new contributors, lead design reviews across subsystems, and help set technical direction for the engine.</p>
 
 vision:
     title: Engineering Principles
@@ -129,6 +129,11 @@ talks:
       - name: "EuroPython"
         icon: "fab fa-python"
     items:
+      - title: "DuckLake v1.0: Developer Discussion"
+        link: "https://www.youtube.com/watch?v=7Su0aVzbb-U"
+        venue: DuckDB
+        date: 2026
+
       - title: "DuckDB: Bringing Analytical SQL Directly to Your Python Shell"
         link: "https://www.youtube.com/watch?v=egN4TwVyJss"
         venue: "EuroPython"
@@ -211,9 +216,17 @@ publications:
 blogposts:
 
     title: Blog Posts
-    all_posts_note: "Showing selected posts. Full list on the <a href='https://duckdb.org/blog' target='_blank' rel='noopener noreferrer'>DuckDB Blog</a>."
+    all_posts_note: "Showing selected posts. Full list on the <a href='https://duckdb.org/blog' target='_blank' rel='noopener noreferrer'>DuckDB Blog</a> and <a href='https://ducklake.select' target='_blank' rel='noopener noreferrer'>DuckLake Blog</a>."
 
     posts:
+      - title: "Data Inlining in DuckLake: Unlocking Streaming for Data Lakes"
+        link: "https://ducklake.select/2026/04/02/data-inlining-in-ducklake/"
+        authors: <b>Pedro Holanda</b>
+        venue: DuckLake Blog
+        date: 2026
+        summary: "Introducing DuckLake's data inlining feature that stores small updates directly in the catalog database, eliminating the small files problem and achieving 926× faster queries and 105× faster ingestion compared to Iceberg."
+        tags: ["DuckLake", "Streaming"]
+
       - title: "DuckDB quacks Arrow: A zero-copy data integration between Apache Arrow and DuckDB"
         link: "https://duckdb.org/2021/12/03/duck-arrow.html"
         authors: <b>Pedro Holanda</b> and <a href="https://github.com/jonkeane">Jonathan Keane</a>

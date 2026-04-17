@@ -23,12 +23,13 @@
   <p class="hero-credentials">{{ hero.credentials }}</p>
   {% endif %}
 
+  {% for group in hero.metric_groups %}
   <div class="hero-metrics-wrapper">
-    {% if hero.metrics_intro %}
-    <p class="hero-metrics-intro">{{ hero.metrics_intro }}</p>
+    {% if group.intro %}
+    <p class="hero-metrics-intro">{{ group.intro }}</p>
     {% endif %}
     <div class="hero-metrics">
-      {% for metric in hero.metrics %}
+      {% for metric in group.metrics %}
       <div class="metric">
         <span class="metric-value">{{ metric.value }}</span>
         <span class="metric-label">{{ metric.label }}</span>
@@ -36,6 +37,7 @@
       {% endfor %}
     </div>
   </div>
+  {% endfor %}
 
   <div class="hero-links">
     {% for link in hero.links %}

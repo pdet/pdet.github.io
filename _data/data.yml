@@ -31,12 +31,19 @@ hero:
     tagline: "Principal Engineer @ DuckDB Labs"
     impact: "I've been building <a href=\"https://duckdb.org\">DuckDB</a>'s infrastructure since it was a research prototype at CWI. From the CSV engine to Arrow integration to <a href=\"https://ducklake.select\">DuckLake</a>, I work on the systems that make analytical databases radically simpler."
     credentials: "PhD from CWI/Leiden University with publications at VLDB and ICDE. Former Microsoft Research intern."
-    metrics_intro: "DuckDB by the numbers"
-    metrics:
-      - label: "GitHub Stars"
-        value: "36k+"
-      - label: "Monthly Downloads"
-        value: "28M+"
+    metric_groups:
+      - intro: "DuckDB by the numbers"
+        metrics:
+          - label: "GitHub Stars"
+            value: "37K+"
+          - label: "Monthly Downloads"
+            value: "30M+"
+      - intro: "DuckLake by the numbers"
+        metrics:
+          - label: "GitHub Stars"
+            value: "2.6K+"
+          - label: "Monthly Downloads"
+            value: "2M+"
     links:
       - label: "GitHub"
         url: "https://github.com/pdet"
@@ -129,6 +136,11 @@ talks:
       - name: "EuroPython"
         icon: "fab fa-python"
     items:
+      - title: "DuckDB uses RDBMS to reimagine the lakehouse"
+        link: "https://www.theregister.com/2026/04/16/duckdb_uses_rdbms_lakehouse/"
+        venue: The Register
+        date: 2026
+
       - title: "DuckLake v1.0: Developer Discussion"
         link: "https://www.youtube.com/watch?v=7Su0aVzbb-U"
         venue: DuckDB
@@ -170,12 +182,12 @@ projects:
       - title: DuckDB
         link: "https://github.com/duckdb/duckdb"
         tagline: "The open-source analytical in-process database. Early contributor since the research prototype."
-        stars: "36k+"
+        stars: "37K+"
 
       - title: DuckLake
         link: "https://github.com/duckdb/ducklake"
         tagline: "Integrated data lake and catalog format designed to work with DuckDB."
-        stars: "2.5k+"
+        stars: "2.6K+"
 
 publications:
 

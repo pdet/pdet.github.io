@@ -3,6 +3,9 @@
 .list-unstyled { list-style: none; padding-left: 0; margin: 0; }
 *, *::before, *::after { box-sizing: border-box; }
 
+/* Offset for sticky nav so anchored sections aren't hidden under it */
+html { scroll-padding-top: 64px; }
+
 /* ======= Base ======= */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -240,8 +243,20 @@ p {
         font-size: 20px;
         line-height: 1.6;
         color: $text-color;
-        margin-bottom: 28px;
+        margin-bottom: 20px;
         font-weight: 500;
+    }
+
+    .hero-proof {
+        font-size: 15px;
+        line-height: 1.6;
+        color: $text-color-secondary;
+        margin: 0 0 22px 0;
+
+        strong {
+            color: $text-color;
+            font-weight: 700;
+        }
     }
 
     .hero-metrics-wrapper {
@@ -621,6 +636,28 @@ p {
         }
     }
 
+    .talk-card-thumb-press {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $smoky-white;
+        border: 1px solid $divider;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: $text-grey;
+            text-decoration: none;
+            font-size: 26px;
+            transition: color 0.2s ease;
+
+            &:hover { color: $accent-color; }
+        }
+    }
+
     .talk-card-body {
         flex: 1;
         min-width: 0;
@@ -655,6 +692,9 @@ p {
     .talk-card-action {
         margin-left: 16px;
         flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
     .talk-watch-link {
@@ -1059,6 +1099,14 @@ p {
         color: #94A3B8;
     }
 
+    .hero-section .hero-proof {
+        color: #94A3B8;
+    }
+
+    .hero-section .hero-proof strong {
+        color: #E2E8F0;
+    }
+
     .hero-section .hero-metrics-intro {
         color: #94A3B8;
     }
@@ -1118,6 +1166,17 @@ p {
 
             &:hover {
                 border-color: #60A5FA;
+            }
+        }
+
+        .talk-card-thumb-press {
+            background: #0F172A;
+            border-color: #334155;
+
+            a {
+                color: #94A3B8;
+
+                &:hover { color: #60A5FA; }
             }
         }
 

@@ -40,6 +40,12 @@
           {% endif %}
         </a>
       </div>
+      {% else %}
+      <div class="talk-card-thumb talk-card-thumb-press">
+        <a href="{{ talk.link }}" target="_blank" rel="noopener noreferrer" aria-label="{{ talk.title }}">
+          <i class="fas fa-newspaper" aria-hidden="true"></i>
+        </a>
+      </div>
       {% endif %}
       <div class="talk-card-body">
         <h3 class="talk-card-title">
@@ -57,9 +63,14 @@
           {% elsif talk.link contains 'inspiring' %}
           <i class="fas fa-headphones" aria-hidden="true"></i> Listen
           {% else %}
-          <i class="fas fa-external-link-alt" aria-hidden="true"></i> View
+          <i class="fas fa-newspaper" aria-hidden="true"></i> Read
           {% endif %}
         </a>
+        {% if talk.slides %}
+        <a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer" class="talk-watch-link talk-slides-link">
+          <i class="fas fa-file-alt" aria-hidden="true"></i> Slides
+        </a>
+        {% endif %}
       </div>
     </div>
     {% endfor %}

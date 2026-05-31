@@ -2,6 +2,16 @@
 # Be aware that even a small syntax error here can lead to failures in output.
 #
 
+# Canonical metric values — single source of truth. The short forms are referenced
+# via YAML anchors (*duckdb_stars, etc.) in the hero and projects below, and via
+# site.data.data.metrics in _includes/head.html and llms.txt. Update them here only.
+metrics:
+    duckdb_stars: &duckdb_stars "38K+"
+    duckdb_downloads: &duckdb_downloads "30M+"
+    ducklake_stars: &ducklake_stars "2.7K+"
+    ducklake_downloads: &ducklake_downloads "2M+"
+    duckdb_stars_full: "38,000"
+    duckdb_downloads_full: "30 million"
 
 sidebar:
     # about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
@@ -29,21 +39,22 @@ sidebar:
 hero:
     name: "Dr. Pedro Holanda"
     tagline: "Principal Engineer @ DuckDB Labs"
-    impact: "I've been building <a href=\"https://duckdb.org\">DuckDB</a>'s infrastructure since it was a research prototype at CWI. From the CSV engine to Arrow integration to <a href=\"https://ducklake.select\">DuckLake</a>, I work on the systems that make analytical databases radically simpler."
-    credentials: "PhD from CWI/Leiden University with publications at VLDB and ICDE. Former Microsoft Research intern."
+    impact: "<a href=\"https://duckdb.org\">DuckDB</a> is a free, open-source database that lets anyone analyze large datasets right on their own computer - now downloaded over 30 million times a month. I've been building its infrastructure since it was a research prototype at CWI, from the CSV engine to Arrow integration to <a href=\"https://ducklake.select\">DuckLake</a>. I work on the systems that make analytical databases radically simpler."
+    proof: "<strong>Selected work:</strong> led <a href=\"https://ducklake.select\">DuckLake</a> from its 0.1 pre-production version to 1.0, and built the CSV engine that ranks highest on the 2025 Pollock robustness benchmark across every tested system."
+    credentials: "PhD from CWI/Leiden University with publications at VLDB and ICDE. Former Microsoft Research intern. Served as COO of DuckDB Labs, helping build the company from a CWI research spin-out before returning to engineering full-time."
     metric_groups:
       - intro: "DuckDB by the numbers"
         metrics:
           - label: "GitHub Stars"
-            value: "37K+"
+            value: *duckdb_stars
           - label: "Monthly Downloads"
-            value: "30M+"
+            value: *duckdb_downloads
       - intro: "DuckLake by the numbers"
         metrics:
           - label: "GitHub Stars"
-            value: "2.6K+"
+            value: *ducklake_stars
           - label: "Monthly Downloads"
-            value: "2M+"
+            value: *ducklake_downloads
     links:
       - label: "GitHub"
         url: "https://github.com/pdet"
@@ -64,37 +75,43 @@ engineering-work:
       - title: DuckLake
         description: "Led the development of DuckDB's integrated data lake format from its 0.1 pre-production version to its 1.0 release. A SQL-native catalog that stores table metadata in any database while data lives in open formats like Parquet on object storage."
         blog_link: "https://ducklake.select"
+        source_link: "https://github.com/duckdb/ducklake"
         icon: "fas fa-warehouse"
 
       - title: CSV Engine
         description: "Designed and built DuckDB's parallel CSV parser with automatic type, delimiter, and dialect detection. Scores highest on the Pollock robustness benchmark (2025) across all tested systems."
         blog_link: "https://duckdb.org/2025/04/16/duckdb-csv-pollock-benchmark.html"
+        source_link: "https://github.com/duckdb/duckdb/pulls?q=is%3Apr+is%3Amerged+author%3Apdet+csv"
         icon: "fas fa-table"
 
       - title: Arrow & ADBC Integration
         description: "Built the zero-copy integration between DuckDB and Python's data ecosystem via Apache Arrow. ADBC provides a modern connectivity standard that eliminates the serialization overhead of ODBC."
         blog_link: "https://duckdb.org/2021/12/03/duck-arrow.html"
+        source_link: "https://github.com/duckdb/duckdb/pulls?q=is%3Apr+is%3Amerged+author%3Apdet+arrow"
         icon: "fas fa-exchange-alt"
 
       - title: ART Persistent Storage
         description: "Designed and implemented the persistent storage layer for DuckDB's Adaptive Radix Tree indexes. Keeps index data durable on disk without sacrificing in-memory lookup speed."
         blog_link: "https://duckdb.org/2022/07/27/art-storage.html"
+        source_link: "https://github.com/duckdb/duckdb/tree/main/src/execution/index/art"
         icon: "fas fa-database"
 
       - title: Python Client
         description: "Built DuckDB's Python client foundations and the UDF framework that lets users extend the engine in pure Python - no C++ required."
         blog_link: "https://duckdb.org/2023/07/07/python-udf.html"
+        source_link: "https://github.com/duckdb/duckdb/pulls?q=is%3Apr+is%3Amerged+author%3Apdet+python"
         icon: "fab fa-python"
 
       - title: BIGNUM Implementation
         description: "Implemented arbitrary-precision integer arithmetic for DuckDB. Handles HUGEINT and DECIMAL types so that financial calculations and scientific measurements stay exact beyond 64-bit limits."
+        source_link: "https://github.com/duckdb/duckdb/pulls?q=is%3Apr+is%3Amerged+author%3Apdet+hugeint"
         icon: "fas fa-calculator"
 
 narrative:
     text: |
-      <p>I joined <a href="https://duckdb.org">DuckDB</a> at CWI Amsterdam when the project had two researchers, only a handful of users, and a bet that analytical databases could be radically simpler. I have been assisting with building its infrastructure from the early days.</p>
-      <p>When DuckDB Labs spun out of CWI, I took on the COO role - helping hire the early team, organizing events, shaping the open-source strategy, and building the company while still writing code. That experience gave me a perspective on the full lifecycle of open-source infrastructure that informs every design decision I make today. When the company was ready for dedicated operations leadership, I chose to return to engineering full-time.</p>
-      <p>As Principal Engineer, I led <a href="https://ducklake.select">DuckLake</a> from its 0.1 pre-production version to its 1.0 release and drive query processing performance. I mentor new contributors, lead design reviews across subsystems, and help set technical direction for the engine.</p>
+      <p>I joined <a href="https://duckdb.org">DuckDB</a> at CWI Amsterdam when the project had two researchers, only a handful of users, and a bet that analytical databases could be radically simpler. I have been building its core infrastructure from the early days.</p>
+      <p>When DuckDB Labs spun out of CWI, I took on the COO role - helping hire the early team, organizing events, shaping the open-source strategy, and building the company while continuing to ship code. That experience gave me a perspective on the full lifecycle of open-source infrastructure that informs every design decision I make today. When the company was ready for dedicated operations leadership, I chose to return to engineering full-time.</p>
+      <p>As Principal Engineer, I led <a href="https://ducklake.select">DuckLake</a> from its 0.1 pre-production version to its 1.0 release - including data inlining that delivers 926× faster queries and 105× faster ingestion versus Iceberg - and I own query-processing performance for the engine. I mentor new contributors, lead design reviews across subsystems, and help set technical direction for the engine.</p>
 
 vision:
     title: Engineering Principles
@@ -115,10 +132,11 @@ timeline:
       - time: "2021 - 2023"
         role: "Chief Operating Officer"
         company: "DuckDB Labs"
+        detail: "Helped hire the early team, shaped the open-source strategy, and built company operations while continuing to ship code."
       - time: "2021 - 2022"
         role: "Post-Doctoral Researcher"
         company: "CWI Amsterdam"
-        detail: "Concurrent with COO role at DuckDB Labs."
+        detail: "Concurrent with the COO role, during the CWI spin-out."
       - time: "2019"
         role: "Research Intern"
         company: "Microsoft Research"
@@ -129,7 +147,7 @@ timeline:
 
 talks:
     title: Talks & Media
-    intro: "Speaker at developer conferences and data community events."
+    intro: "I speak on database internals and query-engine design at FOSDEM, EuroPython, and data community events."
     conferences:
       - name: "FOSDEM"
         icon: "fas fa-code"
@@ -181,18 +199,18 @@ projects:
     assignments:
       - title: DuckDB
         link: "https://github.com/duckdb/duckdb"
-        tagline: "The open-source analytical in-process database. Early contributor since the research prototype."
-        stars: "37K+"
+        tagline: "The open-source analytical in-process database. Early core contributor since the research prototype - 580+ merged pull requests."
+        stars: *duckdb_stars
 
       - title: DuckLake
         link: "https://github.com/duckdb/ducklake"
-        tagline: "Integrated data lake and catalog format designed to work with DuckDB."
-        stars: "2.6K+"
+        tagline: "Integrated data lake and catalog format designed to work with DuckDB. Led its development - 180+ merged pull requests."
+        stars: *ducklake_stars
 
 publications:
 
     title: Selected Publications
-    intro: "Peer-reviewed work on progressive indexing, database benchmarking, and analytical query processing."
+    intro: "Peer-reviewed work on progressive indexing, database benchmarking, and analytical query processing. The same research depth behind these VLDB and ICDE papers ships in DuckDB and DuckLake today."
 
     papers:
       - title: "Multidimensional Adaptive & Progressive Indexes"

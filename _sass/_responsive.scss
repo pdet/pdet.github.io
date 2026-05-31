@@ -21,6 +21,9 @@
         padding: 0;
     }
 
+    /* Nav is not sticky on mobile, so no anchor offset is needed */
+    html { scroll-padding-top: 0; }
+
     .main-wrapper {
         padding: 20px;
     }

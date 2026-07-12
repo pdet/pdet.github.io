@@ -1,0 +1,20 @@
+{% assign systems = site.data.data.systems %}
+{% if systems %}
+<section class="section systems-section" id="systems">
+  <h2 class="section-title">{{ systems.title }}</h2>
+
+  <dl class="systems-list">
+    {% for item in systems.items %}
+    <div class="systems-item">
+      <dt><a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a></dt>
+      <dd>
+        {{ item.description }}
+        {% if item.source_link %}
+        <a class="systems-source" href="{{ item.source_link }}" target="_blank" rel="noopener noreferrer">source</a>
+        {% endif %}
+      </dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>
+{% endif %}

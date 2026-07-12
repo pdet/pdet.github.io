@@ -1,25 +1,7 @@
-{% assign cta = site.data.data.cta %}
-{% if cta %}
-<section class="section cta-section">
-
-  {% if cta.title %}
-  <h2 class="section-title">
-    <span class="fa-stack fa-xs" aria-hidden="true">
-      <i class="fas fa-circle fa-stack-2x"></i>
-      <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-    </span>
-    {{ cta.title }}
-  </h2>
-  {% endif %}
-
-  <div class="cta-box">
-    <p class="cta-text">{{ cta.text }}</p>
-    {% if cta.email %}
-    <a href="mailto:{{ cta.email }}" class="cta-button">
-      <i class="fas fa-envelope" aria-hidden="true"></i> Get in Touch
-    </a>
-    {% endif %}
-  </div>
-
-</section><!--//cta-section-->
+{% assign contact = site.data.data.contact %}
+{% if contact %}
+<section class="section contact-section" id="contact">
+  <h2 class="section-title">{{ contact.title }}</h2>
+  <p class="contact-text">{{ contact.text }} <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+</section>
 {% endif %}

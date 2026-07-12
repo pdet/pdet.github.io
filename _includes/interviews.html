@@ -1,0 +1,18 @@
+{% assign interviews = site.data.data.interviews %}
+{% if interviews %}
+<section class="section interviews-section" id="interviews">
+  <h2 class="section-title">{{ interviews.title }}</h2>
+
+  <ul class="writing-list">
+    {% for item in interviews.items %}
+    <li class="writing-item">
+      <span class="writing-date">{{ item.date }}</span>
+      <span class="writing-body">
+        <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+        <span class="writing-venue">· {{ item.venue }}</span>
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

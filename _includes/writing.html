@@ -1,0 +1,22 @@
+{% assign writing = site.data.data.writing %}
+{% if writing %}
+<section class="section writing-section" id="writing">
+  <h2 class="section-title">{{ writing.title }}</h2>
+
+  <ul class="writing-list">
+    {% for item in writing.items %}
+    <li class="writing-item">
+      <span class="writing-date">{{ item.date }}</span>
+      <span class="writing-body">
+        <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+        <span class="writing-venue">· {{ item.venue }}{% if item.kind == 'talk' %} (talk){% elsif item.kind == 'press' %} (press){% endif %}</span>
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% if writing.note %}
+  <p class="writing-note">{{ writing.note }}</p>
+  {% endif %}
+</section>
+{% endif %}

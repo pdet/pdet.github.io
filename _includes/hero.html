@@ -1,70 +1,21 @@
 {% assign hero = site.data.data.hero %}
 {% assign sidebar = site.data.data.sidebar %}
-{% if hero %}
 <section class="section hero-section" id="about" tabindex="-1">
-
   <div class="hero-header">
-    <img class="hero-avatar" src="{{ site.baseurl }}/assets/images/{{ sidebar.avatar }}" alt="Dr. Pedro Holanda - Principal Engineer at DuckDB Labs" width="100" height="100" fetchpriority="high" />
+    <img class="hero-avatar" src="{{ site.baseurl }}/assets/images/{{ sidebar.avatar }}" alt="Pedro Holanda" width="72" height="72" fetchpriority="high" />
     <div class="hero-header-text">
-      {% if hero.name %}
       <h1 class="hero-name">{{ hero.name }}</h1>
-      {% endif %}
-      {% if hero.tagline %}
       <p class="hero-tagline">{{ hero.tagline }}</p>
-      {% endif %}
     </div>
   </div>
 
-  <div class="hero-impact">
-    {{ hero.impact }}
+  <div class="hero-intro">
+    <p>{{ hero.intro }}</p>
   </div>
 
-  {% if hero.proof %}
-  <p class="hero-proof">{{ hero.proof }}</p>
-  {% endif %}
-
-  {% if hero.credentials %}
-  <p class="hero-credentials">{{ hero.credentials }}</p>
-  {% endif %}
-
-  {% for group in hero.metric_groups %}
-  <div class="hero-metrics-wrapper">
-    {% if group.intro %}
-    <p class="hero-metrics-intro">{{ group.intro }}</p>
-    {% endif %}
-    <div class="hero-metrics">
-      {% for metric in group.metrics %}
-      <div class="metric">
-        <span class="metric-value">{{ metric.value }}</span>
-        <span class="metric-label">{{ metric.label }}</span>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-  {% endfor %}
-
-  <div class="hero-links">
+  <ul class="hero-links">
     {% for link in hero.links %}
-    <a href="{{ link.url }}" class="hero-link" {% unless link.url contains '#' %}target="_blank" rel="noopener noreferrer"{% endunless %}>
-      <i class="{{ link.icon }}" aria-hidden="true"></i> {{ link.label }}
-    </a>
+    <li><a href="{{ link.url }}" {% unless link.url contains '#' or link.url contains 'mailto' %}target="_blank" rel="noopener noreferrer"{% endunless %}>{{ link.label }}</a></li>
     {% endfor %}
-  </div>
-
-  <div class="hero-contact">
-    {% if sidebar.email %}
-    <a href="mailto:{{ sidebar.email }}"><i class="fas fa-envelope" aria-hidden="true"></i> {{ sidebar.email }}</a>
-    {% endif %}
-    {% if sidebar.linkedin %}
-    <a href="https://linkedin.com/in/{{ sidebar.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-    {% endif %}
-    {% if sidebar.twitter %}
-    <a href="https://x.com/{{ sidebar.twitter }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" aria-hidden="true"></i> @{{ sidebar.twitter }}</a>
-    {% endif %}
-    {% if sidebar.stack-overflow %}
-    <a href="https://stackoverflow.com/users/{{ sidebar.stack-overflow }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a>
-    {% endif %}
-  </div>
-
-</section><!--//hero-section-->
-{% endif %}
+  </ul>
+</section>

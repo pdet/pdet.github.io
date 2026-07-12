@@ -1,0 +1,31 @@
+{% assign record = site.data.data.record %}
+{% if record %}
+<section class="section record-section" id="record">
+  <h2 class="section-title">{{ record.title }}</h2>
+
+  <div class="record-rows">
+    {% for row in record.rows %}
+    <div class="record-row">
+      <div class="record-project">
+        <h3 class="record-name"><a href="{{ row.project_link }}" target="_blank" rel="noopener noreferrer">{{ row.project }}</a></h3>
+        <p class="record-role">{{ row.role }}</p>
+      </div>
+      <div class="record-stats">
+        <ul class="record-stat-list">
+          {% for stat in row.stats %}
+          <li><a href="{{ stat.link }}" target="_blank" rel="noopener noreferrer"><strong>{{ stat.value }}</strong> {{ stat.label }}</a></li>
+          {% endfor %}
+        </ul>
+        {% if row.contexts %}
+        <p class="record-context">{% for ctx in row.contexts %}<a href="{{ ctx.link }}" target="_blank" rel="noopener noreferrer">{{ ctx.text }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if record.note %}
+  <p class="record-note">{{ record.note }}</p>
+  {% endif %}
+</section>
+{% endif %}

@@ -5,10 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (darkModeToggle) {
         function updateToggle() {
             var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            var icon = darkModeToggle.querySelector('i');
-            if (icon) {
-                icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-            }
             darkModeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
         }
 

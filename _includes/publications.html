@@ -1,34 +1,18 @@
 {% assign publications = site.data.data.publications %}
 {% if publications %}
 <section class="section publications-section" id="research">
+  <h2 class="section-title">{{ publications.title }}</h2>
 
-  <h2 class="section-title">
-    <span class="fa-stack fa-xs" aria-hidden="true">
-      <i class="fas fa-circle fa-stack-2x"></i>
-      <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
-    </span>
-    {{ publications.title }}
-  </h2>
-
-  {% if publications.intro %}
-  <div class="intro">
-    {{ publications.intro | markdownify }}
-  </div><!--//intro-->
-  {% endif %}
-
-  {% for publication in publications.papers %}
-  {% if publication.date %}
-  <div class="publication-year">{{publication.date}}</div>
-  {% endif %}
-  <div class="item">
-    <h3 class="publication-title">{{ publication.title }}</h3>
-    {% if publication.summary %}
-    <div class="publication-summary">{{ publication.summary }}</div>
-    {% endif %}
-    <div class="publication-authors">{{ publication.authors }}</div>
-    <div class="publication-conference">{{ publication.conference }}</div>
-  </div><!--//item-->
-  {% endfor %}
-
-</section><!--//section-->
+  <ul class="publication-list">
+    {% for paper in publications.papers %}
+    <li class="publication-item">
+      <span class="publication-venue">{{ paper.venue }} {{ paper.date }}</span>
+      <span class="publication-body">
+        <a href="{{ paper.pdf }}" target="_blank" rel="noopener noreferrer" class="publication-title">{{ paper.title }}</a>{% if paper.authors %}<span class="publication-authors">, {{ paper.authors }}</span>{% endif %}
+        {% if paper.code %} <a class="publication-code" href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">code</a>{% endif %}
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
 {% endif %}

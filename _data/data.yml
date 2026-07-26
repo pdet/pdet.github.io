@@ -42,7 +42,8 @@ sidebar:
 hero:
     name: "Pedro Holanda"
     tagline: "Principal Engineer · DuckLabs"
-    intro: "I helped build <a href=\"https://duckdb.org\">DuckDB</a>, an open-source database for analytics that gets downloaded over 45 million times a month. I joined in 2018, back when it was a research prototype at CWI Amsterdam, and I have worked on the core engine ever since. I built the CSV engine, the Arrow integration, the ART index, and the Python client. These days I lead <a href=\"https://ducklake.select\">DuckLake</a>. I hold a PhD in database systems from CWI/Leiden and served as COO of DuckDB Labs."
+    intro: "I helped build <a href=\"https://duckdb.org\">DuckDB</a>, the open-source analytical database downloaded over 45 million times a month. I joined in 2018, when it was still a research prototype at CWI Amsterdam, and have worked on the core engine ever since—building its CSV engine, Arrow integration, ART index, and Python client. Today I lead <a href=\"https://ducklake.select\">DuckLake</a>."
+    note: "PhD in database systems from CWI/Leiden · Former COO of DuckDB Labs"
     links:
       - label: "GitHub"
         url: "https://github.com/pdet"

@@ -18,4 +18,8 @@
     <li><a href="{{ link.url }}" {% unless link.url contains '#' or link.url contains 'mailto' %}target="_blank" rel="noopener noreferrer"{% endunless %}>{{ link.label }}</a></li>
     {% endfor %}
   </ul>
+
+  {% if hero.note %}
+  <p class="hero-note">{{ hero.note }}</p>
+  {% endif %}
 </section>

@@ -13,6 +13,7 @@
     --rule: #e6e3d9;
     --accent: #f5cf00;            /* DuckDB yellow, used as underline/highlight only */
     --accent-soft: rgba(245, 207, 0, 0.22);
+    --focus: #7a6500;
     --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, "Liberation Mono", monospace;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
@@ -24,9 +25,13 @@
     --rule: #2c2a24;
     --accent: #d8b800;
     --accent-soft: rgba(216, 184, 0, 0.18);
+    --focus: #f5cf00;
 }
 
-html { scroll-padding-top: 4rem; }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
 
 body {
     font-family: var(--sans);
@@ -51,10 +56,10 @@ a {
     text-underline-offset: 3px;
 
     &:hover { background: var(--accent-soft); }
-    &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    &:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 }
 
-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
 .skip-link {
     position: absolute;
@@ -115,6 +120,7 @@ main { counter-reset: section; }
     padding: 2.4rem 0 2.6rem;
     border-bottom: 1px solid var(--rule);
     &:last-child { border-bottom: none; }
+    &[tabindex="-1"]:focus { outline: none; }
 }
 
 .section-title {
@@ -182,6 +188,13 @@ main { counter-reset: section; }
     gap: 0.4rem 1.4rem;
     font-family: var(--mono);
     font-size: 0.82rem;
+}
+
+.hero-note {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin: 0.8rem 0 0;
 }
 
 /* ======= Record ======= */
@@ -413,7 +426,40 @@ footer {
 
 /* ======= Responsive ======= */
 @media (max-width: 640px) {
-    .nav-list { gap: 0.5rem 0.8rem; font-size: 0.74rem; flex-wrap: wrap; }
+    .site-nav {
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar { display: none; }
+    }
+
+    .nav-list {
+        gap: 0.25rem;
+        font-size: 0.74rem;
+        flex-wrap: nowrap;
+        min-width: max-content;
+        padding: 0.35rem 1.25rem;
+
+        .nav-home { margin-right: 0.25rem; }
+
+        a {
+            display: flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 0 0.35rem;
+            white-space: nowrap;
+        }
+    }
+
+    .dark-mode-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0;
+    }
 
     .record-row, .systems-item, .timeline-item, .publication-item, .writing-item {
         grid-template-columns: 1fr;
@@ -424,6 +470,11 @@ footer {
     .timeline-time, .publication-venue, .writing-date { padding-top: 0; }
 
     .hero-name { font-size: 1.45rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    body { transition: none; }
 }
 
 /* ======= Print ======= */

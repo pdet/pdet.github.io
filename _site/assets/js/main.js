@@ -19,21 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    /* Smooth scrolling for nav links (respects reduced motion) */
-    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    document.querySelectorAll('.site-nav a[href^="#"]').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                var navHeight = document.querySelector('.site-nav').offsetHeight;
-                var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                window.scrollTo({ top: targetPosition, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-            }
-        });
-    });
-
     /* Active nav link on scroll (only observe sections that have nav links) */
     var navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
     var navIds = [];

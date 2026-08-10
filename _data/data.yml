@@ -139,8 +139,9 @@ systems:
         source_link: "https://github.com/duckdb/duckdb/pulls?q=is%3Apr+is%3Amerged+author%3Apdet+arrow"
 
       - title: Async I/O
-        description: "Read-ahead infrastructure in DuckDB's I/O layer that overlaps fetching with compute, so scans over Parquet and object storage spend less time waiting on the network."
-        link: "https://github.com/duckdb/duckdb/pulls?q=is%3Apr+is%3Amerged+author%3Apdet+async"
+        description: "Read-ahead infrastructure in DuckDB's I/O layer that overlaps fetching with compute."
+        link: "https://duckdb.org/2026/07/31/asynchronous-io"
+        source_link: "https://github.com/duckdb/duckdb/pulls?q=is%3Apr+is%3Amerged+author%3Apdet+async"
 
       - title: BIGNUM arithmetic
         description: "Arbitrary-precision integers for DuckDB, so values past the 64-bit limit stay exact instead of overflowing."
@@ -222,6 +223,12 @@ writing:
     title: Writing
     note: "More on the <a href='https://duckdb.org/blog' target='_blank' rel='noopener noreferrer'>DuckDB blog</a> and <a href='https://ducklake.select' target='_blank' rel='noopener noreferrer'>ducklake.select</a>."
     items:
+      - title: "Asynchronous I/O in DuckDB: Work, Thread, Work"
+        link: "https://duckdb.org/2026/07/31/asynchronous-io"
+        venue: "DuckDB Blog"
+        kind: "post"
+        date: 2026
+
       - title: "Data Inlining in DuckLake: Unlocking Streaming for Data Lakes"
         link: "https://ducklake.select/2026/04/02/data-inlining-in-ducklake/"
         venue: "DuckLake Blog"

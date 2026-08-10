@@ -215,7 +215,9 @@
     
   </ul>
 
+  
   <p class="hero-note">PhD in database systems from CWI/Leiden · Former COO of DuckDB Labs</p>
+  
 </section>
 
 
@@ -349,9 +351,11 @@
     </div>
     
     <div class="systems-item">
-      <dt><a href="https://github.com/duckdb/duckdb/pulls?q=is%3Apr+is%3Amerged+author%3Apdet+async" target="_blank" rel="noopener noreferrer">Async I/O</a></dt>
+      <dt><a href="https://duckdb.org/2026/07/31/asynchronous-io" target="_blank" rel="noopener noreferrer">Async I/O</a></dt>
       <dd>
-        Read-ahead infrastructure in DuckDB's I/O layer that overlaps fetching with compute, so scans over Parquet and object storage spend less time waiting on the network.
+        Read-ahead infrastructure in DuckDB's I/O layer that overlaps fetching with compute, so scans over Parquet and object storage spend less time waiting on the network. On S3 data, it makes Parquet queries about 3&times; faster and CSV reads nearly 20&times; faster.
+        
+        <a class="systems-source" href="https://github.com/duckdb/duckdb/pulls?q=is%3Apr+is%3Amerged+author%3Apdet+async" target="_blank" rel="noopener noreferrer">source</a>
         
       </dd>
     </div>
@@ -520,6 +524,14 @@
     <li class="writing-item">
       <span class="writing-date">2026</span>
       <span class="writing-body">
+        <a href="https://duckdb.org/2026/07/31/asynchronous-io" target="_blank" rel="noopener noreferrer">Asynchronous I/O in DuckDB: Work, Thread, Work</a>
+        <span class="writing-venue">· DuckDB Blog</span>
+      </span>
+    </li>
+    
+    <li class="writing-item">
+      <span class="writing-date">2026</span>
+      <span class="writing-body">
         <a href="https://ducklake.select/2026/04/02/data-inlining-in-ducklake/" target="_blank" rel="noopener noreferrer">Data Inlining in DuckLake: Unlocking Streaming for Data Lakes</a>
         <span class="writing-venue">· DuckLake Blog</span>
       </span>
@@ -671,3 +683,4 @@
 </body>
 
 </html>
+

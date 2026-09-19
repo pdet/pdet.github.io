@@ -4,9 +4,9 @@ layout: null
 ---
 # Dr. Pedro Holanda
 
-Dr. Pedro Holanda is a Principal Engineer at DuckLabs (formerly DuckDB Labs), the company behind DuckDB, the fastest-growing open-source analytical database management system with over {{ site.data.data.metrics.duckdb_stars_full }} GitHub stars and {{ site.data.data.metrics.duckdb_downloads_full }} monthly downloads on PyPI. Pedro is one of the earliest core contributors to DuckDB, having helped build it from a research prototype at Centrum Wiskunde en Informatica (CWI) in Amsterdam into the industry standard for embedded analytics.
+Dr. Pedro Holanda is a Principal Engineer at DuckLabs/AWS. DuckLabs (formerly DuckDB Labs) joined AWS in September 2026 and is the team behind DuckDB, the fastest-growing open-source analytical database management system with over {{ site.data.data.metrics.duckdb_stars_full }} GitHub stars and {{ site.data.data.metrics.duckdb_downloads_full }} monthly downloads on PyPI. Pedro is one of the earliest core contributors to DuckDB, having helped build it from a research prototype at Centrum Wiskunde en Informatica (CWI) in Amsterdam into the industry standard for embedded analytics.
 
-Public track record (GitHub, July 2026): Pedro ranks {{ site.data.data.metrics.duckdb_rank }} of DuckDB's 341 contributors by commit count, with {{ site.data.data.metrics.duckdb_commits }} commits and {{ site.data.data.metrics.duckdb_prs }} merged pull requests, contributing since 2018, the project's first year. On DuckLake he ranks {{ site.data.data.metrics.ducklake_rank }} by commit count, with {{ site.data.data.metrics.ducklake_commits }} commits and {{ site.data.data.metrics.ducklake_prs }} merged pull requests, and he authored {{ site.data.data.metrics.ducklake_pr_share }} of all merged DuckLake pull requests from July 2025 to July 2026 (197 of 391). He leads the project, which he took from its 0.1 pre-production version to its 1.0 release. He is one of the selected people with merge rights across the duckdb GitHub organization, and has reviewed {{ site.data.data.metrics.duckdb_reviews }} pull requests by other DuckDB contributors plus {{ site.data.data.metrics.ducklake_reviews }} external pull requests on DuckLake. Sources: https://github.com/duckdb/duckdb/graphs/contributors and https://github.com/duckdb/ducklake/graphs/contributors
+Public track record (GitHub, checked 19 September 2026): Pedro ranks {{ site.data.data.metrics.duckdb_rank }} of DuckDB's {{ site.data.data.metrics.duckdb_contributors }} contributors by commit count, with {{ site.data.data.metrics.duckdb_commits }} commits and {{ site.data.data.metrics.duckdb_prs }} merged pull requests, contributing since 2018, the project's first year. On DuckLake he ranks {{ site.data.data.metrics.ducklake_rank }} by commit count, with {{ site.data.data.metrics.ducklake_commits }} commits and {{ site.data.data.metrics.ducklake_prs }} merged pull requests, and he authored {{ site.data.data.metrics.ducklake_pr_share }} of all merged DuckLake pull requests from 19 September 2025 to 19 September 2026 (170 of 394). He leads the project, which he took from its 0.1 pre-production version to its 1.0 release. He is one of the selected people with merge rights across the duckdb GitHub organization, and has reviewed {{ site.data.data.metrics.duckdb_reviews }} pull requests by other DuckDB contributors plus {{ site.data.data.metrics.ducklake_reviews }} external pull requests on DuckLake. Sources: https://github.com/duckdb/duckdb/graphs/contributors and https://github.com/duckdb/ducklake/graphs/contributors
 
 Pedro served as Chief Operating Officer (COO) of DuckDB Labs from 2022 to 2023, running hiring and training as the company grew from a small research spinoff into a leading open-source database company, and mentoring interns who grew into senior engineers on the team. Once the company could grow dedicated management resources, he chose to fully return to engineering, and later became Principal Engineer. His key contributions include the CSV Reader/Sniffer, DuckLake (an integrated data lake and catalog format, whose specification he has co-written since version 0.1 and whose releases he manages), the Arrow integration and DuckDB's ADBC driver (zero-copy data transfer that eliminates ODBC's serialization overhead), async I/O read-ahead, BIGNUM arbitrary-precision arithmetic, Enum/Dictionary encoding, the ART index (both the original implementation and its persistent storage), the Extension framework, and the Python client.
 
@@ -14,6 +14,10 @@ Pedro Holanda is Brazilian-born. He holds a PhD in Computer Science from Leiden 
 
 Pedro works closely with DuckDB co-creators Mark Raasveldt and Hannes Mühleisen. He is a frequent speaker at international conferences including FOSDEM, EuroPython, DuckCon, and J on the Beach.
 
+## Selected Videos
+
+{% for talk in site.data.data.talks.items %}- {{ talk.title }} ({{ talk.venue }}, {{ talk.date }}): {{ talk.link }}
+{% endfor %}
 ## Selected Blog Posts
 
 - Arrow IPC Support in DuckDB (2025): https://duckdb.org/2025/05/23/arrow-ipc-support-in-duckdb.html
@@ -30,5 +34,5 @@ Pedro works closely with DuckDB co-creators Mark Raasveldt and Hannes Mühleisen
 - LinkedIn: https://linkedin.com/in/pdet
 - Twitter: https://twitter.com/holanda_pe
 - DuckDB: https://github.com/duckdb/duckdb
-- DuckLabs: https://duckdblabs.com
+- DuckLabs: https://ducklabs.com
 - DuckLake: https://github.com/duckdb/ducklake

@@ -2,33 +2,36 @@
 # Be aware that even a small syntax error here can lead to failures in output.
 #
 
-# Canonical metric values — single source of truth. The short forms are referenced
-# via YAML anchors (*duckdb_stars, etc.) below, and via site.data.data.metrics in
-# _includes/head.html and llms.txt. Update them here only.
-# Last synced with GitHub and PyPI: 2026-07-12.
+# Canonical metric values — single source of truth. Record rows reference these
+# keys via metric fields; the hero, metadata, and llms.txt read them directly.
+# Update metric values here. Avoid YAML aliases: Jekyll coerces numeric strings.
+# Last synced with GitHub, PyPI, and YouTube: 2026-09-19.
+# GitHub: /repos/duckdb/{duckdb,ducklake}, /contributors, and /search/issues.
+# PyPI: https://pypistats.org/api/packages/duckdb/recent (55,967,409 last_month).
+# DuckLake PR share: 170 / 394 merged between 2025-09-19 and 2026-09-19.
 metrics:
-    duckdb_stars: &duckdb_stars "39K"
-    duckdb_downloads: &duckdb_downloads "45M+"
-    ducklake_stars: &ducklake_stars "2.8K"
-    duckdb_commits: &duckdb_commits "5,100+"
-    duckdb_prs: &duckdb_prs "600+"
-    duckdb_reviews: &duckdb_reviews "140+"
-    ducklake_reviews: &ducklake_reviews "58"
-    duckdb_rank: &duckdb_rank "#3"
-    duckdb_contributors: &duckdb_contributors "341"
-    ducklake_commits: &ducklake_commits "1,400+"
-    ducklake_prs: &ducklake_prs "200+"
-    ducklake_pr_share: &ducklake_pr_share "50%"
-    ducklake_rank: &ducklake_rank "#1"
-    duckdb_stars_full: "39,000"
-    duckdb_downloads_full: "45 million"
+    duckdb_stars: "41.5K"
+    duckdb_downloads: "55M+"
+    ducklake_stars: "2,992"
+    duckdb_commits: "5,328"
+    duckdb_prs: "619"
+    duckdb_reviews: "150"
+    ducklake_reviews: "80"
+    duckdb_rank: "#3"
+    duckdb_contributors: "345"
+    ducklake_commits: "1,609"
+    ducklake_prs: "219"
+    ducklake_pr_share: "43%"
+    ducklake_rank: "#1"
+    duckdb_stars_full: "41,500"
+    duckdb_downloads_full: "55 million"
 
 sidebar:
     education: True
 
     # Profile information
     name: Dr. Pedro Holanda
-    tagline: "Principal Engineer @ DuckLabs"
+    tagline: "Principal Engineer @ DuckLabs/AWS"
     avatar: profile.jpg
 
     # Sidebar links
@@ -41,8 +44,8 @@ sidebar:
 
 hero:
     name: "Pedro Holanda"
-    tagline: "Principal Engineer · DuckLabs"
-    intro: "I helped build <a href=\"https://duckdb.org\">DuckDB</a>, the open-source analytical database downloaded over 45 million times a month. I joined in 2018, when it was still a research prototype at CWI Amsterdam, and have worked on the core engine ever since—building its CSV engine, Arrow integration, ART index, and Python client. Today I lead <a href=\"https://ducklake.select\">DuckLake</a>."
+    tagline: "Principal Engineer · DuckLabs/AWS"
+    intro: "I helped build <a href=\"https://duckdb.org\">DuckDB</a>, the open-source analytical database downloaded over DUCKDB_MONTHLY_DOWNLOADS times a month on PyPI. I joined in 2018, when it was still a research prototype at CWI Amsterdam, and have worked on the core engine ever since—building its CSV engine, Arrow integration, ART index, and Python client. Today I lead <a href=\"https://ducklake.select\">DuckLake</a>."
     note: "PhD in database systems from CWI/Leiden · Former COO of DuckDB Labs"
     links:
       - label: "GitHub"
@@ -56,55 +59,59 @@ hero:
 
 record:
     title: Record
-    note: "Figures from GitHub and PyPI, July 2026. Every number links to its source."
+    note: "Figures from GitHub and PyPI, checked 19 September 2026. Downloads cover the last month. Every number links to its source."
     rows:
       - project: "DuckDB"
         role: "Core engine engineer since 2018"
         project_link: "https://github.com/duckdb/duckdb"
         stats:
-          - value: *duckdb_commits
+          - metric: duckdb_commits
             label: "commits"
             link: "https://github.com/duckdb/duckdb/graphs/contributors"
-          - value: *duckdb_rank
-            label: "of 341 contributors by commit count"
+          - metric: duckdb_rank
+            contributors: duckdb_contributors
+            label: "contributors by commit count"
             link: "https://github.com/duckdb/duckdb/graphs/contributors"
-          - value: *duckdb_prs
+          - metric: duckdb_prs
             label: "merged PRs"
             link: "https://github.com/duckdb/duckdb/pulls?q=is%3Apr+is%3Amerged+author%3Apdet"
         contexts:
-          - text: "39K stars"
+          - metric: duckdb_stars
+            text: "stars"
             link: "https://github.com/duckdb/duckdb"
-          - text: "45M+ monthly PyPI downloads"
+          - metric: duckdb_downloads
+            text: "monthly PyPI downloads"
             link: "https://pypistats.org/packages/duckdb"
 
       - project: "DuckLake"
         role: "Technical lead, spec co-author since 0.1, and release manager"
         project_link: "https://github.com/duckdb/ducklake"
         stats:
-          - value: *ducklake_rank
+          - metric: ducklake_rank
             label: "contributor by commit count"
             link: "https://github.com/duckdb/ducklake/graphs/contributors"
-          - value: *ducklake_commits
+          - metric: ducklake_commits
             label: "commits"
             link: "https://github.com/duckdb/ducklake/graphs/contributors"
-          - value: *ducklake_prs
+          - metric: ducklake_prs
             label: "merged PRs"
             link: "https://github.com/duckdb/ducklake/pulls?q=is%3Apr+is%3Amerged+author%3Apdet"
-          - value: *ducklake_pr_share
-            label: "of all merged PRs, Jul 2025 to Jul 2026 (197 of 391)"
-            link: "https://github.com/duckdb/ducklake/pulls?q=is%3Apr+is%3Amerged+merged%3A%3E2025-07-12+author%3Apdet"
+          - metric: ducklake_pr_share
+            label: "of all merged PRs, 19 Sep 2025 to 19 Sep 2026 (170 of 394)"
+            link: "https://github.com/duckdb/ducklake/pulls?q=is%3Apr+is%3Amerged+merged%3A2025-09-19..2026-09-19+author%3Apdet"
         contexts:
-          - text: "2.8K stars"
+          - metric: ducklake_stars
+            text: "stars"
             link: "https://github.com/duckdb/ducklake"
 
       - project: "Stewardship"
         role: "Merge rights across the duckdb organization"
         project_link: "https://github.com/duckdb"
         stats:
-          - value: *duckdb_reviews
+          - metric: duckdb_reviews
             label: "peer PRs reviewed in DuckDB"
             link: "https://github.com/duckdb/duckdb/pulls?q=is%3Apr+reviewed-by%3Apdet+-author%3Apdet"
-          - value: *ducklake_reviews
+          - metric: ducklake_reviews
             label: "external PRs reviewed in DuckLake"
             link: "https://github.com/duckdb/ducklake/pulls?q=is%3Apr+reviewed-by%3Apdet+-author%3Apdet"
 
@@ -162,8 +169,8 @@ timeline:
     items:
       - time: "since 2025"
         role: "Principal Engineer"
-        company: "DuckLabs (formerly DuckDB Labs)"
-        detail: "Leads DuckLake and remains a major contributor to the DuckDB core, with work spanning async I/O, BIGNUM arithmetic, the Arrow integration, and other core functionality. Leads projects, coordinates design reviews, and mentors new contributors. One of the selected people with merge rights across the duckdb organization."
+        company: "DuckLabs/AWS"
+        detail: "DuckLabs joined AWS in September 2026. Leads DuckLake and remains a major contributor to the DuckDB core, with work spanning async I/O, BIGNUM arithmetic, the Arrow integration, and other core functionality. Leads projects, coordinates design reviews, and mentors new contributors. One of the selected people with merge rights across the duckdb organization."
       - time: "2023 – 25"
         role: "Senior Software Engineer"
         company: "DuckDB Labs"
@@ -255,28 +262,35 @@ writing:
 
 talks:
     title: Talks
-    note: "I have also spoken at FOSDEM, DuckCon, PyData Eindhoven, J on the Beach, and Data Hackers (Portuguese)."
+    note: "I have also spoken at FOSDEM, DuckCon, PyData Eindhoven, J on the Beach, and Data Hackers (Portuguese). View counts checked 19 September 2026."
     items:
+      - title: "DuckLake: The Lakehouse That's Just SQL and Parquet"
+        link: "https://www.youtube.com/watch?v=wEKbbY5tPtI"
+        video_id: "wEKbbY5tPtI"
+        venue: "Talk Python to Me · Episode 562"
+        date: 2026
+        views: "1.7K+"
+
       - title: "DuckLake v1.0: Developer Discussion"
         link: "https://www.youtube.com/watch?v=7Su0aVzbb-U"
         video_id: "7Su0aVzbb-U"
         venue: "DuckDB"
         date: 2026
-        views: "3.4K+"
+        views: "4.1K+"
 
       - title: "Efficient CSV Parsing: On the Complexity of Simple Things"
         link: "https://www.youtube.com/watch?v=YrqSp8m7fmk"
         video_id: "YrqSp8m7fmk"
         venue: "DSDSD"
         date: 2024
-        views: "2.2K+"
+        views: "2.4K+"
 
       - title: "DuckDB: Bringing Analytical SQL Directly to Your Python Shell"
         link: "https://www.youtube.com/watch?v=egN4TwVyJss"
         video_id: "egN4TwVyJss"
         venue: "EuroPython"
         date: 2023
-        views: "12K+"
+        views: "12.5K+"
 
 interviews:
     title: Interviews

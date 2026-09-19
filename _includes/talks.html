@@ -4,22 +4,22 @@
   <h2 class="section-title">{{ talks.title }}</h2>
 
   <div class="talks-grid">
-    {% for talk in talks.items %}
+{% for talk in talks.items %}
     <div class="talk-card">
       <a class="talk-thumb" href="{{ talk.link }}" target="_blank" rel="noopener noreferrer" aria-label="Watch: {{ talk.title }}">
         <img src="https://img.youtube.com/vi/{{ talk.video_id }}/mqdefault.jpg" alt="" loading="lazy" width="320" height="180">
-        {% if talk.views %}
+{% if talk.views %}
         <span class="talk-views">{{ talk.views }} views</span>
-        {% endif %}
+{% endif %}
       </a>
       <h3 class="talk-title"><a href="{{ talk.link }}" target="_blank" rel="noopener noreferrer">{{ talk.title }}</a></h3>
       <p class="talk-meta">{{ talk.venue }} · {{ talk.date }}</p>
     </div>
-    {% endfor %}
+{% endfor %}
   </div>
 
-  {% if talks.note %}
+{% if talks.note %}
   <p class="talks-note">{{ talks.note }}</p>
-  {% endif %}
+{% endif %}
 </section>
 {% endif %}

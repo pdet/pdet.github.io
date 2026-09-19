@@ -10,7 +10,7 @@
   </div>
 
   <div class="hero-intro">
-    <p>{{ hero.intro }}</p>
+    <p>{{ hero.intro | replace: 'DUCKDB_MONTHLY_DOWNLOADS', site.data.data.metrics.duckdb_downloads_full }}</p>
   </div>
 
   <ul class="hero-links">

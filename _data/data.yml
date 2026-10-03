@@ -5,10 +5,12 @@
 # Canonical metric values — single source of truth. Record rows reference these
 # keys via metric fields; the hero, metadata, and llms.txt read them directly.
 # Update metric values here. Avoid YAML aliases: Jekyll coerces numeric strings.
-# Last synced with GitHub, PyPI, and YouTube: 2026-10-03.
+# Last synced with GitHub, PyPI, DuckDB extensions, and YouTube: 2026-10-03.
 # GitHub: /repos/duckdb/{duckdb,ducklake}, /contributors, and /search/issues.
 # PyPI: https://pypistats.org/api/packages/duckdb/overall?mirrors=false, summed over the last
 # 30 days (2026-09-03..2026-10-02: 55,066,510). /recent last_month (52,153,780) disagrees with it.
+# Extensions: https://extensions.duckdb.org/downloads-last-week.json (ducklake 1,494,382;
+# #1 of the lake formats ahead of iceberg 1,220,529 and delta 1,031,848; #11 overall).
 # DuckLake PR share: 174 / 402 merged between 2025-10-03 and 2026-10-03.
 metrics:
     duckdb_stars: "41.8K"
@@ -24,6 +26,8 @@ metrics:
     ducklake_prs: "231"
     ducklake_pr_share: "43%"
     ducklake_rank: "#1"
+    ducklake_downloads: "1.4M+"
+    ducklake_ext_rank: "#11"
     duckdb_stars_full: "41,800"
     duckdb_downloads_full: "55 million"
 
@@ -60,7 +64,7 @@ hero:
 
 record:
     title: Record
-    note: "Figures from GitHub and PyPI, checked 3 October 2026. Downloads cover the last month. Every number links to its source."
+    note: "Figures from GitHub, PyPI, and the DuckDB extension repository, checked 3 October 2026. PyPI downloads cover the last month; extension downloads cover the last week. Every number links to its source."
     rows:
       - project: "DuckDB"
         role: "Core engine engineer since 2018"
@@ -104,6 +108,12 @@ record:
           - metric: ducklake_stars
             text: "stars"
             link: "https://github.com/duckdb/ducklake"
+          - metric: ducklake_downloads
+            text: "downloads last week, the most of any DuckDB data lake extension"
+            link: "https://extensions.duckdb.org/downloads-last-week.json"
+          - metric: ducklake_ext_rank
+            text: "of all DuckDB extensions"
+            link: "https://extensions.duckdb.org/downloads-last-week.json"
 
       - project: "Stewardship"
         role: "Merge rights across the duckdb organization"

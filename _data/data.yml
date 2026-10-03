@@ -44,7 +44,7 @@ sidebar:
 
 hero:
     name: "Pedro Holanda"
-    tagline: "Principal Engineer · DuckLabs/AWS"
+    tagline: "Principal Engineer (L7) · DuckLabs/AWS"
     intro: "I helped build <a href=\"https://duckdb.org\">DuckDB</a>, the open-source analytical database downloaded over DUCKDB_MONTHLY_DOWNLOADS times a month on PyPI. I joined in 2018, when it was still a research prototype at CWI Amsterdam, and have worked on the core engine ever since—building its CSV engine, Arrow integration, ART index, and Python client. Today I lead <a href=\"https://ducklake.select\">DuckLake</a>."
     note: "PhD in database systems from CWI/Leiden · Former COO of DuckDB Labs"
     links:

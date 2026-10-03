@@ -5,25 +5,26 @@
 # Canonical metric values — single source of truth. Record rows reference these
 # keys via metric fields; the hero, metadata, and llms.txt read them directly.
 # Update metric values here. Avoid YAML aliases: Jekyll coerces numeric strings.
-# Last synced with GitHub, PyPI, and YouTube: 2026-09-19.
+# Last synced with GitHub, PyPI, and YouTube: 2026-10-03.
 # GitHub: /repos/duckdb/{duckdb,ducklake}, /contributors, and /search/issues.
-# PyPI: https://pypistats.org/api/packages/duckdb/recent (55,967,409 last_month).
-# DuckLake PR share: 170 / 394 merged between 2025-09-19 and 2026-09-19.
+# PyPI: https://pypistats.org/api/packages/duckdb/overall?mirrors=false, summed over the last
+# 30 days (2026-09-03..2026-10-02: 55,066,510). /recent last_month (52,153,780) disagrees with it.
+# DuckLake PR share: 174 / 402 merged between 2025-10-03 and 2026-10-03.
 metrics:
-    duckdb_stars: "41.5K"
+    duckdb_stars: "41.8K"
     duckdb_downloads: "55M+"
-    ducklake_stars: "2,992"
-    duckdb_commits: "5,328"
-    duckdb_prs: "619"
-    duckdb_reviews: "150"
-    ducklake_reviews: "80"
+    ducklake_stars: "3,019"
+    duckdb_commits: "5,407"
+    duckdb_prs: "624"
+    duckdb_reviews: "152"
+    ducklake_reviews: "81"
     duckdb_rank: "#3"
-    duckdb_contributors: "345"
-    ducklake_commits: "1,609"
-    ducklake_prs: "219"
+    duckdb_contributors: "348"
+    ducklake_commits: "1,685"
+    ducklake_prs: "231"
     ducklake_pr_share: "43%"
     ducklake_rank: "#1"
-    duckdb_stars_full: "41,500"
+    duckdb_stars_full: "41,800"
     duckdb_downloads_full: "55 million"
 
 sidebar:
@@ -59,7 +60,7 @@ hero:
 
 record:
     title: Record
-    note: "Figures from GitHub and PyPI, checked 19 September 2026. Downloads cover the last month. Every number links to its source."
+    note: "Figures from GitHub and PyPI, checked 3 October 2026. Downloads cover the last month. Every number links to its source."
     rows:
       - project: "DuckDB"
         role: "Core engine engineer since 2018"
@@ -97,8 +98,8 @@ record:
             label: "merged PRs"
             link: "https://github.com/duckdb/ducklake/pulls?q=is%3Apr+is%3Amerged+author%3Apdet"
           - metric: ducklake_pr_share
-            label: "of all merged PRs, 19 Sep 2025 to 19 Sep 2026 (170 of 394)"
-            link: "https://github.com/duckdb/ducklake/pulls?q=is%3Apr+is%3Amerged+merged%3A2025-09-19..2026-09-19+author%3Apdet"
+            label: "of all merged PRs, 3 Oct 2025 to 3 Oct 2026 (174 of 402)"
+            link: "https://github.com/duckdb/ducklake/pulls?q=is%3Apr+is%3Amerged+merged%3A2025-10-03..2026-10-03+author%3Apdet"
         contexts:
           - metric: ducklake_stars
             text: "stars"
@@ -262,21 +263,21 @@ writing:
 
 talks:
     title: Talks
-    note: "I have also spoken at FOSDEM, DuckCon, PyData Eindhoven, J on the Beach, and Data Hackers (Portuguese). View counts checked 19 September 2026."
+    note: "I have also spoken at FOSDEM, DuckCon, PyData Eindhoven, J on the Beach, and Data Hackers (Portuguese). View counts checked 3 October 2026."
     items:
       - title: "DuckLake: The Lakehouse That's Just SQL and Parquet"
         link: "https://www.youtube.com/watch?v=wEKbbY5tPtI"
         video_id: "wEKbbY5tPtI"
         venue: "Talk Python to Me · Episode 562"
         date: 2026
-        views: "1.7K+"
+        views: "2K+"
 
       - title: "DuckLake v1.0: Developer Discussion"
         link: "https://www.youtube.com/watch?v=7Su0aVzbb-U"
         video_id: "7Su0aVzbb-U"
         venue: "DuckDB"
         date: 2026
-        views: "4.1K+"
+        views: "4.2K+"
 
       - title: "Efficient CSV Parsing: On the Complexity of Simple Things"
         link: "https://www.youtube.com/watch?v=YrqSp8m7fmk"
@@ -290,7 +291,7 @@ talks:
         video_id: "egN4TwVyJss"
         venue: "EuroPython"
         date: 2023
-        views: "12.5K+"
+        views: "12.6K+"
 
 interviews:
     title: Interviews

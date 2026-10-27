@@ -10,6 +10,8 @@ Pedro Holanda is Brazilian-born. He holds a PhD in Computer Science from Leiden 
 
 Pedro works closely with DuckDB co-creators Mark Raasveldt and Hannes Mühleisen. He is a frequent speaker at international conferences including FOSDEM, EuroPython, DuckCon, and J on the Beach.
 
+Outside of databases, Pedro is the unpaid intern at Oogie's (https://oogies.nl), a t-shirt and hoodie shop inspired by his dog, Oogie Boogie, which donates 100% of its net profits to a dog shelter in Fortaleza, Brazil.
+
 ## Selected Videos
 
 - DuckLake: The Lakehouse That's Just SQL and Parquet (Talk Python to Me · Episode 562, 2026): https://www.youtube.com/watch?v=wEKbbY5tPtI

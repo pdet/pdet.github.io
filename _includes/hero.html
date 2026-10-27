@@ -6,11 +6,17 @@
     <div class="hero-header-text">
       <h1 class="hero-name">{{ hero.name }}</h1>
       <p class="hero-tagline">{{ hero.tagline }}</p>
+      {% if hero.tagline2 %}
+      <p class="hero-tagline">{{ hero.tagline2 }}</p>
+      {% endif %}
     </div>
   </div>
 
   <div class="hero-intro">
     <p>{{ hero.intro | replace: 'DUCKDB_MONTHLY_DOWNLOADS', site.data.data.metrics.duckdb_downloads_full }}</p>
+    {% if hero.intro2 %}
+    <p>{{ hero.intro2 }}</p>
+    {% endif %}
   </div>
 
   <ul class="hero-links">

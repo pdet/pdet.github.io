@@ -173,10 +173,15 @@ main { counter-reset: section; }
     margin: 0.35rem 0 0;
 }
 
+.hero-tagline + .hero-tagline {
+    margin-top: 0.15rem;
+}
+
 .hero-intro {
     font-size: 1.02rem;
     max-width: 40rem;
     p { margin: 0; }
+    p + p { margin-top: 0.8rem; }
 }
 
 .hero-links {

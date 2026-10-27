@@ -178,6 +178,10 @@ systems:
 timeline:
     title: Career
     items:
+      - time: "since 2026"
+        role: "Unpaid Intern"
+        company: "<a href=\"https://oogies.nl\">Oogie's</a>"
+        detail: "A t-shirt and hoodie shop inspired by my dog, Oogie Boogie. 100% of net profits go to a dog shelter in Fortaleza, Brazil."
       - time: "since 2025"
         role: "Principal Engineer"
         company: "DuckLabs/AWS"

@@ -4,6 +4,7 @@
   "items": 6,
   "profit_eur": 35.35,
   "goal_eur": 500,
+  "brl_per_eur": 5.9624,
   "profit": 39.41,
   "currency": "USD",
   "rate": 0.89686

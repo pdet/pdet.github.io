@@ -1,0 +1,43 @@
+# Hourly totals for the "Current profits" section on oogies.nl, published to /oogies/profits.json.
+# Needs the FOURTHWALL_USER and FOURTHWALL_PASSWORD secrets from a Fourthwall Open API user.
+name: oogies.nl profits
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: oogies-profits
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      FOURTHWALL_USER: ${{ secrets.FOURTHWALL_USER }}
+      FOURTHWALL_PASSWORD: ${{ secrets.FOURTHWALL_PASSWORD }}
+    steps:
+      - if: env.FOURTHWALL_USER == ''
+        run: echo '::warning::Add the FOURTHWALL_USER and FOURTHWALL_PASSWORD repository secrets.'
+      - if: env.FOURTHWALL_USER != ''
+        uses: actions/checkout@v4
+      - if: env.FOURTHWALL_USER != ''
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - if: env.FOURTHWALL_USER != ''
+        run: node .github/scripts/oogies-profits.mjs
+      - if: env.FOURTHWALL_USER != ''
+        name: Publish if the totals changed
+        run: |
+          git add oogies/profits.json
+          git diff --cached --quiet && exit 0
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Update oogies.nl profits'
+          git pull --rebase
+          git push

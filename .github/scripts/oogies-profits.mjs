@@ -73,17 +73,17 @@ function orderProfit(order) {
 	return profit - (value(total) * FEE_RATE + FEE_FIXED);
 }
 
-async function toEur(currency, previous) {
-	if (currency === 'EUR') {
-		return 1;
-	}
+// Euros per unit of the shop currency, and reais per euro for what the shelter receives.
+async function getRates(currency, previous) {
 	try {
-		const body = await getJson(`${RATES}?base=${currency}&symbols=EUR`);
-		return body.rates.EUR;
+		const symbols = ['EUR', 'BRL'].filter(symbol => symbol !== currency);
+		const body = await getJson(`${RATES}?base=${currency}&symbols=${symbols.join(',')}`);
+		const rates = { ...body.rates, [currency]: 1 };
+		return { eur: rates.EUR, brlPerEur: Math.round(rates.BRL / rates.EUR * 10000) / 10000 };
 	} catch (err) {
-		if (previous?.currency === currency && previous.rate) {
-			console.warn(`Exchange rate unavailable, reusing ${previous.rate}: ${err.message}`);
-			return previous.rate;
+		if (previous?.currency === currency && previous.rate && previous.brl_per_eur) {
+			console.warn(`Exchange rates unavailable, reusing the previous ones: ${err.message}`);
+			return { eur: previous.rate, brlPerEur: previous.brl_per_eur };
 		}
 		throw err;
 	}
@@ -107,21 +107,22 @@ const previous = await readFile(OUT, 'utf8').then(JSON.parse).catch(() => null);
 const currency = sales[0]?.amounts.total.currency ?? previous?.currency ?? 'USD';
 const summary = `${month.label}: ${sales.length} orders, ${items} items, ${profit} ${currency}`;
 
-// Only rewrite the file for a new month or new orders, so the exchange rate alone never causes a commit.
+// Only rewrite the file for a new month, new orders or a missing rate, so rate changes alone never cause a commit.
 if (previous?.month === month.key && previous.items === items && previous.profit === profit &&
-	previous.currency === currency) {
+	previous.currency === currency && previous.rate && previous.brl_per_eur) {
 	console.log(`${summary}, unchanged`);
 } else {
-	const rate = await toEur(currency, previous);
+	const { eur, brlPerEur } = await getRates(currency, previous);
 	const result = {
 		month: month.key,
 		label: month.label,
 		items,
-		profit_eur: Math.round(profit * rate * 100) / 100,
+		profit_eur: Math.round(profit * eur * 100) / 100,
 		goal_eur: GOAL_EUR,
+		brl_per_eur: brlPerEur,
 		profit,
 		currency,
-		rate,
+		rate: eur,
 	};
 	await mkdir(dirname(OUT), { recursive: true });
 	await writeFile(OUT, JSON.stringify(result, null, 2) + '\n');

@@ -1,11 +1,13 @@
 // Writes the totals behind the "Current profits" section on oogies.nl: items sold and estimated
-// profit for the current month, read from the Fourthwall Open API. No customer or order data is kept.
+// profit for the current month, read from the Fourthwall Open API plus the sales listed in OFFLINE.
+// No customer or order data is kept.
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 
 const API = process.env.FOURTHWALL_API || 'https://api.fourthwall.com/open-api/v1.0';
 const RATES = process.env.RATES_API || 'https://api.frankfurter.dev/v1/latest';
 const OUT = process.env.OUT || 'oogies/profits.json';
+const OFFLINE = process.env.OFFLINE || '.github/scripts/oogies-offline-sales.json';
 const TZ = 'Europe/Amsterdam';
 const GOAL_EUR = 500;
 
@@ -73,6 +75,22 @@ function orderProfit(order) {
 	return profit - (value(total) * FEE_RATE + FEE_FIXED);
 }
 
+// Sales made outside the website this month, with price and cost per item in the shop currency.
+async function offlineSales(month) {
+	const sales = await readFile(OFFLINE, 'utf8').then(JSON.parse, err => {
+		if (err.code === 'ENOENT') {
+			return [];
+		}
+		throw err;
+	});
+	for (const sale of sales) {
+		if (typeof sale.date !== 'string' || ![sale.items, sale.price, sale.cost].every(Number.isFinite)) {
+			throw new Error(`Offline sales need a date, items, price and cost: ${JSON.stringify(sale)}`);
+		}
+	}
+	return sales.filter(sale => sale.date.startsWith(month.key));
+}
+
 // Euros per unit of the shop currency, and reais per euro for what the shelter receives.
 async function getRates(currency, previous) {
 	try {
@@ -101,11 +119,16 @@ for (const order of sales) {
 	items += order.offers.reduce((sum, { variant }) => sum + variant.quantity, 0);
 	profit += orderProfit(order);
 }
+const offline = await offlineSales(month);
+for (const sale of offline) {
+	items += sale.items;
+	profit += sale.items * (sale.price - sale.cost);
+}
 profit = Math.round(profit * 100) / 100;
 
 const previous = await readFile(OUT, 'utf8').then(JSON.parse).catch(() => null);
 const currency = sales[0]?.amounts.total.currency ?? previous?.currency ?? 'USD';
-const summary = `${month.label}: ${sales.length} orders, ${items} items, ${profit} ${currency}`;
+const summary = `${month.label}: ${sales.length} orders, ${offline.length} offline sales, ${items} items, ${profit} ${currency}`;
 
 // Only rewrite the file for a new month, new orders or a missing rate, so rate changes alone never cause a commit.
 if (previous?.month === month.key && previous.items === items && previous.profit === profit &&

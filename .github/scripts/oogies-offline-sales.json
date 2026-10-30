@@ -19,5 +19,33 @@
     "items": 1,
     "price": 30,
     "cost": 20.54
+  },
+  {
+    "date": "2026-10-30",
+    "product": "Oogie's Classic Tee (White L, Ivory M)",
+    "items": 2,
+    "price": 25,
+    "cost": 17.59
+  },
+  {
+    "date": "2026-10-30",
+    "product": "Oogie's Packing Guide (Sage XL)",
+    "items": 1,
+    "price": 29,
+    "cost": 20.54
+  },
+  {
+    "date": "2026-10-30",
+    "product": "Oogie's Packing Guide (Sage 2XL)",
+    "items": 1,
+    "price": 31,
+    "cost": 22.54
+  },
+  {
+    "date": "2026-10-30",
+    "product": "Oogie's Classic Hoodie (Cypress L, XL)",
+    "items": 2,
+    "price": 50,
+    "cost": 41.24
   }
 ]

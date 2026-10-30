@@ -1,11 +1,11 @@
 {
   "month": "2026-10",
   "label": "October 2026",
-  "items": 12,
-  "profit_eur": 84.56,
+  "items": 18,
+  "profit_eur": 128.34,
   "goal_eur": 500,
-  "brl_per_eur": 5.9563,
-  "profit": 94.12,
+  "brl_per_eur": 6.0692,
+  "profit": 143.38,
   "currency": "USD",
-  "rate": 0.89847
+  "rate": 0.89509
 }

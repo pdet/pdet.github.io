@@ -1,5 +1,7 @@
 // Writes the totals behind the "Current profits" section on oogies.nl: items sold and estimated
-// profit for the current month, read from the Fourthwall Open API plus the sales listed in OFFLINE.
+// profit for one month, read from the Fourthwall Open API plus the sales listed in OFFLINE.
+// The bar shows the current month once it has a sale. Until then it keeps last month's final result,
+// so it doesn't reset to zero on the 1st and a sale in the last hours of a month still gets counted.
 // No customer or order data is kept.
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
@@ -32,15 +34,26 @@ function tzOffset(ms) {
 	return Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second) - Math.floor(ms / 1000) * 1000;
 }
 
-function currentMonth(now) {
-	const [year, month] = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit' })
-		.format(now).split('-').map(Number);
+// The calendar month (1-12) of the given year, starting at midnight in TZ on the 1st.
+function monthAt(year, month) {
 	const midnight = Date.UTC(year, month - 1, 1);
 	return {
 		key: `${year}-${String(month).padStart(2, '0')}`,
-		label: new Intl.DateTimeFormat('en-GB', { timeZone: TZ, month: 'long', year: 'numeric' }).format(now),
+		label: new Intl.DateTimeFormat('en-GB', { timeZone: TZ, month: 'long', year: 'numeric' })
+			.format(new Date(Date.UTC(year, month - 1, 15))),
 		start: new Date(midnight - tzOffset(midnight)),
 	};
+}
+
+function currentMonth(now) {
+	const [year, month] = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit' })
+		.format(now).split('-').map(Number);
+	return monthAt(year, month);
+}
+
+function monthBefore(month) {
+	const [year, number] = month.key.split('-').map(Number);
+	return number === 1 ? monthAt(year - 1, 12) : monthAt(year, number - 1);
 }
 
 async function getJson(url, headers = {}) {
@@ -75,8 +88,8 @@ function orderProfit(order) {
 	return profit - (value(total) * FEE_RATE + FEE_FIXED);
 }
 
-// Sales made outside the website this month, with price and cost per item in the shop currency.
-async function offlineSales(month) {
+// Sales made outside the website, with the date and the price and cost per item in the shop currency.
+async function offlineSales() {
 	const sales = await readFile(OFFLINE, 'utf8').then(JSON.parse, err => {
 		if (err.code === 'ENOENT') {
 			return [];
@@ -88,66 +101,83 @@ async function offlineSales(month) {
 			throw new Error(`Offline sales need a date, items, price and cost: ${JSON.stringify(sale)}`);
 		}
 	}
-	return sales.filter(sale => sale.date.startsWith(month.key));
+	return sales;
+}
+
+// Items sold and profit in a month: the orders placed from its start up to `end`, plus its offline sales.
+function monthTotals(month, end, orders, offline) {
+	const own = orders.filter(order => {
+		const placed = new Date(order.createdAt);
+		return placed >= month.start && (!end || placed < end);
+	});
+	const ownOffline = offline.filter(sale => sale.date.startsWith(month.key));
+	let items = 0;
+	let profit = 0;
+	for (const order of own) {
+		items += order.offers.reduce((sum, { variant }) => sum + variant.quantity, 0);
+		profit += orderProfit(order);
+	}
+	for (const sale of ownOffline) {
+		items += sale.items;
+		profit += sale.items * (sale.price - sale.cost);
+	}
+	return { ...month, orders: own.length, offline: ownOffline.length, items, profit: Math.round(profit * 100) / 100 };
 }
 
 // Euros per unit of the shop currency, and reais per euro for what the shelter receives.
-async function getRates(currency, previous) {
+async function getRates(currency, published) {
 	try {
 		const symbols = ['EUR', 'BRL'].filter(symbol => symbol !== currency);
 		const body = await getJson(`${RATES}?base=${currency}&symbols=${symbols.join(',')}`);
 		const rates = { ...body.rates, [currency]: 1 };
 		return { eur: rates.EUR, brlPerEur: Math.round(rates.BRL / rates.EUR * 10000) / 10000 };
 	} catch (err) {
-		if (previous?.currency === currency && previous.rate && previous.brl_per_eur) {
+		if (published?.currency === currency && published.rate && published.brl_per_eur) {
 			console.warn(`Exchange rates unavailable, reusing the previous ones: ${err.message}`);
-			return { eur: previous.rate, brlPerEur: previous.brl_per_eur };
+			return { eur: published.rate, brlPerEur: published.brl_per_eur };
 		}
 		throw err;
 	}
 }
 
-const month = currentMonth(new Date());
-const sales = (await ordersSince(month.start)).filter(order =>
-	new Date(order.createdAt) >= month.start &&
+const thisMonth = currentMonth(new Date());
+const lastMonth = monthBefore(thisMonth);
+const orders = (await ordersSince(lastMonth.start)).filter(order =>
 	order.status !== 'CANCELLED' &&
 	(order.source?.type ?? 'ORDER') === 'ORDER');
+const offline = await offlineSales();
+const current = monthTotals(thisMonth, null, orders, offline);
+const previous = monthTotals(lastMonth, thisMonth.start, orders, offline);
 
-let items = 0;
-let profit = 0;
-for (const order of sales) {
-	items += order.offers.reduce((sum, { variant }) => sum + variant.quantity, 0);
-	profit += orderProfit(order);
+// Keep last month's final result on the bar until this month has a sale, unless last month had none either.
+const shown = current.items > 0 || previous.items === 0 ? current : previous;
+const final = shown !== current;
+
+const published = await readFile(OUT, 'utf8').then(JSON.parse).catch(() => null);
+const currency = orders[0]?.amounts.total.currency ?? published?.currency ?? 'USD';
+for (const month of [previous, current]) {
+	console.log(`${month.label}: ${month.orders} orders, ${month.offline} offline sales, ${month.items} items, ${month.profit} ${currency}`);
 }
-const offline = await offlineSales(month);
-for (const sale of offline) {
-	items += sale.items;
-	profit += sale.items * (sale.price - sale.cost);
-}
-profit = Math.round(profit * 100) / 100;
 
-const previous = await readFile(OUT, 'utf8').then(JSON.parse).catch(() => null);
-const currency = sales[0]?.amounts.total.currency ?? previous?.currency ?? 'USD';
-const summary = `${month.label}: ${sales.length} orders, ${offline.length} offline sales, ${items} items, ${profit} ${currency}`;
-
-// Only rewrite the file for a new month, new orders or a missing rate, so rate changes alone never cause a commit.
-if (previous?.month === month.key && previous.items === items && previous.profit === profit &&
-	previous.currency === currency && previous.rate && previous.brl_per_eur) {
-	console.log(`${summary}, unchanged`);
+// Only rewrite the file for a different month or total or a missing rate, so rate changes alone never cause a commit.
+if (published?.month === shown.key && published.final === final && published.items === shown.items &&
+	published.profit === shown.profit && published.currency === currency && published.rate && published.brl_per_eur) {
+	console.log(`Showing ${shown.label}, unchanged`);
 } else {
-	const { eur, brlPerEur } = await getRates(currency, previous);
+	const { eur, brlPerEur } = await getRates(currency, published);
 	const result = {
-		month: month.key,
-		label: month.label,
-		items,
-		profit_eur: Math.round(profit * eur * 100) / 100,
+		month: shown.key,
+		label: shown.label,
+		final,
+		items: shown.items,
+		profit_eur: Math.round(shown.profit * eur * 100) / 100,
 		goal_eur: GOAL_EUR,
 		brl_per_eur: brlPerEur,
-		profit,
+		profit: shown.profit,
 		currency,
 		rate: eur,
 	};
 	await mkdir(dirname(OUT), { recursive: true });
 	await writeFile(OUT, JSON.stringify(result, null, 2) + '\n');
-	console.log(`${summary} = €${result.profit_eur}`);
+	console.log(`Showing ${shown.label}${final ? ' (final)' : ' so far'} = €${result.profit_eur}`);
 }

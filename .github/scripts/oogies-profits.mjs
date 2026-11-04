@@ -12,6 +12,12 @@ const OFFLINE = process.env.OFFLINE || '.github/scripts/oogies-offline-sales.jso
 const TZ = 'Europe/Amsterdam';
 const GOAL_EUR = 500;
 const RESET_DAY = 6;
+// Donations sent before the 5th reset the bar right away: the next period starts at the transfer
+// instead of on the 6th. firstDay is the first offline-sale date that counts for the new period.
+const EARLY_STARTS = {
+	// October's donation went out by Pix on 4 November at 16:36 in Brazil.
+	'2026-11': { start: '2026-11-04T19:36:00Z', firstDay: '2026-11-05' },
+};
 
 // Fourthwall doesn't expose its payment fee, and it depends on how the customer paid.
 // Card orders came out at 3.9% + $0.30, so estimating a bit higher keeps the number on the safe side.
@@ -45,16 +51,23 @@ function resetAt(year, month) {
 // The period that starts on RESET_DAY of the given year and month (1-12).
 function periodStarting(year, month) {
 	const [nextYear, nextMonth] = month === 12 ? [year + 1, 1] : [year, month + 1];
+	const early = EARLY_STARTS[`${year}-${pad(month)}`];
+	const nextEarly = EARLY_STARTS[`${nextYear}-${pad(nextMonth)}`];
 	return {
 		key: `${year}-${pad(month)}`,
 		label: new Intl.DateTimeFormat('en-GB', { timeZone: TZ, month: 'long', year: 'numeric' })
 			.format(new Date(Date.UTC(year, month - 1, 15))),
-		start: resetAt(year, month),
-		end: resetAt(nextYear, nextMonth),
+		start: early ? new Date(early.start) : resetAt(year, month),
+		end: nextEarly ? new Date(nextEarly.start) : resetAt(nextYear, nextMonth),
 		// The same bounds as dates in TZ, which is how the offline sales are listed.
-		firstDay: `${year}-${pad(month)}-${pad(RESET_DAY)}`,
-		endDay: `${nextYear}-${pad(nextMonth)}-${pad(RESET_DAY)}`,
+		firstDay: early ? early.firstDay : `${year}-${pad(month)}-${pad(RESET_DAY)}`,
+		endDay: nextEarly ? nextEarly.firstDay : `${nextYear}-${pad(nextMonth)}-${pad(RESET_DAY)}`,
 	};
+}
+
+function periodAfter(period) {
+	const [year, month] = period.key.split('-').map(Number);
+	return month === 12 ? periodStarting(year + 1, 1) : periodStarting(year, month + 1);
 }
 
 function periodBefore(period) {
@@ -66,7 +79,9 @@ function currentPeriod(now) {
 	const [year, month, day] = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' })
 		.format(now).split('-').map(Number);
 	const period = periodStarting(year, month);
-	return day < RESET_DAY ? periodBefore(period) : period;
+	const current = day < RESET_DAY ? periodBefore(period) : period;
+	const next = periodAfter(current);
+	return now >= next.start ? next : current;
 }
 
 async function getJson(url, headers = {}) {
